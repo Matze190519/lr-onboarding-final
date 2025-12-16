@@ -88,119 +88,6 @@ export default function Home() {
             </CardContent>
           </Card>
         </section>
-        {/* Lina Section */}
-        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-              <img src="/images/lina.png" alt="Lina AI" className="w-full h-full object-cover" />
-            </div>
-            <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">1)</span> Lina (KI) – dein 24/7 Coach
-            </h2>
-          </div>
-
-          {/* Lina Intro Text */}
-          <Card className="border-[#BF953F]/20 bg-[#BF953F]/5 backdrop-blur-md">
-            <CardContent className="p-6 space-y-4 text-muted-foreground">
-              <p className="text-white font-medium">Hallo und herzlich willkommen im LR Lifestyle Team.</p>
-              <p>Ich bin <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Lina</span> – deine digitale Partnerin auf deinem Weg im LR Business.</p>
-              
-              <p>Ich begleite dich Schritt für Schritt:</p>
-              <ul className="list-disc list-inside space-y-1 ml-2">
-                <li>Beim Onboarding</li>
-                <li>Bei der Einrichtung deines Online-Shops</li>
-                <li>Bei Produktfragen</li>
-                <li>Beim Teamaufbau</li>
-                <li>Bei Social Media</li>
-                <li>Und sogar per Live-Telefonat</li>
-              </ul>
-
-              <p className="text-white font-medium">Du bist nicht allein. Ich bin 24/7 für dich da und helfe dir, deinen Start einfach, klar und strukturiert zu machen.</p>
-            </CardContent>
-          </Card>
-          
-          <Accordion type="single" collapsible className="w-full space-y-3">
-            <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Lina starten
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Öffne Lina auf WhatsApp.</p>
-                <p>Schreibe „Hallo".</p>
-                <p>Lina antwortet dir.</p>
-                <p>Tippe unten auf Choose und wähle Onboarding Hilfe.</p>
-                <p>Falls Lina nach deiner Partnernummer fragt, gib sie ein und trage deine Daten ein.</p>
-                <p>Danach bist du freigeschaltet.</p>
-                <Button className="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold" asChild>
-                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    Lina auf WhatsApp öffnen
-                  </a>
-                </Button>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                LR-Onboarding (OnlineShop & Webseite)
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Tippe unten auf Choose und wähle Onboarding.</p>
-                <p>Starte mit OnlineShop einrichten und gehe alles Schritt für Schritt durch.</p>
-                <p>Danach Webseite einrichten und ebenfalls komplett abschließen.</p>
-                <p>Das ist dein technischer Start ins LR Business.</p>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Lina-Onboarding (Videos zur Bedienung)
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Das Lina-Onboarding ist ein separater Bereich.</p>
-                <p>Hier erklärt dir Lina per Video, wie du Lina benutzt</p>
-                <p>und wie die wichtigsten Funktionen aufgebaut sind.</p>
-                <p>Zu jeder wichtigen Kategorie gibt es am Ende ein Quiz.</p>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Normale Lina-Menüs (alle LR-Themen)
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Über Choose erreichst du die normalen Lina-Menüs.</p>
-                <p>Dort kannst du aus mehreren Menüpunkten zu verschiedenen LR-Themen wählen</p>
-                <p>(z. B. Fast-Track, Auto-Konzept, Teamaufbau, Social Media usw.).</p>
-                <p>Geh diese Menüs einmal durch, damit du sicher wirst</p>
-                <p>und jederzeit weißt, wo du welches Thema findest.</p>
-                <p>Auch hier gibt es zu jeder wichtigen Kategorie ein Quiz.</p>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5" className="border border-[#BF953F]/30 bg-[#BF953F]/5 rounded-xl px-4 data-[state=open]:bg-[#BF953F]/10 transition-all duration-300">
-              <AccordionTrigger className="text-[#BF953F] hover:text-[#BF953F]/80 hover:no-underline font-bold py-4">
-                Wichtig – stell Lina Fragen
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 space-y-3">
-                <p>Nutze Lina aktiv.</p>
-                <p>Stelle ihr jederzeit Fragen, zum Beispiel:</p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>„Lina, was ist mein nächster Schritt?"</li>
-                  <li>„Hilf mir bitte eine Namensliste zu erstellen."</li>
-                  <li>„Wie erkläre ich das LR Business richtig?"</li>
-                </ul>
-                <p>Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.</p>
-                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold" asChild>
-                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    Lina eine Frage stellen
-                  </a>
-                </Button>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </section>
 
         {/* NEW SECTION: Dein Start */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
@@ -353,6 +240,119 @@ export default function Home() {
           </Card>
         </section>
 
+        {/* Lina Section */}
+        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+              <img src="/images/lina.png" alt="Lina AI" className="w-full h-full object-cover" />
+            </div>
+            <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">1)</span> Lina (KI) – dein 24/7 Coach
+            </h2>
+          </div>
+
+          {/* Lina Intro Text */}
+          <Card className="border-[#BF953F]/20 bg-[#BF953F]/5 backdrop-blur-md">
+            <CardContent className="p-6 space-y-4 text-muted-foreground">
+              <p className="text-white font-medium">Hallo und herzlich willkommen im LR Lifestyle Team.</p>
+              <p>Ich bin <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Lina</span> – deine digitale Partnerin auf deinem Weg im LR Business.</p>
+              
+              <p>Ich begleite dich Schritt für Schritt:</p>
+              <ul className="list-disc list-inside space-y-1 ml-2">
+                <li>Beim Onboarding</li>
+                <li>Bei der Einrichtung deines Online-Shops</li>
+                <li>Bei Produktfragen</li>
+                <li>Beim Teamaufbau</li>
+                <li>Bei Social Media</li>
+                <li>Und sogar per Live-Telefonat</li>
+              </ul>
+
+              <p className="text-white font-medium">Du bist nicht allein. Ich bin 24/7 für dich da und helfe dir, deinen Start einfach, klar und strukturiert zu machen.</p>
+            </CardContent>
+          </Card>
+          
+          <Accordion type="single" collapsible className="w-full space-y-3">
+            <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                Lina starten
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Öffne Lina auf WhatsApp.</p>
+                <p>Schreibe „Hallo".</p>
+                <p>Lina antwortet dir.</p>
+                <p>Tippe unten auf Choose und wähle Onboarding Hilfe.</p>
+                <p>Falls Lina nach deiner Partnernummer fragt, gib sie ein und trage deine Daten ein.</p>
+                <p>Danach bist du freigeschaltet.</p>
+                <Button className="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold" asChild>
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Lina auf WhatsApp öffnen
+                  </a>
+                </Button>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                LR-Onboarding (OnlineShop & Webseite)
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Tippe unten auf Choose und wähle Onboarding.</p>
+                <p>Starte mit OnlineShop einrichten und gehe alles Schritt für Schritt durch.</p>
+                <p>Danach Webseite einrichten und ebenfalls komplett abschließen.</p>
+                <p>Das ist dein technischer Start ins LR Business.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                Lina-Onboarding (Videos zur Bedienung)
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Das Lina-Onboarding ist ein separater Bereich.</p>
+                <p>Hier erklärt dir Lina per Video, wie du Lina benutzt</p>
+                <p>und wie die wichtigsten Funktionen aufgebaut sind.</p>
+                <p>Zu jeder wichtigen Kategorie gibt es am Ende ein Quiz.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                Normale Lina-Menüs (alle LR-Themen)
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Über Choose erreichst du die normalen Lina-Menüs.</p>
+                <p>Dort kannst du aus mehreren Menüpunkten zu verschiedenen LR-Themen wählen</p>
+                <p>(z. B. Fast-Track, Auto-Konzept, Teamaufbau, Social Media usw.).</p>
+                <p>Geh diese Menüs einmal durch, damit du sicher wirst</p>
+                <p>und jederzeit weißt, wo du welches Thema findest.</p>
+                <p>Auch hier gibt es zu jeder wichtigen Kategorie ein Quiz.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border border-[#BF953F]/30 bg-[#BF953F]/5 rounded-xl px-4 data-[state=open]:bg-[#BF953F]/10 transition-all duration-300">
+              <AccordionTrigger className="text-[#BF953F] hover:text-[#BF953F]/80 hover:no-underline font-bold py-4">
+                Wichtig – stell Lina Fragen
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-3">
+                <p>Nutze Lina aktiv.</p>
+                <p>Stelle ihr jederzeit Fragen, zum Beispiel:</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>„Lina, was ist mein nächster Schritt?"</li>
+                  <li>„Hilf mir bitte eine Namensliste zu erstellen."</li>
+                  <li>„Wie erkläre ich das LR Business richtig?"</li>
+                </ul>
+                <p>Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.</p>
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold" asChild>
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Lina eine Frage stellen
+                  </a>
+                </Button>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
 
         {/* LR Neo Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
