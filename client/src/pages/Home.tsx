@@ -184,8 +184,6 @@ export default function Home() {
                         <p>– Tippe unten auf Choose</p>
                         <p>– Starte das Lina-Onboarding</p>
                         <p>– Schau dir die Videos an, die Lina dir sendet</p>
-                        <p>Zu jeder wichtigen Kategorie gibt es am Ende ein Quiz,</p>
-                        <p>damit du dein Wissen kontrollieren kannst.</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
