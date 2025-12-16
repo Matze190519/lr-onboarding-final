@@ -217,13 +217,13 @@ export default function Home() {
               
               <div className="grid gap-3">
                 <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
-                  <a href="https://apps.apple.com/de/app/lr-connect/id1234567890" target="_blank" rel="noopener noreferrer">
+                  <a href="https://apps.apple.com/de/app/lr-connect/id1510357433" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><Smartphone className="h-4 w-4" /> App Store (iOS)</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
                   </a>
                 </Button>
                 <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
-                  <a href="https://play.google.com/store/apps/details?id=com.lr.connect" target="_blank" rel="noopener noreferrer">
+                  <a href="https://play.google.com/store/apps/details?id=com.lr.dpf&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><Smartphone className="h-4 w-4" /> Google Play (Android)</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
                   </a>
