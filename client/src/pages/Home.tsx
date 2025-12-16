@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, MessageCircle, Users, ExternalLink, Smartphone, Video, Calendar, Play, Mic, Link as LinkIcon, QrCode } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, ExternalLink, Smartphone, Video, Play, Mic, Link as LinkIcon, QrCode, Mail, Phone, CheckCircle2, Star, Car, TrendingUp, Globe } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -14,9 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-[#BF953F]/30">
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Top Left Gold Glow */}
         <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-[#BF953F]/10 rounded-full blur-[120px]" />
-        {/* Bottom Right Gold Glow */}
         <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-[#AA771C]/5 rounded-full blur-[120px]" />
       </div>
 
@@ -53,10 +51,24 @@ export default function Home() {
                 <p className="text-sm text-[#BF953F] font-medium tracking-wide uppercase text-xs">Platin Orgaleiter</p>
               </div>
 
+              {/* Kontaktdaten */}
+              <div className="w-full space-y-2 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center gap-2">
+                  <Phone className="h-4 w-4 text-[#BF953F]" />
+                  <a href="https://wa.me/491715060008" className="hover:text-[#BF953F] transition-colors">WhatsApp: +49 171 506 0008</a>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Mail className="h-4 w-4 text-[#BF953F]" />
+                  <a href="mailto:info@lr-lifestyle.info" className="hover:text-[#BF953F] transition-colors">info@lr-lifestyle.info</a>
+                </div>
+              </div>
+
               <div className="w-full grid gap-3 mt-2">
-                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-[#BF953F]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Lina starten (WhatsApp)
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-[#BF953F]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg" asChild>
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Lina starten (WhatsApp)
+                  </a>
                 </Button>
                 
                 <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#FCF6BA] hover:border-[#BF953F]/50 transition-all duration-300" size="lg" asChild>
@@ -66,11 +78,52 @@ export default function Home() {
                   </a>
                 </Button>
 
-                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#FCF6BA] hover:border-[#BF953F]/50 transition-all duration-300" size="lg">
-                  <Users className="mr-2 h-4 w-4" />
-                  Gruppen beitreten
+                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#FCF6BA] hover:border-[#BF953F]/50 transition-all duration-300" size="lg" asChild>
+                  <a href="#gruppen">
+                    <Users className="mr-2 h-4 w-4" />
+                    Gruppen beitreten
+                  </a>
                 </Button>
               </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* NEW SECTION: Dein Start */}
+        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <h2 className="text-2xl font-heading font-bold text-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">Dein Start</span> – die ersten Tage im LR Business
+          </h2>
+          <Card className="border-white/10 bg-white/5 backdrop-blur-md">
+            <CardContent className="p-6 space-y-4 text-muted-foreground">
+              <p>Das hier ist der Anfang deines Geschäfts. Es geht nicht darum, sofort alles perfekt zu können, sondern darum, das Geschäft <strong className="text-white">Schritt für Schritt</strong> zu erlernen.</p>
+              
+              <p className="font-medium text-white">In den ersten Tagen geht es darum:</p>
+              <ul className="list-disc list-inside space-y-1 ml-2">
+                <li>Erste Kunden kennenzulernen</li>
+                <li>Erste Partner zu gewinnen</li>
+                <li>Gespräche zu führen</li>
+                <li>Deinen Weg zur Duplikation zu finden</li>
+              </ul>
+
+              <p>Network Marketing funktioniert nicht über wenige Gespräche mit Druck, sondern über <strong className="text-white">viele Gespräche mit Leichtigkeit</strong>.</p>
+
+              <div className="bg-[#BF953F]/5 border border-[#BF953F]/20 rounded-lg p-4 space-y-2">
+                <p className="text-white font-medium">Sprich mit Menschen. Zeig ihnen Produkte. Sprich über Möglichkeiten. Höre zu.</p>
+                <p className="text-sm">Nicht jeder ist der Richtige – und genau das ist Teil dieses Geschäfts. Es geht nicht ums Rekrutieren um jeden Preis, sondern ums <strong className="text-white">Selektieren der richtigen Menschen</strong>.</p>
+              </div>
+
+              <p className="font-medium text-white">Dein Fokus am Anfang:</p>
+              <ul className="list-disc list-inside space-y-1 ml-2">
+                <li>2–4 Partner</li>
+                <li>Erste Kunden</li>
+                <li>Produkte erleben und empfehlen</li>
+                <li>Deinen Partnern helfen, genau das Gleiche zu tun</li>
+              </ul>
+
+              <p>So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">1.100 € im Monat*</span>.</p>
+
+              <p className="text-xs text-muted-foreground/70 italic">*Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.</p>
             </CardContent>
           </Card>
         </section>
@@ -83,22 +136,94 @@ export default function Home() {
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-4">
               <div className="space-y-4">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">1</div>
-                  <span className="text-white font-medium">Lina (KI) aktivieren</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">2</div>
-                  <span className="text-white font-medium">LR Neo & MyOffice</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">3</div>
-                  <span className="text-white font-medium">Gruppen beitreten</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">4</div>
-                  <span className="text-white font-medium">Starterwebinar & Meeting</span>
-                </div>
+                <Accordion type="single" collapsible className="w-full space-y-2">
+                  <AccordionItem value="step-1" className="border-0">
+                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
+                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">1</div>
+                      <span className="text-white font-medium flex-1 text-left">Lina (KI) aktivieren</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
+                      <ul className="space-y-1 text-sm">
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp öffnen</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> „Hallo" schreiben</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Menü / Choose → „Onboarding Hilfe"</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Partnernummer eingeben</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Daten bestätigen → Freischaltung</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="step-2" className="border-0">
+                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
+                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">2</div>
+                      <span className="text-white font-medium flex-1 text-left">LR-Start Onboarding in Lina (OnlineShop & Webseite einrichten)</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
+                      <div className="space-y-3 text-sm">
+                        <p>Jetzt richtest du dein LR Business technisch ein.</p>
+                        <p>Öffne Lina auf WhatsApp und gehe unten ins Menü.</p>
+                        <p>Wähle den Punkt „Onboarding".</p>
+                        <p>Starte dort mit „OnlineShop einrichten". Lina führt dich Schritt für Schritt durch den gesamten Prozess.</p>
+                        <p>Danach gehe zu „Webseite einrichten". Auch hier begleitet dich Lina Schritt für Schritt, bis alles fertig ist.</p>
+                        <p>Wenn du an irgendeiner Stelle unsicher bist, schreibe einfach: „Lina, ich komme bei Schritt … nicht weiter."</p>
+                        <p>Lina hilft dir sofort weiter und sagt dir genau, was als Nächstes zu tun ist.</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="step-3" className="border-0">
+                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
+                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">3</div>
+                      <span className="text-white font-medium flex-1 text-left">Lina-Onboarding (Lina komplett verstehen)</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
+                      <div className="space-y-3 text-sm">
+                        <p>Jetzt lernst du Lina vollständig kennen.</p>
+                        <p>Öffne in Lina wieder das Menü.</p>
+                        <p>Wähle den Punkt „Lina Onboarding" oder „Lina verstehen".</p>
+                        <p>Gehe jeden Menüpunkt einmal komplett durch.</p>
+                        <p>Zu jedem wichtigen Bereich bekommst du Videos, die dir alles erklären.</p>
+                        <p>Stelle Lina dabei aktiv Fragen – sie macht dir Vorschläge und zeigt dir nächste Schritte.</p>
+                        <p>Am Ende jeder wichtigen Kategorie gibt es ein Quiz. So kannst du prüfen, ob du alles verstanden hast und wo du noch nacharbeiten solltest.</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="step-4" className="border-0">
+                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
+                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">4</div>
+                      <span className="text-white font-medium flex-1 text-left">LR Neo & MyOffice prüfen</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
+                      <ul className="space-y-1 text-sm">
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Umsätze & Bestellungen</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Qualifikation</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Neue Partner</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Eigene Partner online registrieren</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="step-5" className="border-0">
+                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
+                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">5</div>
+                      <span className="text-white font-medium flex-1 text-left">Gruppen beitreten</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
+                      <ul className="space-y-1 text-sm">
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp Info-Gruppe</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp Austausch</li>
+                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Telegram Gruppen</li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              <div className="mt-6 p-4 bg-[#BF953F]/10 border border-[#BF953F]/30 rounded-lg">
+                <p className="text-sm text-white text-center">
+                  Wenn du alles erledigt hast, setze bitte ein <span className="text-2xl">👍</span> auf die WhatsApp-Nachricht – so wissen wir, dass du ready bist.
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -114,6 +239,26 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">1)</span> Lina (KI) – dein 24/7 Coach
             </h2>
           </div>
+
+          {/* Lina Intro Text */}
+          <Card className="border-[#BF953F]/20 bg-[#BF953F]/5 backdrop-blur-md">
+            <CardContent className="p-6 space-y-4 text-muted-foreground">
+              <p className="text-white font-medium">Hallo und herzlich willkommen im LR Lifestyle Team.</p>
+              <p>Ich bin <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Lina</span> – deine digitale Partnerin auf deinem Weg im LR Business.</p>
+              
+              <p>Ich begleite dich Schritt für Schritt:</p>
+              <ul className="list-disc list-inside space-y-1 ml-2">
+                <li>Beim Onboarding</li>
+                <li>Bei der Einrichtung deines Online-Shops</li>
+                <li>Bei Produktfragen</li>
+                <li>Beim Teamaufbau</li>
+                <li>Bei Social Media</li>
+                <li>Und sogar per Live-Telefonat</li>
+              </ul>
+
+              <p className="text-white font-medium">Du bist nicht allein. Ich bin 24/7 für dich da und helfe dir, deinen Start einfach, klar und strukturiert zu machen.</p>
+            </CardContent>
+          </Card>
           
           <Accordion type="single" collapsible className="w-full space-y-3">
             <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
@@ -121,15 +266,15 @@ export default function Home() {
                 Lina aktivieren
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>So startest du Lina:</p>
-                <ol className="list-decimal list-inside space-y-1 ml-2">
-                  <li>Klicke auf den WhatsApp-Link unten</li>
-                  <li>Schreibe "Hallo"</li>
-                  <li>Wähle im Menü "Partner"</li>
-                  <li>Gib deine Partnernummer ein</li>
-                </ol>
+                <p>Öffne Lina über WhatsApp.</p>
+                <p>Schreibe zuerst „Hallo".</p>
+                <p>Tippe unten im Chat auf Menü / Choose.</p>
+                <p>Wähle „Onboarding Hilfe" aus.</p>
+                <p>Lina fragt dich nach deiner LR-Partnernummer.</p>
+                <p>Gib deine Partnernummer ein und trage deine Daten ein.</p>
+                <p>Danach wirst du freigeschaltet und hast vollen Zugriff auf alle Funktionen von Lina.</p>
                 <Button className="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold" asChild>
-                  <a href="[LINA_WHATSAPP_LINK]" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Lina auf WhatsApp öffnen
                   </a>
@@ -139,34 +284,68 @@ export default function Home() {
 
             <AccordionItem value="item-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Was Lina konkret kann
+                LR-Onboarding mit Lina (OnlineShop & Webseite)
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Komplettes Onboarding</li>
-                  <li>Social Media Strategien</li>
-                  <li>WhatsApp-Vorlagen für Kontakte</li>
-                  <li>Tipps zum Teamaufbau</li>
-                  <li>Interaktiver Lernpfad & Quiz</li>
-                </ul>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Dieses Onboarding hilft dir, dein LR Business korrekt einzurichten.</p>
+                <p>Öffne in Lina das Menü und wähle „Onboarding".</p>
+                <p>Beginne mit „OnlineShop einrichten". Lina erklärt dir jeden Schritt ganz genau.</p>
+                <p>Anschließend gehe zu „Webseite einrichten". Auch hier wirst du Schritt für Schritt durch den gesamten Prozess geführt.</p>
+                <p>Ziel dieses Onboardings ist, dass dein OnlineShop und deine Webseite vollständig und korrekt eingerichtet sind.</p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Mit Lina telefonieren
+                Lina-Onboarding (Videos & Lernen)
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
-                <p>Du kannst Lina auch anrufen! Wähle dazu im Menü die Option für Anrufe oder nutze den Link, den sie dir schickt. Perfekt um Ziele zu besprechen oder Gesprächsleitfäden zu üben.</p>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>In diesem Bereich lernst du alles, was Lina für dich tun kann.</p>
+                <p>Öffne in Lina den Punkt „Lina Onboarding" oder „Lina verstehen".</p>
+                <p>Gehe alle Menüpunkte nacheinander durch.</p>
+                <p>Zu jedem Bereich bekommst du Erklär-Videos, die dir die Funktionen genau zeigen.</p>
+                <p>Stelle Lina zwischendurch Fragen – sie passt ihre Antworten an dich an.</p>
+                <p>Am Ende wichtiger Bereiche gibt es ein Quiz, mit dem du deinen Lernfortschritt überprüfen kannst.</p>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border border-[#BF953F]/30 bg-[#BF953F]/5 rounded-xl px-4 data-[state=open]:bg-[#BF953F]/10 transition-all duration-300">
-              <AccordionTrigger className="text-[#BF953F] hover:text-[#BF953F]/80 hover:no-underline font-bold py-4">
-                Wichtig: Fragen stellen!
+            <AccordionItem value="item-4" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                Mit Lina telefonieren
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
-                <p>Lina lernt ständig dazu. Stelle ihr jede Frage, die du hast. Wenn sie etwas nicht weiß, leitet sie dich an deinen Orgaleiter weiter.</p>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-2">
+                <p>Lina kann auch live mit dir telefonieren.</p>
+                <p>Öffne in Lina das Menü und wähle „Mit Lina telefonieren".</p>
+                <p>Lina schickt dir daraufhin einen Link per WhatsApp.</p>
+                <p>Öffne den Link und sprich mit Lina über:</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>deine Ziele</li>
+                  <li>Termine</li>
+                  <li>LR-Geschäftsvorstellungen</li>
+                </ul>
+                <p>So kannst du Gespräche üben und sicherer werden.</p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border border-[#BF953F]/30 bg-[#BF953F]/5 rounded-xl px-4 data-[state=open]:bg-[#BF953F]/10 transition-all duration-300">
+              <AccordionTrigger className="text-[#BF953F] hover:text-[#BF953F]/80 hover:no-underline font-bold py-4">
+                Wichtig – stell Lina Fragen
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-4 space-y-3">
+                <p>Nutze Lina aktiv.</p>
+                <p>Stelle ihr jederzeit Fragen, zum Beispiel:</p>
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>„Lina, was ist mein nächster Schritt?"</li>
+                  <li>„Hilf mir bitte eine Namensliste zu erstellen."</li>
+                  <li>„Wie erkläre ich das LR Business richtig?"</li>
+                </ul>
+                <p>Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.</p>
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold" asChild>
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Lina eine Frage stellen
+                  </a>
+                </Button>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -179,20 +358,19 @@ export default function Home() {
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-4">
-              
-              {/* App Download Links */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <a href="https://apps.apple.com/de/app/lr-connect/id1510357433" target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-105">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="w-full h-auto" />
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.lr.dpf&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-105">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="w-full h-auto" />
-                </a>
-              </div>
               <p className="text-muted-foreground">
-                Deine zentralen Tools für den Erfolg. Hier findest du alles, was du für dein Business brauchst.
+                LR Neo und MyOffice sind deine zentralen Seiten für deinen Erfolg. Hier siehst du:
               </p>
-              <div className="grid gap-3">
+              <ul className="list-disc list-inside space-y-1 ml-2 text-muted-foreground">
+                <li>Umsätze</li>
+                <li>Bestellungen</li>
+                <li>Neue Partner</li>
+                <li>Teamstruktur</li>
+                <li>Deine Qualifikation</li>
+              </ul>
+              <p className="text-white font-medium">Hier kannst du auch neue Partner direkt online in dein Team registrieren.</p>
+              
+              <div className="grid gap-3 mt-4">
                 <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://myoffice.lrworld.com/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> MyOffice öffnen</span>
@@ -211,7 +389,7 @@ export default function Home() {
         </section>
 
         {/* Gruppen Section */}
-        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
+        <section id="gruppen" className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">3)</span> Gruppen: WhatsApp & Telegram
           </h2>
@@ -222,8 +400,11 @@ export default function Home() {
                 Warum 2x WhatsApp?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-3">
-                <p>Wir trennen wichtige Infos vom täglichen Austausch, damit du nichts verpasst.</p>
-                <div className="grid gap-2">
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li><strong className="text-white">Gruppe 1:</strong> Wichtige Infos von Mathias (News, Angebote, Webinare)</li>
+                  <li><strong className="text-white">Gruppe 2:</strong> Austausch & Support</li>
+                </ul>
+                <div className="grid gap-2 mt-4">
                   <Button variant="secondary" className="w-full justify-start bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 border border-[#25D366]/20" asChild>
                     <a href="https://chat.whatsapp.com/EA0k6OTVONGLMc1b7e0AsV" target="_blank" rel="noopener noreferrer">
                       <Users className="mr-2 h-4 w-4" /> Info-Kanal beitreten
@@ -243,16 +424,30 @@ export default function Home() {
                 Warum Telegram?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-3">
-                <p>Telegram nutzen wir für Material, Dateien und langfristige Updates, da hier nichts verloren geht.</p>
-                <div className="grid gap-2">
+                <ul className="list-disc list-inside space-y-1 ml-2">
+                  <li>Mehr Infos als WhatsApp</li>
+                  <li>Austausch</li>
+                  <li>Content & Materialien</li>
+                </ul>
+                <div className="grid gap-2 mt-4">
                   <Button variant="secondary" className="w-full justify-start bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 border border-[#0088cc]/20" asChild>
                     <a href="https://t.me/+TxckV-xlENozYmEy" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Telegram Gruppe 1
+                      <ExternalLink className="mr-2 h-4 w-4" /> Club 1000
                     </a>
                   </Button>
                   <Button variant="secondary" className="w-full justify-start bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 border border-[#0088cc]/20" asChild>
                     <a href="https://t.me/+DtNs0IQR1D4yZWVi" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Telegram Gruppe 2
+                      <ExternalLink className="mr-2 h-4 w-4" /> Produktgruppe
+                    </a>
+                  </Button>
+                  <Button variant="secondary" className="w-full justify-start bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 border border-[#0088cc]/20" asChild>
+                    <a href="https://t.me/+M8BgIFrDPGc2M2Ri" target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Produkt-Chat
+                    </a>
+                  </Button>
+                  <Button variant="secondary" className="w-full justify-start bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 border border-[#0088cc]/20" asChild>
+                    <a href="https://t.me/+VQB7RcwnZzs5ZmY6" target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Erfahrungsberichte (erst Regeln lesen)
                     </a>
                   </Button>
                 </div>
@@ -277,8 +472,8 @@ export default function Home() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-lg font-semibold text-white">Starterwebinar</h3>
-                  <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-medium">Jeden Dienstag um 20:00 Uhr</p>
-                  <p className="text-sm text-muted-foreground">Die Links kommen rechtzeitig in die Gruppen.</p>
+                  <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-medium">Jeden Dienstag um 20:00 Uhr – live</p>
+                  <p className="text-sm text-muted-foreground">Hier kannst du alles verstehen, Fragen stellen und auch jederzeit deine Interessenten einladen. Die Links kommen rechtzeitig in die Gruppen.</p>
                 </div>
               </div>
 
@@ -292,7 +487,7 @@ export default function Home() {
                 <div className="space-y-1">
                   <h3 className="text-lg font-semibold text-white">Teammeeting</h3>
                   <p className="text-white/80 font-medium">Mindestens alle 2 Wochen</p>
-                  <p className="text-sm text-muted-foreground">Austausch, News und Motivation für das ganze Team.</p>
+                  <p className="text-sm text-muted-foreground">Austausch, Tipps, Motivation & gemeinsame Weiterentwicklung.</p>
                 </div>
               </div>
 
@@ -321,6 +516,12 @@ export default function Home() {
 
               <div className="grid gap-3">
                 <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                  <a href="https://youtu.be/N-soKAiyjsA?si=pyPZf8iJxaFje7h1" target="_blank" rel="noopener noreferrer">
+                    <span className="flex items-center gap-2"><Play className="h-4 w-4" /> Video abspielen</span>
+                    <ArrowRight className="h-4 w-4 opacity-50" />
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://dein-lr-business.de/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Präsentation öffnen</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
@@ -334,16 +535,21 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="bg-[#BF953F]/5 border border-[#BF953F]/10 rounded-lg p-4">
-                <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-semibold mb-2 flex items-center gap-2">
-                  <Smartphone className="h-4 w-4" /> How-To für dich:
-                </h4>
-                <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
-                  <li>Max. 5 Stichpunkte pro Folie</li>
-                  <li>Nicht ablesen, frei sprechen</li>
-                  <li>In eigenen Worten erklären</li>
-                </ul>
-              </div>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="why-presentation" className="border border-white/10 bg-white/5 rounded-xl px-4">
+                  <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
+                    Warum diese Präsentation?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-4">
+                    <ul className="list-disc list-inside space-y-1 ml-2">
+                      <li>5 Stichpunkte pro Folie</li>
+                      <li>Einfach ablesen & in eigenen Worten erklären</li>
+                      <li>Roter Faden für jede Geschäftsvorstellung</li>
+                      <li>Für Handy & PC optimiert</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CardContent>
           </Card>
         </section>
@@ -361,7 +567,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white">Dein persönlicher Team-Link</h3>
-                  <p className="text-sm text-muted-foreground">Nutze die Kraft der KI für dein Business.</p>
+                  <p className="text-sm text-muted-foreground">Wenn du Unternehmer kennst, nutze dieses Tool.</p>
                 </div>
               </div>
 
@@ -369,15 +575,19 @@ export default function Home() {
                 <div className="relative pl-4 border-l-2 border-[#BF953F]/30 space-y-4">
                   <div className="relative">
                     <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F] border-2 border-black"></span>
-                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 1:</span> Partnernummer bereithalten</p>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 1:</span> Partnernummer bereithalten (DE/AT/ES + Zahlen)</p>
                   </div>
                   <div className="relative">
                     <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F]/50 border-2 border-black"></span>
                     <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 2:</span> Link erstellen</p>
                   </div>
                   <div className="relative">
+                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F]/50 border-2 border-black"></span>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 3:</span> Link kopieren</p>
+                  </div>
+                  <div className="relative">
                     <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F]/30 border-2 border-black"></span>
-                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 3:</span> Nur noch diesen Link nutzen!</p>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 4:</span> Nur noch diesen Link nutzen!</p>
                   </div>
                 </div>
 
@@ -399,7 +609,7 @@ export default function Home() {
                   </div>
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
                     <LinkIcon className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
-                    <span className="text-xs text-muted-foreground">Story Link</span>
+                    <span className="text-xs text-muted-foreground">Story Link / DMs</span>
                   </div>
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
                     <QrCode className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
@@ -407,6 +617,72 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Fast Track Section */}
+        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
+          <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">7)</span> Dein möglicher Fast-Track Start*
+          </h2>
+          <Card className="border-[#BF953F]/20 bg-gradient-to-br from-[#BF953F]/5 to-transparent backdrop-blur-md overflow-hidden">
+            <CardContent className="p-6 space-y-6">
+              <p className="text-muted-foreground">LR bietet strukturierte Programme für neue Partner.</p>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-white font-medium flex items-center gap-2 mb-3">
+                    <Star className="h-5 w-5 text-[#BF953F]" /> Mögliche Bonus-Stufen*
+                  </h4>
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="bg-white/5 rounded-lg p-3 text-center border border-[#BF953F]/20">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold text-lg">300 €</span>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-3 text-center border border-[#BF953F]/20">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold text-lg">1.100 €</span>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-3 text-center border border-[#BF953F]/20">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold text-lg">2.000 €</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
+                  <TrendingUp className="h-6 w-6 text-[#BF953F]" />
+                  <div>
+                    <p className="text-white font-medium">Möglicher erster Karriereschritt</p>
+                    <p className="text-sm text-muted-foreground">Junior Manager*</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
+                  <Car className="h-6 w-6 text-[#BF953F]" />
+                  <div>
+                    <p className="text-white font-medium">Auto-Konzept</p>
+                    <p className="text-sm text-muted-foreground">Ab bestimmtem Umsatz & Teamleistung möglich.*</p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xs text-muted-foreground/70 italic">*Keine Garantie. Abhängig von Land, LR-Bedingungen und persönlicher Aktivität. Details in LR Neo/MyOffice.</p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Wichtige Links Section */}
+        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
+          <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">8)</span> Wichtige Infos & Seiten
+          </h2>
+          <Card className="border-white/10 bg-white/5 backdrop-blur-md">
+            <CardContent className="p-6">
+              <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                <a href="https://lrlifestyle.pro/" target="_blank" rel="noopener noreferrer">
+                  <span className="flex items-center gap-2"><Globe className="h-4 w-4" /> Info-Seite für Interessenten</span>
+                  <ArrowRight className="h-4 w-4 opacity-50" />
+                </a>
+              </Button>
             </CardContent>
           </Card>
         </section>
@@ -421,6 +697,9 @@ export default function Home() {
           <div className="text-xs text-muted-foreground/50 max-w-xs mx-auto space-y-2">
             <p>
               Bonus- & Auto-Programme sind abhängig von Land/aktuellen LR-Bedingungen und persönlicher Aktivität. Details in LR Neo/MyOffice.
+            </p>
+            <p>
+              Keine Einkommens- oder Ergebnisgarantie.
             </p>
             <p>
               © {new Date().getFullYear()} LR Lifestyle Team. All rights reserved.
