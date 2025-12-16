@@ -574,9 +574,17 @@ export default function Home() {
           </h2>
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-[#BF953F]/5 to-transparent backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
-              <p className="text-muted-foreground">LR bietet strukturierte Programme für neue Partner.</p>
-
               <div className="space-y-4">
+                <p className="text-muted-foreground">Schnell Junior Manager werden und vom Fast-Track-Bonus profitieren:</p>
+                
+                <div className="bg-[#BF953F]/10 border border-[#BF953F]/30 rounded-lg p-4 space-y-2">
+                  <p className="text-white font-medium">Qualifikation für Junior Manager & Fast-Track-Bonus:</p>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
+                    <li>2 direkte Partner mit mindestens 500 PW</li>
+                    <li>Gesamtumsatz von 4.000 PW</li>
+                  </ul>
+                </div>
+
                 <div>
                   <h4 className="text-white font-medium flex items-center gap-2 mb-3">
                     <Star className="h-5 w-5 text-[#BF953F]" /> Mögliche Bonus-Stufen*
@@ -595,18 +603,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
-                  <TrendingUp className="h-6 w-6 text-[#BF953F]" />
-                  <div>
-                    <p className="text-white font-medium">Möglicher erster Karriereschritt</p>
-                    <p className="text-sm text-muted-foreground">Junior Manager*</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10">
                   <Car className="h-6 w-6 text-[#BF953F]" />
                   <div>
                     <p className="text-white font-medium">Auto-Konzept</p>
-                    <p className="text-sm text-muted-foreground">Ab bestimmtem Umsatz & Teamleistung möglich.*</p>
+                    <p className="text-sm text-muted-foreground">Traumwagen bis zu 80% günstiger – ohne Anzahlung.*</p>
                   </div>
                 </div>
               </div>
