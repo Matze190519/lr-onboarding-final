@@ -65,7 +65,7 @@ export default function Home() {
 
               <div className="w-full grid gap-3 mt-2">
                 <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-[#BF953F]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg" asChild>
-                  <a href="https://api.whatsapp.com/send?phone=4915170605019" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Lina starten (WhatsApp)
                   </a>
@@ -132,7 +132,7 @@ export default function Home() {
                 <p>Falls Lina nach deiner Partnernummer fragt, gib sie ein und trage deine Daten ein.</p>
                 <p>Danach bist du freigeschaltet.</p>
                 <Button className="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold" asChild>
-                  <a href="https://api.whatsapp.com/send?phone=4915170605019" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Lina auf WhatsApp öffnen
                   </a>
@@ -194,7 +194,7 @@ export default function Home() {
                 <p>Wähle im Choose-Menü „Telefoniere mit Lina“ und sprich live mit ihr – wie ein echtes Telefongespräch.</p>
                 <p>Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.</p>
                 <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold" asChild>
-                  <a href="https://api.whatsapp.com/send?phone=4915170605019" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Lina eine Frage stellen
                   </a>
