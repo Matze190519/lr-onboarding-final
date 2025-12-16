@@ -14,10 +14,10 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Top Left Blue Glow */}
-        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-blue-600/10 rounded-full blur-[120px]" />
-        {/* Bottom Right Green Glow */}
-        <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-green-500/10 rounded-full blur-[120px]" />
+        {/* Top Left Gold Glow */}
+        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-[#BF953F]/10 rounded-full blur-[120px]" />
+        {/* Bottom Right Gold Glow */}
+        <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-[#AA771C]/5 rounded-full blur-[120px]" />
       </div>
 
       <main className="relative z-10 container max-w-md mx-auto py-8 px-4 flex flex-col gap-8">
@@ -25,13 +25,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col items-center text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="space-y-2">
-            <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-medium text-blue-300 mb-4 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-blue-400 mr-2 animate-pulse"></span>
-              AI POWERED BUSINESS
+            <div className="flex justify-center mb-6">
+              <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]" />
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-white drop-shadow-sm leading-tight">
               Herzlich willkommen im <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] to-[#0088cc]">LR Lifestyle Team</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">LR Lifestyle Team</span>
             </h1>
             <p className="text-lg text-muted-foreground font-light">
               Dein Start in 30–60 Minuten – Schritt für Schritt
@@ -39,12 +38,12 @@ export default function Home() {
           </div>
 
           {/* Profile Card */}
-          <Card className="w-full border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden group hover:border-white/10 transition-all duration-500">
+          <Card className="w-full border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500">
             <CardContent className="p-6 flex flex-col items-center gap-4">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-tr from-[#25D366] to-[#0088cc] rounded-full opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
-                <Avatar className="w-24 h-24 border-2 border-white/10 relative ring-2 ring-white/5 ring-offset-2 ring-offset-black/50">
-                  <AvatarImage src="/images/profile-placeholder.jpg" alt="Mathias Vinzing" className="object-cover" />
+                <div className="absolute -inset-4 bg-gradient-to-tr from-[#BF953F] via-[#FCF6BA] to-[#AA771C] rounded-full opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+                <Avatar className="w-32 h-32 border-2 border-[#BF953F]/20 relative ring-2 ring-[#BF953F]/10 ring-offset-2 ring-offset-black/50">
+                  <AvatarImage src="/images/profile-new.png" alt="Mathias Vinzing" className="object-cover" />
                   <AvatarFallback className="bg-muted text-muted-foreground">MV</AvatarFallback>
                 </Avatar>
               </div>
@@ -55,19 +54,19 @@ export default function Home() {
               </div>
 
               <div className="w-full grid gap-3 mt-2">
-                <Button className="w-full bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#128C7E] hover:to-[#25D366] text-white font-semibold shadow-lg shadow-[#25D366]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg">
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-[#BF953F]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Lina starten (WhatsApp)
                 </Button>
                 
-                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#0088cc] hover:border-[#0088cc]/30 transition-all duration-300" size="lg" asChild>
+                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#FCF6BA] hover:border-[#BF953F]/50 transition-all duration-300" size="lg" asChild>
                   <a href="https://myoffice.lrworld.com/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     LR Neo / MyOffice öffnen
                   </a>
                 </Button>
 
-                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#0088cc] hover:border-[#0088cc]/30 transition-all duration-300" size="lg">
+                <Button variant="outline" className="w-full border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#FCF6BA] hover:border-[#BF953F]/50 transition-all duration-300" size="lg">
                   <Users className="mr-2 h-4 w-4" />
                   Gruppen beitreten
                 </Button>
@@ -176,10 +175,20 @@ export default function Home() {
         {/* LR Neo Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">2)</span> LR Neo & MyOffice
+            <span className="text-[#D4AF37]">2)</span> LR Neo & MyOffice
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-4">
+              
+              {/* App Download Links */}
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                <a href="https://apps.apple.com/de/app/lr-connect/id1510357433" target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-105">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" className="w-full h-auto" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.lr.dpf&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-105">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" className="w-full h-auto" />
+                </a>
+              </div>
               <p className="text-muted-foreground">
                 Deine zentralen Tools für den Erfolg. Hier findest du alles, was du für dein Business brauchst.
               </p>
