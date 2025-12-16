@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-[#BF953F]/30">
       {/* Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Top Left Gold Glow */}
@@ -50,7 +50,7 @@ export default function Home() {
               
               <div className="text-center space-y-1">
                 <h3 className="text-xl font-heading font-semibold text-white">Mathias Vinzing</h3>
-                <p className="text-sm text-primary font-medium tracking-wide uppercase text-xs">Platin Orgaleiter</p>
+                <p className="text-sm text-[#BF953F] font-medium tracking-wide uppercase text-xs">Platin Orgaleiter</p>
               </div>
 
               <div className="w-full grid gap-3 mt-2">
@@ -78,25 +78,25 @@ export default function Home() {
         {/* Startplan Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">A)</span> Dein Startplan
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">A)</span> Dein Startplan
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-4">
               <div className="space-y-4">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold border border-primary/30 group-hover:bg-primary group-hover:text-black transition-colors">1</div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">1</div>
                   <span className="text-white font-medium">Lina (KI) aktivieren</span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold border border-primary/30 group-hover:bg-primary group-hover:text-black transition-colors">2</div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">2</div>
                   <span className="text-white font-medium">LR Neo & MyOffice</span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold border border-primary/30 group-hover:bg-primary group-hover:text-black transition-colors">3</div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">3</div>
                   <span className="text-white font-medium">Gruppen beitreten</span>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-primary/30 transition-colors cursor-pointer group">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold border border-primary/30 group-hover:bg-primary group-hover:text-black transition-colors">4</div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors cursor-pointer group">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30 group-hover:bg-[#BF953F] group-hover:text-black transition-colors">4</div>
                   <span className="text-white font-medium">Starterwebinar & Meeting</span>
                 </div>
               </div>
@@ -111,13 +111,13 @@ export default function Home() {
               <img src="/images/lina.png" alt="Lina AI" className="w-full h-full object-cover" />
             </div>
             <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-              <span className="text-[#D4AF37]">1)</span> Lina (KI) – dein 24/7 Coach
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">1)</span> Lina (KI) – dein 24/7 Coach
             </h2>
           </div>
           
           <Accordion type="single" collapsible className="w-full space-y-3">
             <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-primary hover:no-underline font-medium py-4">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
                 Lina aktivieren
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
@@ -138,7 +138,7 @@ export default function Home() {
             </AccordionItem>
 
             <AccordionItem value="item-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-primary hover:no-underline font-medium py-4">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
                 Was Lina konkret kann
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4">
@@ -153,7 +153,7 @@ export default function Home() {
             </AccordionItem>
 
             <AccordionItem value="item-3" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-primary hover:no-underline font-medium py-4">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
                 Mit Lina telefonieren
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4">
@@ -161,8 +161,8 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border border-primary/30 bg-primary/5 rounded-xl px-4 data-[state=open]:bg-primary/10 transition-all duration-300">
-              <AccordionTrigger className="text-primary hover:text-primary/80 hover:no-underline font-bold py-4">
+            <AccordionItem value="item-4" className="border border-[#BF953F]/30 bg-[#BF953F]/5 rounded-xl px-4 data-[state=open]:bg-[#BF953F]/10 transition-all duration-300">
+              <AccordionTrigger className="text-[#BF953F] hover:text-[#BF953F]/80 hover:no-underline font-bold py-4">
                 Wichtig: Fragen stellen!
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4">
@@ -175,7 +175,7 @@ export default function Home() {
         {/* LR Neo Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-[#D4AF37]">2)</span> LR Neo & MyOffice
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">2)</span> LR Neo & MyOffice
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-4">
@@ -193,13 +193,13 @@ export default function Home() {
                 Deine zentralen Tools für den Erfolg. Hier findest du alles, was du für dein Business brauchst.
               </p>
               <div className="grid gap-3">
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-primary hover:border-primary/30 h-auto py-4" asChild>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://myoffice.lrworld.com/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> MyOffice öffnen</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
                   </a>
                 </Button>
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-primary hover:border-primary/30 h-auto py-4" asChild>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://sso.lrworld.com/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><Smartphone className="h-4 w-4" /> LR Neo Login</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
@@ -213,12 +213,12 @@ export default function Home() {
         {/* Gruppen Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">3)</span> Gruppen: WhatsApp & Telegram
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">3)</span> Gruppen: WhatsApp & Telegram
           </h2>
           
           <Accordion type="single" collapsible className="w-full space-y-3">
             <AccordionItem value="group-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-primary hover:no-underline font-medium py-4">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
                 Warum 2x WhatsApp?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-3">
@@ -239,7 +239,7 @@ export default function Home() {
             </AccordionItem>
 
             <AccordionItem value="group-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
-              <AccordionTrigger className="text-white hover:text-primary hover:no-underline font-medium py-4">
+              <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
                 Warum Telegram?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-3">
@@ -264,20 +264,20 @@ export default function Home() {
         {/* Webinar Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">4)</span> Starterwebinar & Teammeeting
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">4)</span> Starterwebinar & Teammeeting
           </h2>
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent backdrop-blur-md overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+          <Card className="border-[#BF953F]/20 bg-gradient-to-br from-primary/5 to-transparent backdrop-blur-md overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#BF953F]/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
             <CardContent className="p-6 space-y-6">
               
               {/* Starterwebinar - KORRIGIERT: DIENSTAG */}
               <div className="flex gap-4 items-start">
-                <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0 border border-primary/30">
+                <div className="h-10 w-10 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] shrink-0 border border-[#BF953F]/30">
                   <Video className="h-5 w-5" />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-lg font-semibold text-white">Starterwebinar</h3>
-                  <p className="text-primary font-medium">Jeden Dienstag um 20:00 Uhr</p>
+                  <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-medium">Jeden Dienstag um 20:00 Uhr</p>
                   <p className="text-sm text-muted-foreground">Die Links kommen rechtzeitig in die Gruppen.</p>
                 </div>
               </div>
@@ -303,13 +303,13 @@ export default function Home() {
         {/* Geschäftsvorstellung Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-900">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">5)</span> Geschäftsvorstellung
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">5)</span> Geschäftsvorstellung
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-6">
               <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-black relative group cursor-pointer">
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-black/30 transition-colors">
-                  <div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center pl-1 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                  <div className="h-16 w-16 rounded-full bg-[#BF953F]/90 flex items-center justify-center pl-1 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
                     <Play className="h-8 w-8 text-black fill-black" />
                   </div>
                 </div>
@@ -320,13 +320,13 @@ export default function Home() {
               </div>
 
               <div className="grid gap-3">
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-primary hover:border-primary/30 h-auto py-4" asChild>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://dein-lr-business.de/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Präsentation öffnen</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
                   </a>
                 </Button>
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-primary hover:border-primary/30 h-auto py-4" asChild>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                   <a href="https://dein-lr-business.de/personalize.html" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center gap-2"><LinkIcon className="h-4 w-4" /> Link personalisieren</span>
                     <ArrowRight className="h-4 w-4 opacity-50" />
@@ -334,8 +334,8 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
-                <h4 className="text-primary font-semibold mb-2 flex items-center gap-2">
+              <div className="bg-[#BF953F]/5 border border-[#BF953F]/10 rounded-lg p-4">
+                <h4 className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-semibold mb-2 flex items-center gap-2">
                   <Smartphone className="h-4 w-4" /> How-To für dich:
                 </h4>
                 <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
@@ -351,12 +351,12 @@ export default function Home() {
         {/* KI-Voice Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">6)</span> Unternehmer-Tool: KI-Voice
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">6)</span> Unternehmer-Tool: KI-Voice
           </h2>
-          <Card className="border-primary/20 bg-gradient-to-br from-black to-primary/5 backdrop-blur-md overflow-hidden">
+          <Card className="border-[#BF953F]/20 bg-gradient-to-br from-black to-primary/5 backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
               <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
+                <div className="h-12 w-12 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] border border-[#BF953F]/30">
                   <Mic className="h-6 w-6" />
                 </div>
                 <div>
@@ -366,22 +366,22 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <div className="relative pl-4 border-l-2 border-primary/30 space-y-4">
+                <div className="relative pl-4 border-l-2 border-[#BF953F]/30 space-y-4">
                   <div className="relative">
-                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-primary border-2 border-black"></span>
-                    <p className="text-sm text-white"><span className="text-primary font-bold">Schritt 1:</span> Partnernummer bereithalten</p>
+                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F] border-2 border-black"></span>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 1:</span> Partnernummer bereithalten</p>
                   </div>
                   <div className="relative">
-                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-primary/50 border-2 border-black"></span>
-                    <p className="text-sm text-white"><span className="text-primary font-bold">Schritt 2:</span> Link erstellen</p>
+                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F]/50 border-2 border-black"></span>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 2:</span> Link erstellen</p>
                   </div>
                   <div className="relative">
-                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-primary/30 border-2 border-black"></span>
-                    <p className="text-sm text-white"><span className="text-primary font-bold">Schritt 3:</span> Nur noch diesen Link nutzen!</p>
+                    <span className="absolute -left-[21px] top-0 h-3 w-3 rounded-full bg-[#BF953F]/30 border-2 border-black"></span>
+                    <p className="text-sm text-white"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Schritt 3:</span> Nur noch diesen Link nutzen!</p>
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-primary/90 to-primary hover:from-primary hover:to-primary/90 text-black font-semibold shadow-lg shadow-primary/20" asChild>
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-[#BF953F]/20" asChild>
                   <a href="https://ki-voice.net/team-link" target="_blank" rel="noopener noreferrer">
                     <LinkIcon className="mr-2 h-4 w-4" />
                     Jetzt Team-Link erstellen
@@ -390,19 +390,19 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
-                    <Smartphone className="h-5 w-5 text-primary mx-auto mb-1" />
+                    <Smartphone className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
                     <span className="text-xs text-muted-foreground">Insta Bio</span>
                   </div>
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
-                    <MessageCircle className="h-5 w-5 text-primary mx-auto mb-1" />
+                    <MessageCircle className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
                     <span className="text-xs text-muted-foreground">WhatsApp Status</span>
                   </div>
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
-                    <LinkIcon className="h-5 w-5 text-primary mx-auto mb-1" />
+                    <LinkIcon className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
                     <span className="text-xs text-muted-foreground">Story Link</span>
                   </div>
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
-                    <QrCode className="h-5 w-5 text-primary mx-auto mb-1" />
+                    <QrCode className="h-5 w-5 text-[#BF953F] mx-auto mb-1" />
                     <span className="text-xs text-muted-foreground">QR Code</span>
                   </div>
                 </div>
@@ -414,8 +414,8 @@ export default function Home() {
         {/* Footer */}
         <footer className="text-center space-y-6 pt-8 pb-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-            <a href="[IMPRINT_URL]" className="hover:text-primary transition-colors">Impressum</a>
-            <a href="[PRIVACY_URL]" className="hover:text-primary transition-colors">Datenschutz</a>
+            <a href="[IMPRINT_URL]" className="hover:text-[#BF953F] transition-colors">Impressum</a>
+            <a href="[PRIVACY_URL]" className="hover:text-[#BF953F] transition-colors">Datenschutz</a>
           </div>
           
           <div className="text-xs text-muted-foreground/50 max-w-xs mx-auto space-y-2">

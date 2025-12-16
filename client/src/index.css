@@ -46,7 +46,7 @@
 
 :root {
   /* Premium Gold & Black Theme - Light Mode (Fallback, mainly Dark Mode used) */
-  --primary: oklch(0.78 0.15 85); /* Gold #D4AF37 approx */
+  --primary: oklch(0.75 0.12 75); /* Metallic Gold - closer to #BF953F */
   --primary-foreground: oklch(0.15 0.02 280); /* Deep Black */
   --sidebar-primary: oklch(0.78 0.15 85);
   --sidebar-primary-foreground: oklch(0.15 0.02 280);
@@ -67,7 +67,7 @@
   --popover-foreground: oklch(0.98 0 0);
   
   /* Primary Gold Colors */
-  --primary: oklch(0.78 0.15 85); /* Gold #D4AF37 */
+  --primary: oklch(0.75 0.12 75); /* Metallic Gold - closer to #BF953F */
   --primary-foreground: oklch(0.10 0.01 280);
   
   --secondary: oklch(0.20 0.02 85); /* Dark Gold/Bronze */
@@ -93,7 +93,7 @@
 
 .dark {
   /* Premium Gold & Black Theme - Dark Mode (Primary) */
-  --primary: oklch(0.78 0.15 85); /* Gold #D4AF37 */
+  --primary: oklch(0.75 0.12 75); /* Metallic Gold - closer to #BF953F */
   --primary-foreground: oklch(0.10 0.01 280); /* Deep Black Text on Gold */
   --sidebar-primary: oklch(0.78 0.15 85);
   --sidebar-primary-foreground: oklch(0.10 0.01 280);
