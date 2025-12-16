@@ -27,11 +27,11 @@ export default function Home() {
               <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]" />
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-white drop-shadow-sm leading-tight">
-              Herzlich willkommen im <br/>
+              Willkommen im <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">LR Lifestyle Team</span>
             </h1>
             <p className="text-lg text-muted-foreground font-light">
-              Dein Start in 30–60 Minuten – Schritt für Schritt
+              Hier findest du alles, was du für deinen Start brauchst.
             </p>
           </div>
 
@@ -103,20 +103,18 @@ export default function Home() {
           {/* Lina Intro Text */}
           <Card className="border-[#BF953F]/20 bg-[#BF953F]/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-4 text-muted-foreground">
-              <p className="text-white font-medium">Hallo und herzlich willkommen im LR Lifestyle Team.</p>
-              <p>Ich bin <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">Lina</span> – deine digitale Partnerin auf deinem Weg im LR Business.</p>
+              <p className="text-white font-medium">Lina ist deine KI-Assistentin auf WhatsApp.</p>
               
-              <p>Ich begleite dich Schritt für Schritt:</p>
+              <p>Sie hilft dir bei:</p>
               <ul className="list-disc list-inside space-y-1 ml-2">
-                <li>Beim Onboarding</li>
-                <li>Bei der Einrichtung deines Online-Shops</li>
-                <li>Bei Produktfragen</li>
-                <li>Beim Teamaufbau</li>
-                <li>Bei Social Media</li>
-                <li>Und sogar per Live-Telefonat</li>
+                <li>OnlineShop einrichten</li>
+                <li>Produktfragen</li>
+                <li>Teamaufbau & Namensliste</li>
+                <li>Social Media Texte & Ideen</li>
+                <li>WhatsApp Vorlagen</li>
               </ul>
 
-              <p className="text-white font-medium">Du bist nicht allein. Ich bin 24/7 für dich da und helfe dir, deinen Start einfach, klar und strukturiert zu machen.</p>
+              <p className="text-white font-medium">Du kannst Lina auch anrufen und live mit ihr sprechen.</p>
             </CardContent>
           </Card>
           
@@ -213,7 +211,10 @@ export default function Home() {
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-4">
               <p className="text-muted-foreground">
-                Die LR Connect App ist deine mobile Zentrale für unterwegs. Hier hast du Zugriff auf wichtige Funktionen, Produktinfos und dein Team.
+                Lade dir die App runter. Du brauchst sie später für deine Umsätze, Bestellungen und um neue Partner zu registrieren.
+              </p>
+              <p className="text-white font-medium">
+                Einloggen kannst du dich, sobald dein Shop steht.
               </p>
               
               <div className="grid gap-3">
@@ -241,34 +242,18 @@ export default function Home() {
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-4 text-muted-foreground">
-              <p>Das hier ist der Anfang deines Geschäfts. Es geht nicht darum, sofort alles perfekt zu können, sondern darum, das Geschäft <strong className="text-white">Schritt für Schritt</strong> zu erlernen.</p>
-              
-              <p className="font-medium text-white">In den ersten Tagen geht es darum:</p>
+              <p className="font-medium text-white">Die ersten 1–2 Wochen:</p>
               <ul className="list-disc list-inside space-y-1 ml-2">
-                <li>Erste Kunden kennenzulernen</li>
-                <li>Erste Partner zu gewinnen</li>
-                <li>Gespräche zu führen</li>
-                <li>Deinen Weg zur Duplikation zu finden</li>
+                <li>OnlineShop aufsetzen (mit Lina)</li>
+                <li>Produkte bestellen & testen</li>
+                <li>Namensliste schreiben (50–100 Kontakte)</li>
+                <li>Erste Gespräche führen</li>
+                <li>Starterwebinar besuchen</li>
               </ul>
 
-              <p>Network Marketing funktioniert nicht über wenige Gespräche mit Druck, sondern über <strong className="text-white">viele Gespräche mit Leichtigkeit</strong>.</p>
+              <p className="text-white font-medium mt-4">Ziel: 2–4 Partner + erste Kunden gewinnen.</p>
 
-              <div className="bg-[#BF953F]/5 border border-[#BF953F]/20 rounded-lg p-4 space-y-2">
-                <p className="text-white font-medium">Sprich mit Menschen. Zeig ihnen Produkte. Sprich über Möglichkeiten. Höre zu.</p>
-                <p className="text-sm">Nicht jeder ist der Richtige – und genau das ist Teil dieses Geschäfts. Es geht nicht ums Rekrutieren um jeden Preis, sondern ums <strong className="text-white">Selektieren der richtigen Menschen</strong>.</p>
-              </div>
-
-              <p className="font-medium text-white">Dein Fokus am Anfang:</p>
-              <ul className="list-disc list-inside space-y-1 ml-2">
-                <li>2–4 Partner</li>
-                <li>Erste Kunden</li>
-                <li>Produkte erleben und empfehlen</li>
-                <li>Deinen Partnern helfen, genau das Gleiche zu tun</li>
-              </ul>
-
-              <p>So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">1.100 € im Monat*</span>.</p>
-
-              <p className="text-xs text-muted-foreground/70 italic">*Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.</p>
+              <p className="text-xs text-muted-foreground/70 italic mt-4">Keine Garantie. Ergebnisse hängen von deinem Einsatz ab.</p>
             </CardContent>
           </Card>
         </section>
@@ -324,17 +309,15 @@ export default function Home() {
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-4">
-              <p className="text-muted-foreground">
-                LR Neo und MyOffice sind deine zentralen Seiten für deinen Erfolg. Hier siehst du:
+              <p className="text-white font-medium">
+                Hier siehst du deine Zahlen:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-2 text-muted-foreground">
-                <li>Umsätze</li>
-                <li>Bestellungen</li>
-                <li>Neue Partner</li>
-                <li>Teamstruktur</li>
+                <li>Umsätze & Bestellungen</li>
+                <li>Deine Partner & Teamstruktur</li>
                 <li>Deine Qualifikation</li>
               </ul>
-              <p className="text-white font-medium">Hier kannst du auch neue Partner direkt online in dein Team registrieren.</p>
+              <p className="text-muted-foreground mt-3">Hier registrierst du auch neue Partner in dein Team.</p>
               
               <div className="grid gap-3 mt-4">
                 <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
@@ -439,7 +422,8 @@ export default function Home() {
                 <div className="space-y-1">
                   <h3 className="text-lg font-semibold text-white">Starterwebinar</h3>
                   <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-medium">Jeden Dienstag um 20:00 Uhr – live</p>
-                  <p className="text-sm text-muted-foreground">Hier kannst du alles verstehen, Fragen stellen und auch jederzeit deine Interessenten einladen. Die Links kommen rechtzeitig in die Gruppen.</p>
+                  <p className="text-sm text-muted-foreground">Lerne das Geschäft verstehen. Stell Fragen. Lade deine Interessenten ein.</p>
+                  <p className="text-sm text-white font-medium mt-2">Die Links kommen rechtzeitig in die Gruppen.</p>
                 </div>
               </div>
 
@@ -482,11 +466,10 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="space-y-3 text-sm text-muted-foreground">
-                  <p className="text-white font-medium">Warum diese Präsentation?</p>
-                  <p>Diese Präsentation ist dein wichtigstes Werkzeug, um Interessenten das LR Geschäft professionell vorzustellen – egal ob persönlich, per WhatsApp oder Video-Call.</p>
-                  <p className="text-white font-medium">Warum den Link personalisieren?</p>
-                  <p>Wenn du den Link personalisierst, erscheinen in der Präsentation dein Name, dein Bild und deine Kontaktdaten – nicht die von Mathias. Interessenten sehen dann direkt, an wen sie sich wenden müssen.</p>
-                  <p>Wenn du die Präsentation per Zoom aufnimmst, sind ebenfalls deine Daten im Video – so bleibt alles professionell und persönlich.</p>
+                  <p className="text-white font-medium">So nutzt du die Präsentation:</p>
+                  <p>Schick den Link an Interessenten oder zeig sie live per Zoom. Nutze sie für deine Geschäftsvorstellungen.</p>
+                  <p className="text-white font-medium mt-3">Link personalisieren:</p>
+                  <p>Wenn du den Link personalisierst, erscheinen dein Name, dein Bild und deine Kontaktdaten in der Präsentation – nicht die von Mathias.</p>
                 </div>
                 
                 <div className="grid gap-3">
@@ -570,9 +553,9 @@ export default function Home() {
                 </div>
 
                 <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-[#BF953F]/20" asChild>
-                  <a href="https://ki-voice.net/team-link" target="_blank" rel="noopener noreferrer">
+                  <a href="https://ki-voice.net/" target="_blank" rel="noopener noreferrer">
                     <LinkIcon className="mr-2 h-4 w-4" />
-                    Jetzt Team-Link erstellen
+                    Zur KI-Voice Webseite
                   </a>
                 </Button>
 
@@ -607,20 +590,16 @@ export default function Home() {
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-[#BF953F]/5 to-transparent backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
               <div className="space-y-4">
-                <p className="text-muted-foreground">Schnell Junior Manager werden und vom Fast-Track-Bonus profitieren:</p>
-                
                 <div className="bg-[#BF953F]/10 border border-[#BF953F]/30 rounded-lg p-4 space-y-2">
-                  <p className="text-white font-medium">Qualifikation für Junior Manager & Fast-Track-Bonus:</p>
+                  <p className="text-white font-medium">Junior Manager Qualifikation:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
-                    <li>2 direkte Partner mit mindestens 500 PW</li>
-                    <li>Gesamtumsatz von 4.000 PW</li>
+                    <li>2 direkte Partner mit je 500 PW</li>
+                    <li>Gesamtumsatz 4.000 PW</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-white font-medium flex items-center gap-2 mb-3">
-                    <Star className="h-5 w-5 text-[#BF953F]" /> Mögliche Bonus-Stufen*
-                  </h4>
+                  <p className="text-white font-medium mb-2">Mögliche Fast-Track-Boni:</p>
                   <div className="grid grid-cols-3 gap-2">
                     <div className="bg-white/5 rounded-lg p-3 text-center border border-[#BF953F]/20">
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold text-lg">300 €</span>
@@ -638,12 +617,12 @@ export default function Home() {
                   <Car className="h-6 w-6 text-[#BF953F]" />
                   <div>
                     <p className="text-white font-medium">Auto-Konzept</p>
-                    <p className="text-sm text-muted-foreground">Traumwagen bis zu 80% günstiger – ohne Anzahlung.*</p>
+                    <p className="text-sm text-muted-foreground">Ab bestimmter Qualifikation möglich.</p>
                   </div>
                 </div>
               </div>
 
-              <p className="text-xs text-muted-foreground/70 italic">*Keine Garantie. Abhängig von Land, LR-Bedingungen und persönlicher Aktivität. Details in LR Neo/MyOffice.</p>
+              <p className="text-xs text-muted-foreground/70 italic">Details in LR Neo/MyOffice. Abhängig von Land und LR-Bedingungen.</p>
             </CardContent>
           </Card>
         </section>
