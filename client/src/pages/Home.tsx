@@ -453,8 +453,8 @@ export default function Home() {
                   <p className="text-white font-medium">Warum diese Präsentation?</p>
                   <p>Diese Präsentation ist dein wichtigstes Werkzeug, um Interessenten das LR Geschäft professionell vorzustellen – egal ob persönlich, per WhatsApp oder Video-Call.</p>
                   <p className="text-white font-medium">Warum den Link personalisieren?</p>
-                  <p>Wenn du den Link mit deinem Namen und deiner Partnernummer personalisierst, können Interessenten die Präsentation in Ruhe durchgehen. Wenn sie sich danach registrieren wollen, landen sie automatisch bei dir – du musst nichts weiter tun.</p>
-                  <p>So kannst du die Präsentation einfach verschicken und deine Interessenten informieren sich selbst, wann es für sie passt.</p>
+                  <p>Wenn du den Link personalisierst, erscheinen in der Präsentation dein Name, dein Bild und deine Kontaktdaten – nicht die von Mathias. Interessenten sehen dann direkt, an wen sie sich wenden müssen.</p>
+                  <p>Wenn du die Präsentation per Zoom aufnimmst, sind ebenfalls deine Daten im Video – so bleibt alles professionell und persönlich.</p>
                 </div>
                 
                 <div className="grid gap-3">
