@@ -160,12 +160,11 @@ export default function Home() {
                     </AccordionTrigger>
                     <AccordionContent className="pt-2 pl-14 text-muted-foreground">
                       <div className="space-y-3 text-sm">
-                        <p>Nachdem Lina aktiviert und freigeschaltet ist, startest du jetzt das LR-Onboarding.</p>
+                        <p>Nachdem Lina aktiviert und freigeschaltet ist, startest du jetzt das komplette LR-Onboarding.</p>
                         <p>So gehst du vor:</p>
                         <p>– Tippe unten auf Choose</p>
                         <p>– Wähle Onboarding</p>
-                        <p>– Starte mit OnlineShop einrichten und gehe den Prozess komplett durch</p>
-                        <p>– Danach: Webseite einrichten und ebenfalls komplett durchgehen</p>
+                        <p>– Gehe den kompletten Prozess durch (OnlineShop einrichten + Webseite einrichten)</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
