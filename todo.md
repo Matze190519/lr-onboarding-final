@@ -1,12 +1,2 @@
 
-- [x] Hero: Für Teampartner umschreiben (Willkommen-Ton, nicht Marketing)
-- [x] Lina-Intro: Praktisch erklären was Lina kann (keine Verkaufssprache)
-- [x] LR Connect: Einfach erklären wofür die App ist
-- [x] Dein Start: Konkrete erste Schritte für neue Partner
-- [x] Startplan: Klare Anleitung ohne Zeitdruck
-- [x] LR Neo: Erklären was Partner dort finden
-- [x] Starterwebinar: Wann und warum teilnehmen
-- [x] Geschäftsvorstellung: Praktische Nutzung erklären
-- [x] Fast-Track: Realistische Infos ohne Übertreibung
-- [x] Team-Registrierung Link korrigieren (zur Webseite, nicht direkt Registrierung)
-- [x] KI-Voice Link korrigieren (zur Webseite, nicht direkt Registrierung)
+- [x] KI-Voice: Zwei Buttons hinzufügen (Webseite + Registrierung)

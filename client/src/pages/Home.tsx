@@ -552,12 +552,20 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-[#BF953F]/20" asChild>
-                  <a href="https://ki-voice.net/" target="_blank" rel="noopener noreferrer">
-                    <LinkIcon className="mr-2 h-4 w-4" />
-                    Zur KI-Voice Webseite
-                  </a>
-                </Button>
+                <div className="grid gap-3">
+                  <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                    <a href="https://ki-voice.net/" target="_blank" rel="noopener noreferrer">
+                      <span className="flex items-center gap-2"><Globe className="h-4 w-4" /> KI-Voice Webseite ansehen</span>
+                      <ArrowRight className="h-4 w-4 opacity-50" />
+                    </a>
+                  </Button>
+                  <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-[#BF953F]/20" asChild>
+                    <a href="https://ki-voice.net/team-link" target="_blank" rel="noopener noreferrer">
+                      <LinkIcon className="mr-2 h-4 w-4" />
+                      Jetzt Team-Link erstellen
+                    </a>
+                  </Button>
+                </div>
 
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-white/5 rounded-lg p-3 text-center border border-white/5">
