@@ -1,2 +1,2 @@
 
-- [x] Fast-Track Überschrift ändern: "Unser gemeinsames Ziel – die ersten 1-2 Wochen"
+- [x] Vorschau-Bild für WhatsApp/Social Media einbauen (Open Graph Meta Tags)
