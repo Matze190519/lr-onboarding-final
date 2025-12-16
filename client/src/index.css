@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-heading: "Inter", sans-serif;
   --font-sans: "Inter", sans-serif;
-  --font-heading: "Montserrat", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -55,26 +55,36 @@
   --chart-3: oklch(0.55 0.10 85);
   --chart-4: oklch(0.45 0.08 85);
   --chart-5: oklch(0.35 0.06 85);
-  --radius: 1rem; /* More rounded for premium feel */
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.15 0.02 280);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 280);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 280);
-  --secondary: oklch(0.95 0.01 85);
-  --secondary-foreground: oklch(0.25 0.05 85);
-  --muted: oklch(0.95 0.01 85);
-  --muted-foreground: oklch(0.55 0.02 85);
-  --accent: oklch(0.95 0.01 85);
-  --accent-foreground: oklch(0.25 0.05 85);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.90 0.02 85);
-  --input: oklch(0.90 0.02 85);
-  --ring: oklch(0.78 0.15 85);
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0.02 280);
+  --radius: 1rem; /* More rounded for premium   /* Deep Blue Background #020617 */
+  --background: oklch(0.15 0.05 260); 
+  --foreground: oklch(0.98 0 0);
+  
+  /* Glass Cards */
+  --card: oklch(0.2 0.05 260 / 0.4);
+  --card-foreground: oklch(0.98 0 0);
+  
+  --popover: oklch(0.2 0.05 260 / 0.9);
+  --popover-foreground: oklch(0.98 0 0);
+  
+  /* Primary Gradient Colors (Green to Blue) */
+  --primary: oklch(0.7 0.15 150); /* Bright Greenish */
+  --primary-foreground: oklch(0.15 0.05 260);
+  
+  --secondary: oklch(0.3 0.05 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  
+  --muted: oklch(0.3 0.05 260);
+  --muted-foreground: oklch(0.7 0.05 260);
+  
+  --accent: oklch(0.3 0.05 260);
+  --accent-foreground: oklch(0.98 0 0);
+  
+  --destructive: oklch(0.6 0.2 20);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.98 0 0 / 0.1);
+  --input: oklch(0.98 0 0 / 0.1);
+  --ring: oklch(0.7 0.15 150);
   --sidebar-accent: oklch(0.95 0.01 85);
   --sidebar-accent-foreground: oklch(0.25 0.05 85);
   --sidebar-border: oklch(0.90 0.02 85);
