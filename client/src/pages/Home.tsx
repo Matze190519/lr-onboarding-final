@@ -247,101 +247,32 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">A)</span> Dein Startplan
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
-            <CardContent className="p-4">
-              <div className="space-y-4">
-                <Accordion type="single" collapsible className="w-full space-y-2">
-                  <AccordionItem value="step-1" className="border-0">
-                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
-                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">1</div>
-                      <span className="text-white font-medium flex-1 text-left">Lina (KI) aktivieren</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <ul className="space-y-1 text-sm">
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp öffnen</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> „Hallo" schreiben</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Menü / Choose → „Onboarding Hilfe"</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Partnernummer eingeben</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Daten bestätigen → Freischaltung</li>
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="step-2" className="border-0">
-                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
-                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">2</div>
-                      <span className="text-white font-medium flex-1 text-left">LR-Start Onboarding in Lina (OnlineShop & Webseite einrichten)</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <div className="space-y-3 text-sm">
-                        <p>Nachdem Lina aktiviert und freigeschaltet ist, startest du jetzt das komplette LR-Onboarding.</p>
-                        <p>So gehst du vor:</p>
-                        <p>– Tippe unten auf Choose</p>
-                        <p>– Wähle Onboarding</p>
-                        <p>– Starte mit Onboarding Prozess</p>
-                        <p>– Gehe den kompletten Prozess durch (OnlineShop einrichten + Webseite einrichten)</p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="step-3" className="border-0">
-                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
-                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">3</div>
-                      <span className="text-white font-medium flex-1 text-left">Lina-Onboarding (Videos zur Bedienung von Lina)</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <div className="space-y-3 text-sm">
-                        <p>Nach dem LR-Onboarding folgt das Lina-Onboarding.</p>
-                        <p>Das ist ein eigenes Onboarding, in dem Lina dir per Video erklärt,</p>
-                        <p>wie du Lina richtig benutzt und wie die wichtigsten Funktionen aufgebaut sind.</p>
-                        <p>So gehst du vor:</p>
-                        <p>– Tippe unten auf Choose</p>
-                        <p>– Starte das Lina-Onboarding</p>
-                        <p>– Schau dir die Videos an, die Lina dir sendet</p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="step-4" className="border-0">
-                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
-                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">4</div>
-                      <span className="text-white font-medium flex-1 text-left">Normale Lina-Menüs nutzen (alle Themen einmal durchgehen)</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <div className="space-y-3 text-sm">
-                        <p>Zusätzlich zum Lina-Onboarding solltest du dir auch die normalen Lina-Menüs anschauen.</p>
-                        <p>So funktioniert das:</p>
-                        <p>– Tippe unten auf Choose</p>
-                        <p>– Es öffnet sich ein Menü mit verschiedenen Menüpunkten:</p>
-                        <p>  – Onboarding</p>
-                        <p>  – Social Media Hilfe</p>
-                        <p>  – Telefoniere mit Lina</p>
-                        <p>  – LR Allgemein</p>
-                        <p>  – Business & Karriere</p>
-                        <p>  – Produkte Infos</p>
-                        <p>  – Verkauf & Vertrieb</p>
-                        <p>  – Schnellzugriff</p>
-                        <p>Gehe diese Menüpunkte einmal komplett durch,</p>
-                        <p>damit du weißt, wo du welches Thema findest.</p>
-                        <p>Auch hier gibt es zu jeder wichtigen Kategorie am Ende ein Quiz,</p>
-                        <p>um dein Wissen zu überprüfen.</p>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="step-5" className="border-0">
-                    <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
-                      <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">5</div>
-                      <span className="text-white font-medium flex-1 text-left">Gruppen beitreten</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <ul className="space-y-1 text-sm">
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp Info-Gruppe</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> WhatsApp Austausch</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Telegram Gruppen</li>
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+            <CardContent className="p-6">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">1</div>
+                  <span className="text-white font-medium flex-1">Lina (KI) aktivieren</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">2</div>
+                  <span className="text-white font-medium flex-1">LR-Start Onboarding in Lina (OnlineShop & Webseite einrichten)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">3</div>
+                  <span className="text-white font-medium flex-1">Lina-Onboarding (Videos zur Bedienung von Lina)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">4</div>
+                  <span className="text-white font-medium flex-1">Normale Lina-Menüs nutzen (alle Themen einmal durchgehen)</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+                  <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">5</div>
+                  <span className="text-white font-medium flex-1">Gruppen beitreten</span>
+                </div>
               </div>
 
               <div className="mt-6 p-4 bg-[#BF953F]/10 border border-[#BF953F]/30 rounded-lg">
