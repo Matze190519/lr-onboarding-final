@@ -183,13 +183,15 @@ export default function Home() {
                 Wichtig – stell Lina Fragen
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-3">
-                <p>Nutze Lina aktiv.</p>
-                <p>Stelle ihr jederzeit Fragen, zum Beispiel:</p>
+                <p>Nutze Lina aktiv – entweder schriftlich per Chat oder live per Telefon.</p>
+                <p className="text-white font-medium">Schreibe Lina Fragen, zum Beispiel:</p>
                 <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>„Lina, was ist mein nächster Schritt?"</li>
-                  <li>„Hilf mir bitte eine Namensliste zu erstellen."</li>
-                  <li>„Wie erkläre ich das LR Business richtig?"</li>
+                  <li>„Lina, was ist mein nächster Schritt?“</li>
+                  <li>„Hilf mir bitte eine Namensliste zu erstellen.“</li>
+                  <li>„Wie erkläre ich das LR Business richtig?“</li>
                 </ul>
+                <p className="text-white font-medium">Oder nutze „Telefoniere mit Lina“:</p>
+                <p>Wähle im Choose-Menü „Telefoniere mit Lina“ und sprich live mit ihr – wie ein echtes Telefongespräch.</p>
                 <p>Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.</p>
                 <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold" asChild>
                   <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
