@@ -160,13 +160,15 @@ export default function Home() {
                     </AccordionTrigger>
                     <AccordionContent className="pt-2 pl-14 text-muted-foreground">
                       <div className="space-y-3 text-sm">
-                        <p>Jetzt richtest du dein LR Business technisch ein.</p>
-                        <p>Öffne Lina auf WhatsApp und gehe unten ins Menü.</p>
-                        <p>Wähle den Punkt „Onboarding".</p>
-                        <p>Starte dort mit „OnlineShop einrichten". Lina führt dich Schritt für Schritt durch den gesamten Prozess.</p>
-                        <p>Danach gehe zu „Webseite einrichten". Auch hier begleitet dich Lina Schritt für Schritt, bis alles fertig ist.</p>
-                        <p>Wenn du an irgendeiner Stelle unsicher bist, schreibe einfach: „Lina, ich komme bei Schritt … nicht weiter."</p>
-                        <p>Lina hilft dir sofort weiter und sagt dir genau, was als Nächstes zu tun ist.</p>
+                        <p>Nachdem Lina aktiviert und freigeschaltet ist, startest du jetzt das LR-Onboarding.</p>
+                        <p>So gehst du vor:</p>
+                        <p>– Tippe unten auf Choose</p>
+                        <p>– Wähle Onboarding</p>
+                        <p>– Starte mit OnlineShop einrichten und gehe den Prozess komplett durch</p>
+                        <p>– Danach: Webseite einrichten und ebenfalls komplett durchgehen</p>
+                        <p>Lina führt dich hier Schritt für Schritt durch die wichtigsten Startpunkte.</p>
+                        <p>Wenn du irgendwo unsicher bist, schreibe Lina direkt:</p>
+                        <p>„Lina, ich bin im Onboarding bei Schritt … – sag mir bitte genau, was ich jetzt machen soll."</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -174,17 +176,19 @@ export default function Home() {
                   <AccordionItem value="step-3" className="border-0">
                     <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
                       <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">3</div>
-                      <span className="text-white font-medium flex-1 text-left">Lina-Onboarding (Lina komplett verstehen)</span>
+                      <span className="text-white font-medium flex-1 text-left">Lina-Onboarding (Videos zur Bedienung von Lina)</span>
                     </AccordionTrigger>
                     <AccordionContent className="pt-2 pl-14 text-muted-foreground">
                       <div className="space-y-3 text-sm">
-                        <p>Jetzt lernst du Lina vollständig kennen.</p>
-                        <p>Öffne in Lina wieder das Menü.</p>
-                        <p>Wähle den Punkt „Lina Onboarding" oder „Lina verstehen".</p>
-                        <p>Gehe jeden Menüpunkt einmal komplett durch.</p>
-                        <p>Zu jedem wichtigen Bereich bekommst du Videos, die dir alles erklären.</p>
-                        <p>Stelle Lina dabei aktiv Fragen – sie macht dir Vorschläge und zeigt dir nächste Schritte.</p>
-                        <p>Am Ende jeder wichtigen Kategorie gibt es ein Quiz. So kannst du prüfen, ob du alles verstanden hast und wo du noch nacharbeiten solltest.</p>
+                        <p>Nach dem LR-Onboarding folgt das Lina-Onboarding.</p>
+                        <p>Das ist ein eigenes Onboarding, in dem Lina dir per Video erklärt,</p>
+                        <p>wie du Lina richtig benutzt und wie die wichtigsten Funktionen aufgebaut sind.</p>
+                        <p>So gehst du vor:</p>
+                        <p>– Tippe unten auf Choose</p>
+                        <p>– Starte das Lina-Onboarding</p>
+                        <p>– Schau dir die Videos an, die Lina dir sendet</p>
+                        <p>Zu jeder wichtigen Kategorie gibt es am Ende ein Quiz,</p>
+                        <p>damit du dein Wissen kontrollieren kannst.</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -192,15 +196,26 @@ export default function Home() {
                   <AccordionItem value="step-4" className="border-0">
                     <AccordionTrigger className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:border-[#BF953F]/30 transition-colors hover:no-underline">
                       <div className="h-8 w-8 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] font-bold border border-[#BF953F]/30">4</div>
-                      <span className="text-white font-medium flex-1 text-left">LR Neo & MyOffice prüfen</span>
+                      <span className="text-white font-medium flex-1 text-left">Normale Lina-Menüs nutzen (alle Themen einmal durchgehen)</span>
                     </AccordionTrigger>
                     <AccordionContent className="pt-2 pl-14 text-muted-foreground">
-                      <ul className="space-y-1 text-sm">
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Umsätze & Bestellungen</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Qualifikation</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Neue Partner</li>
-                        <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#BF953F]" /> Eigene Partner online registrieren</li>
-                      </ul>
+                      <div className="space-y-3 text-sm">
+                        <p>Zusätzlich zum Lina-Onboarding solltest du dir auch die normalen Lina-Menüs anschauen.</p>
+                        <p>So funktioniert das:</p>
+                        <p>– Tippe unten auf Choose</p>
+                        <p>– Es öffnet sich ein Menü mit ca. 10 verschiedenen Menüpunkten</p>
+                        <p>– Jeder Menüpunkt steht für ein LR-Thema, z. B.:</p>
+                        <p>  – Fast-Track Bonus</p>
+                        <p>  – Auto-Konzept</p>
+                        <p>  – Teamaufbau</p>
+                        <p>  – Social Media</p>
+                        <p>  – WhatsApp-Texte</p>
+                        <p>  – Geschäftsvorstellung</p>
+                        <p>Gehe diese Menüpunkte einmal komplett durch,</p>
+                        <p>damit du weißt, wo du welches Thema findest.</p>
+                        <p>Auch hier gibt es zu jeder wichtigen Kategorie am Ende ein Quiz,</p>
+                        <p>um dein Wissen zu überprüfen.</p>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
 
@@ -263,16 +278,15 @@ export default function Home() {
           <Accordion type="single" collapsible className="w-full space-y-3">
             <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Lina aktivieren
+                Lina starten
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Öffne Lina über WhatsApp.</p>
-                <p>Schreibe zuerst „Hallo".</p>
-                <p>Tippe unten im Chat auf Menü / Choose.</p>
-                <p>Wähle „Onboarding Hilfe" aus.</p>
-                <p>Lina fragt dich nach deiner LR-Partnernummer.</p>
-                <p>Gib deine Partnernummer ein und trage deine Daten ein.</p>
-                <p>Danach wirst du freigeschaltet und hast vollen Zugriff auf alle Funktionen von Lina.</p>
+                <p>Öffne Lina auf WhatsApp.</p>
+                <p>Schreibe „Hallo".</p>
+                <p>Lina antwortet dir.</p>
+                <p>Tippe unten auf Choose und wähle Onboarding Hilfe.</p>
+                <p>Falls Lina nach deiner Partnernummer fragt, gib sie ein und trage deine Daten ein.</p>
+                <p>Danach bist du freigeschaltet.</p>
                 <Button className="w-full mt-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold" asChild>
                   <a href="https://wa.me/message/BKDI5TI2VMQIO1" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
@@ -284,46 +298,39 @@ export default function Home() {
 
             <AccordionItem value="item-2" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                LR-Onboarding mit Lina (OnlineShop & Webseite)
+                LR-Onboarding (OnlineShop & Webseite)
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Dieses Onboarding hilft dir, dein LR Business korrekt einzurichten.</p>
-                <p>Öffne in Lina das Menü und wähle „Onboarding".</p>
-                <p>Beginne mit „OnlineShop einrichten". Lina erklärt dir jeden Schritt ganz genau.</p>
-                <p>Anschließend gehe zu „Webseite einrichten". Auch hier wirst du Schritt für Schritt durch den gesamten Prozess geführt.</p>
-                <p>Ziel dieses Onboardings ist, dass dein OnlineShop und deine Webseite vollständig und korrekt eingerichtet sind.</p>
+                <p>Tippe unten auf Choose und wähle Onboarding.</p>
+                <p>Starte mit OnlineShop einrichten und gehe alles Schritt für Schritt durch.</p>
+                <p>Danach Webseite einrichten und ebenfalls komplett abschließen.</p>
+                <p>Das ist dein technischer Start ins LR Business.</p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Lina-Onboarding (Videos & Lernen)
+                Lina-Onboarding (Videos zur Bedienung)
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>In diesem Bereich lernst du alles, was Lina für dich tun kann.</p>
-                <p>Öffne in Lina den Punkt „Lina Onboarding" oder „Lina verstehen".</p>
-                <p>Gehe alle Menüpunkte nacheinander durch.</p>
-                <p>Zu jedem Bereich bekommst du Erklär-Videos, die dir die Funktionen genau zeigen.</p>
-                <p>Stelle Lina zwischendurch Fragen – sie passt ihre Antworten an dich an.</p>
-                <p>Am Ende wichtiger Bereiche gibt es ein Quiz, mit dem du deinen Lernfortschritt überprüfen kannst.</p>
+                <p>Das Lina-Onboarding ist ein separater Bereich.</p>
+                <p>Hier erklärt dir Lina per Video, wie du Lina benutzt</p>
+                <p>und wie die wichtigsten Funktionen aufgebaut sind.</p>
+                <p>Zu jeder wichtigen Kategorie gibt es am Ende ein Quiz.</p>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
               <AccordionTrigger className="text-white hover:text-[#BF953F] hover:no-underline font-medium py-4">
-                Mit Lina telefonieren
+                Normale Lina-Menüs (alle LR-Themen)
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-4 space-y-2">
-                <p>Lina kann auch live mit dir telefonieren.</p>
-                <p>Öffne in Lina das Menü und wähle „Mit Lina telefonieren".</p>
-                <p>Lina schickt dir daraufhin einen Link per WhatsApp.</p>
-                <p>Öffne den Link und sprich mit Lina über:</p>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>deine Ziele</li>
-                  <li>Termine</li>
-                  <li>LR-Geschäftsvorstellungen</li>
-                </ul>
-                <p>So kannst du Gespräche üben und sicherer werden.</p>
+                <p>Über Choose erreichst du die normalen Lina-Menüs.</p>
+                <p>Dort kannst du aus mehreren Menüpunkten zu verschiedenen LR-Themen wählen</p>
+                <p>(z. B. Fast-Track, Auto-Konzept, Teamaufbau, Social Media usw.).</p>
+                <p>Geh diese Menüs einmal durch, damit du sicher wirst</p>
+                <p>und jederzeit weißt, wo du welches Thema findest.</p>
+                <p>Auch hier gibt es zu jeder wichtigen Kategorie ein Quiz.</p>
               </AccordionContent>
             </AccordionItem>
 
