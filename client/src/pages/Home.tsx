@@ -166,9 +166,6 @@ export default function Home() {
                         <p>– Wähle Onboarding</p>
                         <p>– Starte mit OnlineShop einrichten und gehe den Prozess komplett durch</p>
                         <p>– Danach: Webseite einrichten und ebenfalls komplett durchgehen</p>
-                        <p>Lina führt dich hier Schritt für Schritt durch die wichtigsten Startpunkte.</p>
-                        <p>Wenn du irgendwo unsicher bist, schreibe Lina direkt:</p>
-                        <p>„Lina, ich bin im Onboarding bei Schritt … – sag mir bitte genau, was ich jetzt machen soll."</p>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
