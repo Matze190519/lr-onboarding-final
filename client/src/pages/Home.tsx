@@ -198,14 +198,15 @@ export default function Home() {
                         <p>Zusätzlich zum Lina-Onboarding solltest du dir auch die normalen Lina-Menüs anschauen.</p>
                         <p>So funktioniert das:</p>
                         <p>– Tippe unten auf Choose</p>
-                        <p>– Es öffnet sich ein Menü mit ca. 10 verschiedenen Menüpunkten</p>
-                        <p>– Jeder Menüpunkt steht für ein LR-Thema, z. B.:</p>
-                        <p>  – Fast-Track Bonus</p>
-                        <p>  – Auto-Konzept</p>
-                        <p>  – Teamaufbau</p>
-                        <p>  – Social Media</p>
-                        <p>  – WhatsApp-Texte</p>
-                        <p>  – Geschäftsvorstellung</p>
+                        <p>– Es öffnet sich ein Menü mit verschiedenen Menüpunkten:</p>
+                        <p>  – Onboarding</p>
+                        <p>  – Social Media Hilfe</p>
+                        <p>  – Telefoniere mit Lina</p>
+                        <p>  – LR Allgemein</p>
+                        <p>  – Business & Karriere</p>
+                        <p>  – Produkte Infos</p>
+                        <p>  – Verkauf & Vertrieb</p>
+                        <p>  – Schnellzugriff</p>
                         <p>Gehe diese Menüpunkte einmal komplett durch,</p>
                         <p>damit du weißt, wo du welches Thema findest.</p>
                         <p>Auch hier gibt es zu jeder wichtigen Kategorie am Ende ein Quiz,</p>
