@@ -617,7 +617,7 @@ export default function Home() {
         {/* Fast Track Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">8)</span> Dein möglicher Fast-Track Start*
+<span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">8)</span> Unser gemeinsames Ziel – die ersten 1-2 Wochen
           </h2>
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-[#BF953F]/5 to-transparent backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
