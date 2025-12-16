@@ -39,9 +39,9 @@ export default function Home() {
           <Card className="w-full border-white/5 bg-white/5 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500">
             <CardContent className="p-6 flex flex-col items-center gap-4">
               <div className="relative">
-                <div className="absolute -inset-6 bg-gradient-to-tr from-[#BF953F] via-[#FCF6BA] to-[#AA771C] rounded-full opacity-30 blur-2xl group-hover:opacity-50 transition-all duration-500 animate-pulse" />
-                <div className="absolute -inset-3 bg-gradient-to-br from-[#BF953F]/40 via-[#FCF6BA]/40 to-[#AA771C]/40 rounded-full blur-lg" />
-                <Avatar className="w-32 h-32 border-4 border-[#BF953F] relative ring-4 ring-[#FCF6BA]/30 ring-offset-4 ring-offset-black shadow-2xl shadow-[#BF953F]/50">
+                <div className="absolute -inset-8 bg-white rounded-full opacity-20 blur-3xl group-hover:opacity-40 transition-all duration-500 animate-pulse" />
+                <div className="absolute -inset-4 bg-white/60 rounded-full blur-2xl" />
+                <Avatar className="w-32 h-32 border-0 relative shadow-2xl shadow-white/30">
                   <AvatarImage src="/images/profile-new.png" alt="Mathias Vinzing" className="object-cover" />
                   <AvatarFallback className="bg-muted text-muted-foreground">MV</AvatarFallback>
                 </Avatar>
@@ -211,7 +211,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">2)</span> LR Connect App
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6 space-y-4">
               <p className="text-muted-foreground">
                 Die LR Connect App ist deine mobile Zentrale für unterwegs. Hier hast du Zugriff auf wichtige Funktionen, Produktinfos und dein Team.
@@ -241,7 +241,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">Dein Start</span> – die ersten Tage im LR Business
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6 space-y-4 text-muted-foreground">
               <p>Das hier ist der Anfang deines Geschäfts. Es geht nicht darum, sofort alles perfekt zu können, sondern darum, das Geschäft <strong className="text-white">Schritt für Schritt</strong> zu erlernen.</p>
               
@@ -281,7 +281,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">A)</span> Dein Startplan
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6">
               <div className="space-y-3">
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
@@ -326,7 +326,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">3)</span> LR Neo & MyOffice
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6 space-y-4">
               <p className="text-muted-foreground">
                 LR Neo und MyOffice sind deine zentralen Seiten für deinen Erfolg. Hier siehst du:
@@ -471,7 +471,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">6)</span> Geschäftsvorstellung
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6 space-y-6">
               <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-black relative group cursor-pointer">
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-black/30 transition-colors">
@@ -659,7 +659,7 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">9)</span> Wichtige Infos & Seiten
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative overflow-hidden group hover:border-[#BF953F]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#BF953F]/20 hover:-translate-y-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#BF953F]/20 via-[#FCF6BA]/20 to-[#AA771C]/20 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500" />
+            <div className="absolute -inset-1 bg-white/30 rounded-lg opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500" />
             <CardContent className="p-6">
               <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                 <a href="https://lrlifestyle.pro/" target="_blank" rel="noopener noreferrer">
