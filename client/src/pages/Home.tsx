@@ -449,7 +449,13 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm text-muted-foreground">Nutze diese Präsentation, um Interessenten das LR Geschäft zu erklären. Personalisiere den Link mit deinem Namen und deiner Partnernummer, damit deine Kontakte direkt zu dir zurückfinden.</p>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="text-white font-medium">Warum diese Präsentation?</p>
+                  <p>Diese Präsentation ist dein wichtigstes Werkzeug, um Interessenten das LR Geschäft professionell vorzustellen – egal ob persönlich, per WhatsApp oder Video-Call.</p>
+                  <p className="text-white font-medium">Warum den Link personalisieren?</p>
+                  <p>Wenn du den Link mit deinem Namen und deiner Partnernummer personalisierst, können Interessenten die Präsentation in Ruhe durchgehen. Wenn sie sich danach registrieren wollen, landen sie automatisch bei dir – du musst nichts weiter tun.</p>
+                  <p>So kannst du die Präsentation einfach verschicken und deine Interessenten informieren sich selbst, wann es für sie passt.</p>
+                </div>
                 
                 <div className="grid gap-3">
                   <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
