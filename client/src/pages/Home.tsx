@@ -107,9 +107,14 @@ export default function Home() {
 
         {/* Lina Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
-          <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-primary">1)</span> Lina (KI) – dein 24/7 Coach
-          </h2>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+              <img src="/images/lina.png" alt="Lina AI" className="w-full h-full object-cover" />
+            </div>
+            <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
+              <span className="text-[#D4AF37]">1)</span> Lina (KI) – dein 24/7 Coach
+            </h2>
+          </div>
           
           <Accordion type="single" collapsible className="w-full space-y-3">
             <AccordionItem value="item-1" className="border border-white/10 bg-white/5 rounded-xl px-4 data-[state=open]:bg-white/10 transition-all duration-300">
