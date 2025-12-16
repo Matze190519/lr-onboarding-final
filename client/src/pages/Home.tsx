@@ -164,6 +164,7 @@ export default function Home() {
                         <p>So gehst du vor:</p>
                         <p>– Tippe unten auf Choose</p>
                         <p>– Wähle Onboarding</p>
+                        <p>– Starte mit Onboarding Prozess</p>
                         <p>– Gehe den kompletten Prozess durch (OnlineShop einrichten + Webseite einrichten)</p>
                       </div>
                     </AccordionContent>
@@ -516,25 +517,29 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="grid gap-3">
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
-                  <a href="https://youtu.be/N-soKAiyjsA?si=pyPZf8iJxaFje7h1" target="_blank" rel="noopener noreferrer">
-                    <span className="flex items-center gap-2"><Play className="h-4 w-4" /> Video abspielen</span>
-                    <ArrowRight className="h-4 w-4 opacity-50" />
-                  </a>
-                </Button>
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
-                  <a href="https://dein-lr-business.de/" target="_blank" rel="noopener noreferrer">
-                    <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Präsentation öffnen</span>
-                    <ArrowRight className="h-4 w-4 opacity-50" />
-                  </a>
-                </Button>
-                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
-                  <a href="https://dein-lr-business.de/personalize.html" target="_blank" rel="noopener noreferrer">
-                    <span className="flex items-center gap-2"><LinkIcon className="h-4 w-4" /> Link personalisieren</span>
-                    <ArrowRight className="h-4 w-4 opacity-50" />
-                  </a>
-                </Button>
+              <div className="space-y-4">
+                <p className="text-sm text-muted-foreground">Nutze diese Präsentation, um Interessenten das LR Geschäft zu erklären. Personalisiere den Link mit deinem Namen und deiner Partnernummer, damit deine Kontakte direkt zu dir zurückfinden.</p>
+                
+                <div className="grid gap-3">
+                  <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                    <a href="https://youtu.be/N-soKAiyjsA?si=pyPZf8iJxaFje7h1" target="_blank" rel="noopener noreferrer">
+                      <span className="flex items-center gap-2"><Play className="h-4 w-4" /> Video abspielen</span>
+                      <ArrowRight className="h-4 w-4 opacity-50" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                    <a href="https://dein-lr-business.de/" target="_blank" rel="noopener noreferrer">
+                      <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> Präsentation öffnen</span>
+                      <ArrowRight className="h-4 w-4 opacity-50" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                    <a href="https://dein-lr-business.de/personalize.html" target="_blank" rel="noopener noreferrer">
+                      <span className="flex items-center gap-2"><LinkIcon className="h-4 w-4" /> Link personalisieren</span>
+                      <ArrowRight className="h-4 w-4 opacity-50" />
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               <Accordion type="single" collapsible className="w-full">
@@ -572,6 +577,8 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">Wenn du Unternehmer kennst, nutze dieses Tool.</p>
                 </div>
               </div>
+
+              <p className="text-sm text-muted-foreground">Erstelle deinen personalisierten Team-Link mit deiner Partnernummer. Durch Cookies werden deine Interessenten automatisch dir zugeordnet, wenn sie sich registrieren.</p>
 
               <div className="space-y-4">
                 <div className="relative pl-4 border-l-2 border-[#BF953F]/30 space-y-4">
