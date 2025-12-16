@@ -204,6 +204,35 @@ export default function Home() {
           </Accordion>
         </section>
 
+        {/* LR Connect App Section */}
+        <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">2)</span> LR Connect App
+          </h2>
+          <Card className="border-white/10 bg-white/5 backdrop-blur-md">
+            <CardContent className="p-6 space-y-4">
+              <p className="text-muted-foreground">
+                Die LR Connect App ist deine mobile Zentrale für unterwegs. Hier hast du Zugriff auf wichtige Funktionen, Produktinfos und dein Team.
+              </p>
+              
+              <div className="grid gap-3">
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                  <a href="https://apps.apple.com/de/app/lr-connect/id1234567890" target="_blank" rel="noopener noreferrer">
+                    <span className="flex items-center gap-2"><Smartphone className="h-4 w-4" /> App Store (iOS)</span>
+                    <ArrowRight className="h-4 w-4 opacity-50" />
+                  </a>
+                </Button>
+                <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
+                  <a href="https://play.google.com/store/apps/details?id=com.lr.connect" target="_blank" rel="noopener noreferrer">
+                    <span className="flex items-center gap-2"><Smartphone className="h-4 w-4" /> Google Play (Android)</span>
+                    <ArrowRight className="h-4 w-4 opacity-50" />
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
         {/* NEW SECTION: Dein Start */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
           <h2 className="text-2xl font-heading font-bold text-white">
@@ -290,7 +319,7 @@ export default function Home() {
         {/* LR Neo Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">2)</span> LR Neo & MyOffice
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">3)</span> LR Neo & MyOffice
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-4">
@@ -327,7 +356,7 @@ export default function Home() {
         {/* Gruppen Section */}
         <section id="gruppen" className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">3)</span> Gruppen: WhatsApp & Telegram
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">4)</span> Gruppen: WhatsApp & Telegram
           </h2>
           
           <Accordion type="single" collapsible className="w-full space-y-3">
@@ -395,7 +424,7 @@ export default function Home() {
         {/* Webinar Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">4)</span> Starterwebinar & Teammeeting
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">5)</span> Starterwebinar & Teammeeting
           </h2>
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-primary/5 to-transparent backdrop-blur-md overflow-hidden relative">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#BF953F]/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
@@ -434,7 +463,7 @@ export default function Home() {
         {/* Geschäftsvorstellung Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-900">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">5)</span> Geschäftsvorstellung
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">6)</span> Geschäftsvorstellung
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6 space-y-6">
@@ -503,7 +532,7 @@ export default function Home() {
         {/* KI-Voice Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">6)</span> Unternehmer-Tool: KI-Voice
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">7)</span> Unternehmer-Tool: KI-Voice
           </h2>
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-black to-primary/5 backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
@@ -572,7 +601,7 @@ export default function Home() {
         {/* Fast Track Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">7)</span> Dein möglicher Fast-Track Start*
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">8)</span> Dein möglicher Fast-Track Start*
           </h2>
           <Card className="border-[#BF953F]/20 bg-gradient-to-br from-[#BF953F]/5 to-transparent backdrop-blur-md overflow-hidden">
             <CardContent className="p-6 space-y-6">
@@ -621,7 +650,7 @@ export default function Home() {
         {/* Wichtige Links Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">8)</span> Wichtige Infos & Seiten
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">9)</span> Wichtige Infos & Seiten
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md">
             <CardContent className="p-6">
