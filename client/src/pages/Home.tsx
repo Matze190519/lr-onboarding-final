@@ -108,10 +108,11 @@ export default function Home() {
               <p>Sie hilft dir bei:</p>
               <ul className="list-disc list-inside space-y-1 ml-2">
                 <li>OnlineShop einrichten</li>
-                <li>Produktfragen</li>
+                <li>Produktfragen (kennt alle Produkte & Preise)</li>
                 <li>Teamaufbau & Namensliste</li>
                 <li>Social Media Texte & Ideen</li>
                 <li>WhatsApp Vorlagen</li>
+                <li>Bilder & Videos erstellen</li>
               </ul>
 
               <p className="text-white font-medium">Du kannst Lina auch anrufen und live mit ihr sprechen.</p>
@@ -210,10 +211,13 @@ export default function Home() {
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-4">
-              <p className="text-muted-foreground">
-                Lade dir die App runter. Du brauchst sie später für deine Umsätze, Bestellungen und um neue Partner zu registrieren.
-              </p>
               <p className="text-white font-medium">
+                Deine LR App für deinen Erfolg.
+              </p>
+              <p className="text-muted-foreground">
+                Von hier aus hast du Zugriff auf LR Neo und MyOffice. Viele Infos auf einem Blick.
+              </p>
+              <p className="text-sm text-muted-foreground">
                 Einloggen kannst du dich, sobald dein Shop steht.
               </p>
               
@@ -242,18 +246,35 @@ export default function Home() {
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-4 text-muted-foreground">
-              <p className="font-medium text-white">Die ersten 1–2 Wochen:</p>
+              <p>Das hier ist der Anfang deines Geschäfts. Es geht nicht darum, sofort alles perfekt zu können, sondern darum, das Geschäft <strong className="text-white">Schritt für Schritt</strong> zu erlernen.</p>
+              
+              <p className="font-medium text-white">In den ersten Tagen geht es darum:</p>
               <ul className="list-disc list-inside space-y-1 ml-2">
-                <li>OnlineShop aufsetzen (mit Lina)</li>
-                <li>Produkte bestellen & testen</li>
-                <li>Namensliste schreiben (50–100 Kontakte)</li>
-                <li>Erste Gespräche führen</li>
                 <li>Starterwebinar besuchen</li>
+                <li>Erste Kunden kennenlernen</li>
+                <li>Erste Partner gewinnen</li>
+                <li>Gespräche führen</li>
+                <li>Deinen Weg zur Duplikation finden</li>
               </ul>
 
-              <p className="text-white font-medium mt-4">Ziel: 2–4 Partner + erste Kunden gewinnen.</p>
+              <p>Network Marketing funktioniert nicht über wenige Gespräche mit Druck, sondern über <strong className="text-white">viele Gespräche mit Leichtigkeit</strong>.</p>
 
-              <p className="text-xs text-muted-foreground/70 italic mt-4">Keine Garantie. Ergebnisse hängen von deinem Einsatz ab.</p>
+              <div className="bg-[#BF953F]/5 border border-[#BF953F]/20 rounded-lg p-4 space-y-2">
+                <p className="text-white font-medium">Sprich mit Menschen. Zeig ihnen Produkte. Sprich über Möglichkeiten. Höre zu.</p>
+                <p className="text-sm">Nicht jeder ist der Richtige – und genau das ist Teil dieses Geschäfts. Es geht nicht ums Rekrutieren um jeden Preis, sondern ums <strong className="text-white">Selektieren der richtigen Menschen</strong>.</p>
+              </div>
+
+              <p className="font-medium text-white">Dein Fokus am Anfang:</p>
+              <ul className="list-disc list-inside space-y-1 ml-2">
+                <li>2–4 Partner</li>
+                <li>Erste Kunden</li>
+                <li>Produkte erleben und empfehlen</li>
+                <li>Deinen Partnern helfen, genau das Gleiche zu tun</li>
+              </ul>
+
+              <p>So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#AA771C] font-bold">1.100 € im Monat*</span>.</p>
+
+              <p className="text-xs text-muted-foreground/70 italic">*Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.</p>
             </CardContent>
           </Card>
         </section>
