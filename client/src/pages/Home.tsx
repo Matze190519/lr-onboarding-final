@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "wouter";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight, MessageCircle, Users, ExternalLink, Smartphone, Video, Play, Mic, Link as LinkIcon, QrCode, Mail, Phone, CheckCircle2, Star, Car, TrendingUp, Globe } from "lucide-react";
 import {
@@ -12,10 +13,11 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-[#BF953F]/30">
-      {/* Background Effects */}
+      {/* Background Effects - Enhanced Glow */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-[#BF953F]/10 rounded-full blur-[120px]" />
-        <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-[#AA771C]/5 rounded-full blur-[120px]" />
+        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-[#BF953F]/20 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-[#AA771C]/15 rounded-full blur-[150px]" />
+        <div className="absolute top-[40%] left-[50%] w-[50%] h-[50%] bg-[#FCF6BA]/10 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       <main className="relative z-10 container max-w-md mx-auto py-8 px-4 flex flex-col gap-8">
@@ -23,8 +25,9 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col items-center text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="space-y-2">
-            <div className="flex justify-center mb-6">
-              <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]" />
+            <div className="flex justify-center mb-6 relative">
+              <div className="absolute inset-0 bg-[#BF953F]/30 blur-3xl rounded-full" />
+              <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.6)] relative z-10" />
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-white drop-shadow-sm leading-tight">
               Willkommen im <br/>
@@ -676,8 +679,8 @@ export default function Home() {
         {/* Footer */}
         <footer className="text-center space-y-6 pt-8 pb-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1000">
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-            <a href="[IMPRINT_URL]" className="hover:text-[#BF953F] transition-colors">Impressum</a>
-            <a href="[PRIVACY_URL]" className="hover:text-[#BF953F] transition-colors">Datenschutz</a>
+            <Link href="/impressum" className="hover:text-[#BF953F] transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-[#BF953F] transition-colors">Datenschutz</Link>
           </div>
           
           <div className="text-xs text-muted-foreground/50 max-w-xs mx-auto space-y-2">
