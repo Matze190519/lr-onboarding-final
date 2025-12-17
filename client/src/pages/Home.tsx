@@ -665,7 +665,10 @@ export default function Home() {
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">9)</span> Wichtige Infos & Seiten
           </h2>
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
-            <CardContent className="p-6">
+            <CardContent className="p-6 space-y-3">
+              <p className="text-sm text-muted-foreground">
+                Auf der Seite findest du ausführliche Infos + Lina Chat für allgemeine Fragen.
+              </p>
               <Button variant="outline" className="w-full justify-between border-white/10 bg-white/5 hover:bg-white/10 hover:text-[#BF953F] hover:border-[#BF953F]/30 h-auto py-4" asChild>
                 <a href="https://lrlifestyle.pro/" target="_blank" rel="noopener noreferrer">
                   <span className="flex items-center gap-2"><Globe className="h-4 w-4" /> Info-Seite für Interessenten</span>
