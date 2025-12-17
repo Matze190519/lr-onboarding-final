@@ -1,2 +1,2 @@
 
-- [x] Logo Glow testen: Weißer Glow statt Gold-Glow
+- [x] Alle Gold-Glows zu Weiß ändern (Avatar, Cards, Buttons, Hintergrund-Effekte)

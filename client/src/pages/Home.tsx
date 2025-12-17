@@ -68,7 +68,7 @@ export default function Home() {
               </div>
 
               <div className="w-full grid gap-3 mt-2">
-                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-[#BF953F]/20 transition-all duration-300 hover:scale-[1.02] border-0" size="lg" asChild>
+                <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-bold shadow-lg shadow-white/30 transition-all duration-300 hover:scale-[1.02] border-0" size="lg" asChild>
                   <a href="https://api.whatsapp.com/send?phone=4915170605019" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Lina starten (WhatsApp)
@@ -95,7 +95,7 @@ export default function Home() {
         {/* Lina Section */}
         <section className="space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <div className="flex items-center gap-3 mb-2">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37]/30 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
               <img src="/images/lina.png" alt="Lina AI" className="w-full h-full object-cover" />
             </div>
             <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
@@ -582,7 +582,7 @@ export default function Home() {
                       <ArrowRight className="h-4 w-4 opacity-50" />
                     </a>
                   </Button>
-                  <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-[#BF953F]/20" asChild>
+                  <Button className="w-full bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C] hover:brightness-110 text-black font-semibold shadow-lg shadow-white/30" asChild>
                     <a href="https://ki-voice.net/team-link" target="_blank" rel="noopener noreferrer">
                       <LinkIcon className="mr-2 h-4 w-4" />
                       Jetzt Team-Link erstellen
