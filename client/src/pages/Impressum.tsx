@@ -25,18 +25,20 @@ export default function Impressum() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-3">Angaben gemäß § 5 TMG</h2>
               <p>
-                Mathias Vinzing<br />
-                LR Partner<br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]
+                Online Network Vision S.L.<br />
+                Vertreten durch: Mathias Vinzing<br />
+                Santanyi, Spanien
+              </p>
+              <p className="text-sm italic mt-2">
+                Diese Website wird von selbständigen LR-Partnern betrieben und ist keine offizielle Seite der LR Health & Beauty SE & Co. KG.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-white mb-3">Kontakt</h2>
               <p>
-                E-Mail: [E-Mail-Adresse]<br />
-                Telefon: [Telefonnummer]
+                E-Mail: info@lr-lifestyle.info<br />
+                Telefon: +49 171 5060008
               </p>
             </section>
 
@@ -44,8 +46,7 @@ export default function Impressum() {
               <h2 className="text-2xl font-semibold text-white mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
               <p>
                 Mathias Vinzing<br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]
+                Santanyi, Spanien
               </p>
             </section>
 

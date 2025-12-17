@@ -649,7 +649,7 @@ export default function Home() {
                   <Car className="h-6 w-6 text-[#BF953F]" />
                   <div>
                     <p className="text-white font-medium">Auto-Konzept</p>
-                    <p className="text-sm text-muted-foreground">Ab bestimmter Qualifikation möglich.</p>
+                    <p className="text-sm text-muted-foreground">Ab Junior Manager sofort Zugriff auf das unschlagbare LR Autokonzept – bestelle dir direkt dein Traumauto 70-80% günstiger. Alle Infos im LR Neo.</p>
                   </div>
                 </div>
               </div>

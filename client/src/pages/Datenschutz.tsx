@@ -81,10 +81,11 @@ export default function Datenschutz() {
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
               </p>
               <p>
-                Mathias Vinzing<br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]<br />
-                E-Mail: [E-Mail-Adresse]
+                Online Network Vision S.L.<br />
+                Vertreten durch: Mathias Vinzing<br />
+                Santanyi, Spanien<br />
+                E-Mail: info@lr-lifestyle.info<br />
+                Telefon: +49 171 5060008
               </p>
               <p>
                 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
