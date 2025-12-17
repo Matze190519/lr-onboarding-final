@@ -1,2 +1,2 @@
 
-- [x] Alle Gold-Glows zu Weiß ändern (Avatar, Cards, Buttons, Hintergrund-Effekte)
+- [x] Alle gelben/anderen Farben zu Gold ändern (nur Weiß oder Gold erlaubt)
