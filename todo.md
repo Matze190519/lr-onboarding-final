@@ -1,2 +1,2 @@
 
-- [x] "Dein Start" Text vereinfachen: Starterwebinar besuchen, Produkte testen & Kunden begeistern, Partner finden & Team aufbauen
+- [x] WhatsApp Vorschau-Bild ersetzen (neues Bild mit Löwen-Logo)
