@@ -460,7 +460,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-lg font-semibold text-white">Teammeeting</h3>
-                  <p className="text-white/80 font-medium">Mindestens alle 2 Wochen</p>
+                  <p className="text-white font-medium">Mindestens alle 2 Wochen</p>
                   <p className="text-sm text-muted-foreground">Austausch, Tipps, Motivation & gemeinsame Weiterentwicklung.</p>
                 </div>
               </div>

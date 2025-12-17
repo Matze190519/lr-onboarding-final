@@ -1,2 +1,2 @@
 
-- [x] Alle gelben/anderen Farben zu Gold ändern (nur Weiß oder Gold erlaubt)
+- [x] Alle verbleibenden Nicht-Weiß/Gold Texte prüfen und logisch zu Gold ändern (z.B. "Wichtig – stell Lina Fragen")
