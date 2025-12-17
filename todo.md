@@ -1,2 +1,2 @@
 
-- [x] Play-Button bei Geschäftsvorstellung nach unten rechts verschieben (überdeckt Logo)
+- [x] KI-Voice Card Rahmen korrigieren (schwarz statt transparent wie andere Cards)

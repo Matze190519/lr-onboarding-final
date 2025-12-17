@@ -541,7 +541,7 @@ export default function Home() {
           <h2 className="text-2xl font-heading font-bold text-white flex items-center gap-2">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#BF953F] via-[#FCF6BA] to-[#AA771C]">7)</span> Unternehmer-Tool: KI-Voice
           </h2>
-          <Card className="border-[#BF953F]/20 bg-gradient-to-br from-black to-primary/5 backdrop-blur-md overflow-hidden">
+          <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-6">
               <div className="flex items-center gap-4">
                 <div className="h-12 w-12 rounded-full bg-[#BF953F]/20 flex items-center justify-center text-[#BF953F] border border-[#BF953F]/30">
