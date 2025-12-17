@@ -477,10 +477,9 @@ export default function Home() {
           <Card className="border-white/10 bg-white/5 backdrop-blur-md relative group hover:border-[#BF953F]/30 transition-all duration-500 hover:-translate-y-1 shadow-[0_20px_60px_-15px_rgba(255,255,255,0.3)] hover:shadow-[0_25px_80px_-15px_rgba(255,255,255,0.5)]">
             <CardContent className="p-6 space-y-6">
               <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-black relative group cursor-pointer">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50 group-hover:bg-black/30 transition-colors">
-                  <div className="h-16 w-16 rounded-full bg-[#BF953F]/90 flex items-center justify-center pl-1 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
-                    <Play className="h-8 w-8 text-black fill-black" />
-                  </div>
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors" />
+                <div className="absolute bottom-4 right-4 h-16 w-16 rounded-full bg-[#BF953F]/90 flex items-center justify-center pl-1 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform z-10">
+                  <Play className="h-8 w-8 text-black fill-black" />
                 </div>
                 <img src="/images/presentation-slide-1.jpg" alt="LR Lifestyle Team Präsentation" className="w-full h-full object-cover" />
                 <a href="https://youtu.be/N-soKAiyjsA?si=pyPZf8iJxaFje7h1" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
