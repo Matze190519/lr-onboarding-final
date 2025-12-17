@@ -1,2 +1,2 @@
 
-- [x] KI-Voice Card Rahmen korrigieren (schwarz statt transparent wie andere Cards)
+- [x] "Dein Start" Text vereinfachen: Starterwebinar besuchen, Produkte testen & Kunden begeistern, Partner finden & Team aufbauen

@@ -254,10 +254,8 @@ export default function Home() {
               <p className="font-medium text-white">In den ersten Tagen geht es darum:</p>
               <ul className="list-disc list-inside space-y-1 ml-2">
                 <li>Starterwebinar besuchen</li>
-                <li>Erste Kunden kennenlernen</li>
-                <li>Erste Partner gewinnen</li>
-                <li>Gespräche führen</li>
-                <li>Deinen Weg zur Duplikation finden</li>
+                <li>Produkte testen & Kunden begeistern</li>
+                <li>Partner finden & Team aufbauen</li>
               </ul>
 
               <p>Network Marketing funktioniert nicht über wenige Gespräche mit Druck, sondern über <strong className="text-white">viele Gespräche mit Leichtigkeit</strong>.</p>
