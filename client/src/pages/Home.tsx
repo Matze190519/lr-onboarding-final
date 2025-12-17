@@ -26,8 +26,8 @@ export default function Home() {
         <section className="flex flex-col items-center text-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <div className="space-y-2">
             <div className="flex justify-center mb-6 relative">
-              <div className="absolute inset-0 bg-[#BF953F]/30 blur-3xl rounded-full" />
-              <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.6)] relative z-10" />
+              <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full" />
+              <img src="/images/logo.png" alt="LR Lifestyle Team Logo" className="h-32 w-auto drop-shadow-[0_0_40px_rgba(255,255,255,0.8)] relative z-10" />
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold tracking-tight text-white drop-shadow-sm leading-tight">
               Willkommen im <br/>
