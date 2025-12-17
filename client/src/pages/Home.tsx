@@ -482,7 +482,7 @@ export default function Home() {
                     <Play className="h-8 w-8 text-black fill-black" />
                   </div>
                 </div>
-                <img src="/images/hero-bg.jpg" alt="Video Thumbnail" className="w-full h-full object-cover opacity-50" />
+                <img src="/images/presentation-slide-1.jpg" alt="LR Lifestyle Team Präsentation" className="w-full h-full object-cover" />
                 <a href="https://youtu.be/N-soKAiyjsA?si=pyPZf8iJxaFje7h1" target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
                   <span className="sr-only">Video abspielen</span>
                 </a>
