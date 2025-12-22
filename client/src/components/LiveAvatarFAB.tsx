@@ -15,7 +15,7 @@ export default function LiveAvatarFAB() {
   return (
     <>
       {/* Floating Action Button - positioned on LEFT side */}
-      <div className="fixed bottom-6 md:bottom-8 left-4 md:left-8 z-50">
+      <div className="fixed bottom-24 md:bottom-28 left-4 md:left-8 z-50">
         <AnimatePresence>
           {showTooltip && !isOpen && (
             <motion.div
