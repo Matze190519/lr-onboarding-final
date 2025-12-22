@@ -1218,6 +1218,21 @@ export default function Home() {
 
         {/* ==================== SECTION 9: KI-VOICE ==================== */}
         <SectionCard number={9} title="Unternehmer-Tool: KI-Voice" isActive={activeSection === 9}>
+          {/* LINA VOICE Preview Image */}
+          <a 
+            href="https://ki-voice.net/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden mb-4 hover:opacity-90 transition-opacity"
+            style={{ border: '2px solid rgba(191,149,63,0.3)' }}
+          >
+            <img 
+              src="/images/lina-voice.jpg" 
+              alt="LINA VOICE - Telefon-KI für Unternehmer" 
+              className="w-full h-auto"
+            />
+          </a>
+          
           <h4 className="text-white font-medium mb-3">Dein persönlicher Team-Link</h4>
           <p className="text-white/70 text-sm mb-4">
             Wenn du Unternehmer kennst, nutze dieses Tool.
