@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import LiveAvatarFAB from "./components/LiveAvatarFAB";
 
 
 function Router() {
@@ -37,6 +38,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <LiveAvatarFAB />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -464,7 +464,7 @@ export default function Home() {
           >PLATIN ORGALEITER</p>
           <div className="flex flex-col gap-2 text-sm mt-4">
             <a 
-              href="https://api.whatsapp.com/send?phone=4917150600008" 
+              href="https://api.whatsapp.com/send?phone=491715060008" 
               className="flex items-center justify-center gap-2 hover:opacity-80 transition-opacity"
             >
               <span style={{ color: '#BF953F' }}><PhoneIcon /></span>
@@ -475,7 +475,7 @@ export default function Home() {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
                 }}
-              >WhatsApp: +49 171 506 0008</span>
+              >WhatsApp: +49 171 5060008</span>
             </a>
             <a 
               href="mailto:info@lr-lifestyle.info" 
@@ -1332,7 +1332,7 @@ export default function Home() {
 
       {/* WhatsApp Button */}
       <a
-        href="https://api.whatsapp.com/send?phone=4917150600008"
+        href="https://api.whatsapp.com/send?phone=491715060008"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 py-3 px-5 rounded-full font-medium transition-all duration-300 hover:scale-105"
         style={{ 
           background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
