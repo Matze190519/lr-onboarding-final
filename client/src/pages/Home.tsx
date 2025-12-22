@@ -3,6 +3,21 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import confetti from 'canvas-confetti';
 
 const TOTAL_STEPS = 5;
+const TOTAL_SECTIONS = 10;
+
+// Sektions-Namen für Navigation
+const sectionNames = [
+  'Lina (KI)',
+  'Gruppen',
+  'LR Connect',
+  'Wichtige Seiten',
+  'Ins Handeln',
+  'Gemeinsames Ziel',
+  'Webinar & Meeting',
+  'Geschäftsvorstellung',
+  'KI-Voice Tool',
+  'Wichtige Infos'
+];
 
 // Gold Konfetti Farben
 const goldColors = ['#BF953F', '#FCF6BA', '#B38728', '#FBF5B7', '#AA771C'];
@@ -149,27 +164,32 @@ const GoldButton = ({
   );
 };
 
-// Section Card Component
+// Section Card Component mit aktiver Sektion Highlight
 const SectionCard = ({ 
   number, 
   title, 
-  children 
+  children,
+  isActive = false
 }: { 
   number: number; 
   title: string; 
   children: React.ReactNode;
+  isActive?: boolean;
 }) => (
   <div 
-    className="rounded-2xl p-6 mb-6 relative"
+    id={`section-${number}`}
+    className="rounded-2xl p-6 mb-6 relative scroll-mt-20 transition-all duration-500"
     style={{ 
-      background: 'rgba(255,255,255,0.03)',
+      background: isActive ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.03)',
       border: '1px solid rgba(255,255,255,0.08)',
-      boxShadow: '0 0 60px rgba(255,255,255,0.08), 0 0 100px rgba(255,255,255,0.03)'
+      boxShadow: isActive 
+        ? '0 0 60px rgba(255,255,255,0.25), 0 0 120px rgba(255,255,255,0.15), 0 0 180px rgba(255,255,255,0.08)' 
+        : '0 0 60px rgba(255,255,255,0.08), 0 0 100px rgba(255,255,255,0.03)'
     }}
   >
     <div className="flex items-center gap-4 mb-4">
       <div 
-        className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0"
+        className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 transition-all duration-500"
         style={{ 
           background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
           color: '#000',
@@ -181,6 +201,70 @@ const SectionCard = ({
       <h2 className="text-xl font-bold text-white">{title}</h2>
     </div>
     {children}
+  </div>
+);
+
+// Option A: Dot Navigation (rechts am Rand)
+const DotNavigation = ({ activeSection }: { activeSection: number }) => (
+  <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3">
+    {Array.from({ length: TOTAL_SECTIONS }, (_, i) => i + 1).map((num) => (
+      <a
+        key={num}
+        href={`#section-${num}`}
+        className="group relative flex items-center justify-end"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById(`section-${num}`)?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        {/* Label bei Hover */}
+        <span className="absolute right-8 px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white border border-white/20">
+          {sectionNames[num - 1]}
+        </span>
+        {/* Dot */}
+        <div
+          className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSection === num ? 'scale-125' : 'scale-100 hover:scale-110'}`}
+          style={{
+            background: activeSection === num 
+              ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
+              : 'rgba(255,255,255,0.3)',
+            boxShadow: activeSection === num ? '0 0 15px rgba(191,149,63,0.6)' : 'none'
+          }}
+        />
+      </a>
+    ))}
+  </div>
+);
+
+// Option B: Section Progress Bar (unter dem Fortschrittsbalken)
+const SectionProgressBar = ({ activeSection }: { activeSection: number }) => (
+  <div className="flex gap-1 mt-3">
+    {Array.from({ length: TOTAL_SECTIONS }, (_, i) => i + 1).map((num) => (
+      <a
+        key={num}
+        href={`#section-${num}`}
+        className="group relative flex-1"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById(`section-${num}`)?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        {/* Tooltip */}
+        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-black/90 text-white border border-white/20 pointer-events-none">
+          {num}. {sectionNames[num - 1]}
+        </span>
+        {/* Segment */}
+        <div
+          className={`h-1.5 rounded-full transition-all duration-300 ${num <= activeSection ? '' : 'opacity-30'}`}
+          style={{
+            background: num <= activeSection 
+              ? 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
+              : 'rgba(255,255,255,0.2)',
+            boxShadow: num === activeSection ? '0 0 10px rgba(191,149,63,0.5)' : 'none'
+          }}
+        />
+      </a>
+    ))}
   </div>
 );
 
@@ -222,6 +306,33 @@ const StartplanStep = ({
 
 export default function Home() {
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
+  const [activeSection, setActiveSection] = useState(1);
+
+  // Scroll Observer für aktive Sektion
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            const num = parseInt(id.replace('section-', ''));
+            if (!isNaN(num)) {
+              setActiveSection(num);
+            }
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
+    );
+
+    // Beobachte alle Sektionen
+    for (let i = 1; i <= TOTAL_SECTIONS; i++) {
+      const el = document.getElementById(`section-${i}`);
+      if (el) observer.observe(el);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem('lr-onboarding-progress');
@@ -281,8 +392,13 @@ export default function Home() {
               }}
             />
           </div>
+          {/* Option B: Section Progress Bar */}
+          <SectionProgressBar activeSection={activeSection} />
         </div>
       </div>
+
+      {/* Option A: Dot Navigation (rechts am Rand) */}
+      <DotNavigation activeSection={activeSection} />
 
       <div className="max-w-2xl mx-auto px-4 py-8">
         {/* Hero */}
@@ -529,7 +645,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 1: LINA ==================== */}
-        <SectionCard number={1} title="Lina (KI) – dein 24/7 Coach">
+        <SectionCard number={1} title="Lina (KI) – dein 24/7 Coach" isActive={activeSection === 1}>
           <p className="text-white/70 text-sm mb-4">
             Lina ist deine KI-Assistentin auf WhatsApp.
           </p>
@@ -703,7 +819,7 @@ export default function Home() {
         <GoldDivider />
 
         <div id="gruppen">
-          <SectionCard number={2} title="Gruppen: WhatsApp & Telegram">
+          <SectionCard number={2} title="Gruppen: WhatsApp & Telegram" isActive={activeSection === 2}>
             <p className="text-white/70 text-sm mb-4">
               Tritt unseren Team-Gruppen bei und vernetze dich mit anderen Partnern.
             </p>
@@ -759,7 +875,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 3: LR CONNECT APP ==================== */}
-        <SectionCard number={3} title="LR Connect App">
+        <SectionCard number={3} title="LR Connect App" isActive={activeSection === 3}>
           <p className="text-white/70 text-sm mb-4">
             Deine LR App für deinen Erfolg.
           </p>
@@ -782,7 +898,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 4: DEINE WICHTIGSTEN SEITEN ==================== */}
-        <SectionCard number={4} title="Deine wichtigsten Seiten">
+        <SectionCard number={4} title="Deine wichtigsten Seiten" isActive={activeSection === 4}>
           <p className="text-white/70 text-sm mb-3">Hier siehst du deine Zahlen:</p>
           <ul className="text-white/60 text-sm space-y-1 mb-4 ml-4">
             <li>• Umsätze & Bestellungen</li>
@@ -805,7 +921,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 5: 10 TEXTE AN NAMEN SCHICKEN ==================== */}
-        <SectionCard number={5} title="Komm ins Handeln">
+        <SectionCard number={5} title="Komm ins Handeln" isActive={activeSection === 5}>
           <div 
             className="rounded-xl p-5 mb-6 border"
             style={{ 
@@ -857,7 +973,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 6: FAST-TRACK BONUS ==================== */}
-        <SectionCard number={6} title="Unser gemeinsames Ziel – die ersten 1-2 Wochen">
+        <SectionCard number={6} title="Unser gemeinsames Ziel – die ersten 1-2 Wochen" isActive={activeSection === 6}>
           <div 
             className="rounded-xl p-4 mb-4"
             style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
@@ -983,7 +1099,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 7: STARTERWEBINAR ==================== */}
-        <SectionCard number={7} title="Starterwebinar & Teammeeting">
+        <SectionCard number={7} title="Starterwebinar & Teammeeting" isActive={activeSection === 7}>
           <div className="mb-4">
             <h4 className="text-white font-medium mb-2">Starterwebinar</h4>
             <p className="text-white/70 text-sm mb-2">
@@ -1024,7 +1140,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 8: GESCHÄFTSVORSTELLUNG ==================== */}
-        <SectionCard number={8} title="Geschäftsvorstellung">
+        <SectionCard number={8} title="Geschäftsvorstellung" isActive={activeSection === 8}>
           {/* Video Preview */}
           <a 
             href="https://youtu.be/N-soKAiyjsA" 
@@ -1101,7 +1217,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 9: KI-VOICE ==================== */}
-        <SectionCard number={9} title="Unternehmer-Tool: KI-Voice">
+        <SectionCard number={9} title="Unternehmer-Tool: KI-Voice" isActive={activeSection === 9}>
           <h4 className="text-white font-medium mb-3">Dein persönlicher Team-Link</h4>
           <p className="text-white/70 text-sm mb-4">
             Wenn du Unternehmer kennst, nutze dieses Tool.
@@ -1163,7 +1279,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 10: WICHTIGE INFOS ==================== */}
-        <SectionCard number={10} title="Wichtige Infos & Seiten">
+        <SectionCard number={10} title="Wichtige Infos & Seiten" isActive={activeSection === 10}>
           <p className="text-white/70 text-sm mb-4">
             Auf der Seite findest du ausführliche Infos + Lina Chat für allgemeine Fragen.
           </p>
