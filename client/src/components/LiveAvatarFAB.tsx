@@ -15,22 +15,22 @@ export default function LiveAvatarFAB() {
   return (
     <>
       {/* Floating Action Button - positioned on LEFT side */}
-      <div className="fixed bottom-24 md:bottom-28 left-4 md:left-8 z-50">
+      <div className="fixed bottom-6 md:bottom-8 left-4 md:left-8 z-50">
         <AnimatePresence>
           {showTooltip && !isOpen && (
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -10 }}
-              className="absolute left-full ml-3 top-1/2 -translate-y-1/2 whitespace-nowrap"
+              className="absolute left-0 bottom-full mb-3 whitespace-nowrap"
             >
               <div className="bg-[#0a0a0a] border border-red-500/30 rounded-lg px-4 py-2 shadow-lg">
                 <p className="text-white text-sm font-medium">🎅 Sprich mit Santa!</p>
                 <p className="text-red-400/70 text-xs">Live Video-Chat</p>
               </div>
-              {/* Arrow pointing left */}
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full">
-                <div className="border-8 border-transparent border-r-[#C9A86C]/30"></div>
+              {/* Arrow pointing down */}
+              <div className="absolute left-4 top-full">
+                <div className="border-8 border-transparent border-t-red-500/30"></div>
               </div>
             </motion.div>
           )}
