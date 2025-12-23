@@ -1221,7 +1221,9 @@ export default function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="block rounded-xl overflow-hidden mb-4 hover:opacity-90 transition-opacity"
-            style={{ border: '2px solid rgba(191,149,63,0.3)' }}
+            style={{ 
+              boxShadow: '0 0 30px rgba(255,255,255,0.4), 0 0 60px rgba(255,255,255,0.25), 0 0 100px rgba(255,255,255,0.15)'
+            }}
           >
             <img 
               src="/images/lina-voice.jpg" 
