@@ -505,7 +505,7 @@ export default function Home() {
           {/* Hilfe-Text */}
           <div 
             className="mt-4 rounded-xl p-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <p className="text-white/80 text-sm text-center">
               <strong style={{ 
@@ -561,7 +561,7 @@ export default function Home() {
             </p>
             <div 
               className="rounded-xl p-4 mb-4"
-              style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
             >
               <p className="text-white/80 text-sm">
                 Sprich mit Menschen. Zeig ihnen Produkte. Sprich über Möglichkeiten. Höre zu.
@@ -590,9 +590,10 @@ export default function Home() {
         <div 
           className="mb-8 rounded-2xl p-6"
           style={{ 
-            background: 'linear-gradient(135deg, rgba(191,149,63,0.15) 0%, rgba(0,0,0,0) 100%)',
-            border: '2px dashed rgba(191,149,63,0.5)',
-            boxShadow: '0 0 30px rgba(191,149,63,0.1)'
+            background: 'rgba(255,255,255,0.03)',
+            border: '2px solid transparent',
+            borderImage: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%) 1',
+            boxShadow: '0 0 30px rgba(191,149,63,0.2)'
           }}
         >
           <h3 
@@ -643,7 +644,7 @@ export default function Home() {
           {/* Sponsor-Hinweis */}
           <div 
             className="mt-4 p-3 rounded-xl text-center"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <p className="text-white/70 text-sm">
               📩 <strong className="text-white">Fertig?</strong> Schick deinem Sponsor eine kurze Info!
@@ -720,7 +721,7 @@ export default function Home() {
                 </p>
                 <div 
                   className="rounded-xl p-3 mb-3"
-                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
                 >
                   <p className="text-white/70 text-xs mb-2">
                     <strong style={{ color: '#BF953F' }}>Wichtig:</strong> Danach zur Kontrolle an deinen <strong className="text-white">Sponsor schicken</strong>, ob alles richtig eingerichtet ist.
@@ -773,7 +774,7 @@ export default function Home() {
                 </ul>
                 <div 
                   className="rounded-xl p-3"
-                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
                 >
                   <p className="text-white/70 text-xs">
                     <strong style={{ color: '#BF953F' }}>Tipp:</strong> Auch hier gibt es zu jeder wichtigen Kategorie ein <strong className="text-white">Quiz</strong>.
@@ -810,7 +811,7 @@ export default function Home() {
                 </p>
                 <div 
                   className="rounded-xl p-3 mb-4"
-                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
                 >
                   <p className="text-white/70 text-xs">
                     Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.
@@ -934,8 +935,8 @@ export default function Home() {
           <div 
             className="rounded-xl p-5 mb-6 border"
             style={{ 
-              background: 'linear-gradient(135deg, rgba(191,149,63,0.1) 0%, rgba(0,0,0,0) 100%)',
-              borderColor: 'rgba(191,149,63,0.3)'
+              background: 'rgba(255,255,255,0.05)',
+              borderColor: 'rgba(255,255,255,0.15)'
             }}
           >
             <p className="text-white font-medium mb-2">
@@ -985,7 +986,7 @@ export default function Home() {
         <SectionCard number={6} title="Unser gemeinsames Ziel – die ersten 1-2 Wochen" isActive={activeSection === 6}>
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <p className="text-white/80 text-sm font-medium mb-2">Junior Manager Qualifikation:</p>
             <ul className="text-white/60 text-sm space-y-1 ml-4">
@@ -1124,7 +1125,7 @@ export default function Home() {
 
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <p className="text-white font-medium mb-2">Starterwebinare bei Lina finden:</p>
             <p className="text-white/60 text-sm mb-2">
@@ -1185,7 +1186,7 @@ export default function Home() {
           
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <p className="text-white/80 text-sm font-medium mb-2">Link personalisieren:</p>
             <p className="text-white/60 text-sm">
@@ -1315,7 +1316,7 @@ export default function Home() {
           {/* LR Job Seite */}
           <div 
             className="rounded-xl p-4 mt-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             <h4 
               className="font-bold mb-2"
