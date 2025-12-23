@@ -591,9 +591,10 @@ export default function Home() {
           className="mb-8 rounded-2xl p-6"
           style={{ 
             background: 'rgba(255,255,255,0.03)',
-            border: '2px solid transparent',
-            borderImage: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%) 1',
-            boxShadow: '0 0 30px rgba(191,149,63,0.2)'
+            border: '2px solid #BF953F',
+            borderRadius: '16px',
+            boxShadow: '0 0 30px rgba(191,149,63,0.2)',
+            position: 'relative'
           }}
         >
           <h3 
