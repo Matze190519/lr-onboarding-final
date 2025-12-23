@@ -23,11 +23,12 @@ export default function Impressum() {
 
           <div className="space-y-6 text-muted-foreground">
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-3">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-2xl font-semibold text-white mb-3">Angaben gemäß § 5 DDG</h2>
               <p>
-                Online Network Vision S.L.<br />
+                <strong>Online Network Vision S.L.</strong><br />
+                NIF: B55478382<br />
                 Vertreten durch: Mathias Vinzing<br />
-                Santanyi, Spanien
+                Anschrift: Calle Mare de Déu de Consolació 33 B, 07660 Santanyí (Illes Balears), Spanien
               </p>
               <p className="text-sm italic mt-2">
                 Diese Website wird von selbständigen LR-Partnern betrieben und ist keine offizielle Seite der LR Health & Beauty SE & Co. KG.
@@ -43,10 +44,20 @@ export default function Impressum() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+              <h2 className="text-2xl font-semibold text-white mb-3">EU-Streitschlichtung (ODR)</h2>
               <p>
-                Mathias Vinzing<br />
-                Santanyi, Spanien
+                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br />
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-[#BF953F] hover:underline">https://ec.europa.eu/consumers/odr/</a>
+              </p>
+              <p className="mt-2">
+                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-3">Verbraucherstreitbeilegung</h2>
+              <p>
+                Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
               </p>
             </section>
 

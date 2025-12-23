@@ -81,11 +81,12 @@ export default function Datenschutz() {
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
               </p>
               <p>
-                Online Network Vision S.L.<br />
+                <strong>Online Network Vision S.L.</strong><br />
+                NIF: B55478382<br />
                 Vertreten durch: Mathias Vinzing<br />
-                Santanyi, Spanien<br />
-                E-Mail: info@lr-lifestyle.info<br />
-                Telefon: +49 171 5060008
+                Calle Mare de Déu de Consolació 33 B, 07660 Santanyí (Illes Balears), Spanien<br />
+                E-Mail: <a href="mailto:info@lr-lifestyle.info" className="text-[#BF953F] hover:underline">info@lr-lifestyle.info</a><br />
+                Telefon: <a href="tel:+491715060008" className="text-[#BF953F] hover:underline">+49 171 5060008</a>
               </p>
               <p>
                 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
