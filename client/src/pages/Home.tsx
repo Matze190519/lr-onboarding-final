@@ -268,7 +268,7 @@ const SectionProgressBar = ({ activeSection }: { activeSection: number }) => (
   </div>
 );
 
-// Startplan Step Component
+// Startplan Step Component - Checkbox Style with Confetti
 const StartplanStep = ({
   number,
   title,
@@ -279,30 +279,70 @@ const StartplanStep = ({
   title: string;
   checked: boolean;
   onClick: () => void;
-}) => (
-  <button
-    onClick={onClick}
-    className="w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-white/5"
-    style={{ 
-      background: checked ? 'rgba(191,149,63,0.15)' : 'rgba(255,255,255,0.02)',
-      border: checked ? '1px solid rgba(191,149,63,0.5)' : '1px solid rgba(255,255,255,0.05)'
-    }}
-  >
-    <div 
-      className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+}) => {
+  const [showConfetti, setShowConfetti] = useState(false);
+  
+  const handleClick = () => {
+    if (!checked) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 1000);
+    }
+    onClick();
+  };
+  
+  return (
+    <button
+      onClick={handleClick}
+      className="w-full flex items-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5 relative overflow-hidden"
       style={{ 
-        background: checked 
-          ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
-          : 'rgba(255,255,255,0.1)',
-        color: checked ? '#000' : '#fff',
-        boxShadow: checked ? '0 0 15px rgba(191,149,63,0.4)' : 'none'
+        background: checked ? 'rgba(191,149,63,0.1)' : 'rgba(255,255,255,0.03)',
+        border: checked ? '1px solid rgba(191,149,63,0.3)' : '1px solid rgba(255,255,255,0.1)'
       }}
     >
-      {checked ? '✓' : number}
-    </div>
-    <span className={`text-left ${checked ? 'text-white' : 'text-white/70'}`}>{title}</span>
-  </button>
-);
+      {/* Confetti Effect */}
+      {showConfetti && (
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 rounded-full animate-ping"
+              style={{
+                background: i % 3 === 0 ? '#BF953F' : i % 3 === 1 ? '#FCF6BA' : '#fff',
+                left: `${10 + (i * 7)}%`,
+                top: `${20 + (i % 4) * 15}%`,
+                animationDelay: `${i * 50}ms`,
+                animationDuration: '600ms'
+              }}
+            />
+          ))}
+        </div>
+      )}
+      
+      {/* Checkbox */}
+      <div 
+        className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 transition-all duration-300"
+        style={{ 
+          background: checked 
+            ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 100%)'
+            : 'transparent',
+          border: checked ? 'none' : '2px solid rgba(255,255,255,0.3)',
+          boxShadow: checked ? '0 0 12px rgba(191,149,63,0.5)' : 'none'
+        }}
+      >
+        {checked && (
+          <svg className="w-4 h-4" fill="none" stroke="#000" strokeWidth="3" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        )}
+      </div>
+      
+      {/* Title */}
+      <span className={`text-left text-sm ${checked ? 'text-white line-through opacity-70' : 'text-white/80'}`}>
+        {title}
+      </span>
+    </button>
+  );
+};
 
 export default function Home() {
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
@@ -634,7 +674,7 @@ export default function Home() {
           {/* Sponsor-Hinweis */}
           <div 
             className="mt-4 p-3 rounded-xl text-center"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px dashed rgba(191,149,63,0.3)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
           >
             <p className="text-white/70 text-sm">
               📩 <strong className="text-white">Fertig?</strong> Schick deinem Sponsor eine kurze Info!
