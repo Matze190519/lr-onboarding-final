@@ -352,7 +352,7 @@ html {
 }
 
 
-/* Ghost Button Shimmer Effect */
+/* Ghost Button Shimmer Effect - Subtle */
 @keyframes ghost-shimmer {
   0%, 100% {
     left: -100%;
@@ -372,19 +372,25 @@ html {
   position: absolute;
   top: -50%;
   left: -100%;
-  width: 50%;
+  width: 30%;
   height: 200%;
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.05),
     transparent
   );
   transform: skewX(-25deg);
-  animation: ghost-shimmer 5s ease-in-out infinite;
+  animation: ghost-shimmer 8s ease-in-out infinite;
   pointer-events: none;
 }
 
 .ghost-btn:hover::after {
-  animation: ghost-shimmer 2s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+  animation: ghost-shimmer 4s ease-in-out infinite;
 }
