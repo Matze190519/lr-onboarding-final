@@ -1222,7 +1222,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="block rounded-xl overflow-hidden mb-4 hover:opacity-90 transition-opacity"
             style={{ 
-              boxShadow: '0 0 30px rgba(255,255,255,0.4), 0 0 60px rgba(255,255,255,0.25), 0 0 100px rgba(255,255,255,0.15)'
+              boxShadow: '0 0 60px rgba(255,255,255,0.4), 0 0 100px rgba(255,255,255,0.2)'
             }}
           >
             <img 
