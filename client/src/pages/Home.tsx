@@ -133,11 +133,11 @@ const GoldButton = ({
   const baseStyle = {
     background: checked 
       ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
-      : 'transparent',
-    border: '2px dashed rgba(191,149,63,0.6)',
+      : 'rgba(255,255,255,0.05)',
+    border: checked ? 'none' : '1px solid rgba(255,255,255,0.15)',
     boxShadow: checked 
       ? '0 0 20px rgba(191,149,63,0.5), inset 0 1px 0 rgba(255,255,255,0.3)'
-      : '0 0 15px rgba(191,149,63,0.1)',
+      : '0 0 10px rgba(255,255,255,0.05)',
   };
   
   return (
@@ -154,10 +154,10 @@ const GoldButton = ({
           }
         }
       }}
-      className={`flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:border-[rgba(191,149,63,0.9)] ${checked ? 'text-black' : 'text-white'}`}
+      className={`flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 hover:border-white/25 ${checked ? 'text-black' : 'text-white/80'}`}
       style={baseStyle}
     >
-      {icon && <span style={{ color: checked ? '#000' : '#BF953F' }}>{icon}</span>}
+      {icon && <span style={{ color: checked ? '#000' : 'rgba(255,255,255,0.7)' }}>{icon}</span>}
       {children}
       {external && !checked && <ExternalIcon />}
     </a>
