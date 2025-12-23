@@ -1147,9 +1147,6 @@ export default function Home() {
             target="_blank" 
             rel="noopener noreferrer"
             className="block relative rounded-xl overflow-hidden mb-4 group"
-            style={{ 
-              border: '2px dashed rgba(191,149,63,0.6)',
-            }}
           >
             <img 
               src="/images/video_preview.webp" 
