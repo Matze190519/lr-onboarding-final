@@ -295,8 +295,8 @@ const StartplanStep = ({
       onClick={handleClick}
       className="w-full flex items-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5 relative overflow-hidden"
       style={{ 
-        background: checked ? 'rgba(191,149,63,0.1)' : 'rgba(255,255,255,0.03)',
-        border: checked ? '1px solid rgba(191,149,63,0.3)' : '1px solid rgba(255,255,255,0.1)'
+        background: 'rgba(255,255,255,0.03)',
+        border: '1px solid rgba(255,255,255,0.1)'
       }}
     >
       {/* Confetti Effect */}
@@ -337,7 +337,7 @@ const StartplanStep = ({
       </div>
       
       {/* Title */}
-      <span className={`text-left text-sm ${checked ? 'text-white line-through opacity-70' : 'text-white/80'}`}>
+      <span className={`text-left text-sm ${checked ? 'text-white' : 'text-white/80'}`}>
         {title}
       </span>
     </button>
