@@ -154,7 +154,7 @@ const GoldButton = ({
           }
         }
       }}
-      className={`flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 hover:border-white/25 ${checked ? 'text-black' : 'text-white/80'}`}
+      className={`ghost-btn flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 hover:border-white/25 ${checked ? 'text-black' : 'text-white/80'}`}
       style={baseStyle}
     >
       {icon && <span style={{ color: checked ? '#000' : 'rgba(255,255,255,0.7)' }}>{icon}</span>}

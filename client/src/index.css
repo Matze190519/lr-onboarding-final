@@ -350,3 +350,41 @@ html {
 .gold-badge-animate {
   animation: gold-pulse 2s ease-in-out infinite;
 }
+
+
+/* Ghost Button Shimmer Effect */
+@keyframes ghost-shimmer {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 150%;
+  }
+}
+
+.ghost-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ghost-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.1),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: ghost-shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.ghost-btn:hover::after {
+  animation: ghost-shimmer 2s ease-in-out infinite;
+}
