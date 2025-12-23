@@ -279,46 +279,16 @@ const StartplanStep = ({
   title: string;
   checked: boolean;
   onClick: () => void;
-}) => {
-  const [showConfetti, setShowConfetti] = useState(false);
-  
-  const handleClick = () => {
-    if (!checked) {
-      setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 1000);
-    }
-    onClick();
-  };
-  
-  return (
-    <button
-      onClick={handleClick}
-      className="w-full flex items-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5 relative overflow-hidden"
-      style={{ 
-        background: 'rgba(255,255,255,0.03)',
-        border: '1px solid rgba(255,255,255,0.1)'
-      }}
-    >
-      {/* Confetti Effect */}
-      {showConfetti && (
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 rounded-full animate-ping"
-              style={{
-                background: i % 3 === 0 ? '#BF953F' : i % 3 === 1 ? '#FCF6BA' : '#fff',
-                left: `${10 + (i * 7)}%`,
-                top: `${20 + (i % 4) * 15}%`,
-                animationDelay: `${i * 50}ms`,
-                animationDuration: '600ms'
-              }}
-            />
-          ))}
-        </div>
-      )}
-      
-      {/* Checkbox */}
+}) => (
+  <button
+    onClick={onClick}
+    className="w-full flex items-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5"
+    style={{ 
+      background: 'rgba(255,255,255,0.03)',
+      border: '1px solid rgba(255,255,255,0.1)'
+    }}
+  >
+    {/* Checkbox */}
       <div 
         className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 transition-all duration-300"
         style={{ 
@@ -336,13 +306,12 @@ const StartplanStep = ({
         )}
       </div>
       
-      {/* Title */}
-      <span className={`text-left text-sm ${checked ? 'text-white' : 'text-white/80'}`}>
-        {title}
-      </span>
-    </button>
-  );
-};
+    {/* Title */}
+    <span className={`text-left text-sm ${checked ? 'text-white' : 'text-white/80'}`}>
+      {title}
+    </span>
+  </button>
+);
 
 export default function Home() {
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
