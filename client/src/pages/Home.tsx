@@ -1005,7 +1005,7 @@ export default function Home() {
               backgroundClip: 'text'
             }}>Fast-Track-Boni:</span>
           </p>
-          <div className="grid grid-cols-4 gap-2 md:gap-3 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             <div 
               className="text-center py-3 md:py-4 px-1 rounded-xl relative"
               style={{ 
