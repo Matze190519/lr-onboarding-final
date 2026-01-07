@@ -1087,7 +1087,23 @@ export default function Home() {
               <span className="text-white/40 text-xs block">/Monat</span>
             </div>
           </div>
-          <p className="text-white/50 text-xs text-center mb-6">plus Autobonus + Handelsspanne (aus Verkauf an Kunden)</p>
+          <p className="text-white/50 text-xs text-center mb-4">plus Autobonus + Handelsspanne (aus Verkauf an Kunden)</p>
+          <div className="text-center mb-6">
+            <a 
+              href="/FAQ-Fast-track-2026.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm hover:underline"
+              style={{ 
+                background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >
+              → FAQ Fast Track Bonus
+            </a>
+          </div>
 
           <div 
             className="rounded-xl p-4 mb-4"
