@@ -993,6 +993,7 @@ export default function Home() {
             <ul className="text-white/60 text-sm space-y-1 ml-4">
               <li>• 2 direkte Partner mit je 500 PW</li>
               <li>• Gesamtumsatz 4.000 PW</li>
+              <li>• Mind. 100 PW Eigenumsatz</li>
             </ul>
           </div>
 
@@ -1004,16 +1005,17 @@ export default function Home() {
               backgroundClip: 'text'
             }}>Fast-Track-Boni:</span>
           </p>
-          <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
+          <div className="grid grid-cols-4 gap-2 md:gap-3 mb-4">
             <div 
-              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
+              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,255,255,0.2)'
               }}
             >
+              <span className="text-white/60 text-xs block mb-1">Junior Manager</span>
               <span 
-                className="text-xl md:text-3xl font-black"
+                className="text-lg md:text-2xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1021,17 +1023,19 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
                 }}
-              >300 €</span>
+              >250 €</span>
+              <span className="text-white/40 text-xs block">/Monat</span>
             </div>
             <div 
-              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
+              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 45px rgba(255,255,255,0.45), 0 0 90px rgba(255,255,255,0.25)'
               }}
             >
+              <span className="text-white/60 text-xs block mb-1">Manager</span>
               <span 
-                className="text-xl md:text-3xl font-black"
+                className="text-lg md:text-2xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1039,17 +1043,19 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.6))'
                 }}
-              >1.100 €</span>
+              >500 €</span>
+              <span className="text-white/40 text-xs block">/Monat</span>
             </div>
             <div 
-              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
+              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,255,255,0.3)'
               }}
             >
+              <span className="text-white/60 text-xs block mb-1">Junior Teamleiter</span>
               <span 
-                className="text-xl md:text-3xl font-black"
+                className="text-lg md:text-2xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1057,9 +1063,31 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.7))'
                 }}
-              >2.000 €</span>
+              >1.000 €</span>
+              <span className="text-white/40 text-xs block">/Monat</span>
+            </div>
+            <div 
+              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
+              style={{ 
+                background: 'transparent',
+                boxShadow: '0 0 55px rgba(255,255,255,0.55), 0 0 110px rgba(255,255,255,0.35)'
+              }}
+            >
+              <span className="text-white/60 text-xs block mb-1">Teamleiter</span>
+              <span 
+                className="text-lg md:text-2xl font-black"
+                style={{ 
+                  background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.8))'
+                }}
+              >1.250 €</span>
+              <span className="text-white/40 text-xs block">/Monat</span>
             </div>
           </div>
+          <p className="text-white/50 text-xs text-center mb-6">plus Autobonus + Handelsspanne (aus Verkauf an Kunden)</p>
 
           <div 
             className="rounded-xl p-4 mb-4"
