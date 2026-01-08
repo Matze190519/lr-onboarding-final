@@ -578,7 +578,7 @@ export default function Home() {
               <li>• Deinen Partnern helfen, genau das Gleiche zu tun</li>
             </ul>
             <p className="text-white/70 text-sm">
-              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>1.100 € im Monat</span></strong>*.
+              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>1.000 € im Monat</span></strong>*.
             </p>
             <p className="text-white/40 text-xs mt-3 italic">
               *Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.
