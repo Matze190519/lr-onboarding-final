@@ -964,13 +964,59 @@ export default function Home() {
             </ul>
           </div>
 
-          <p className="text-white/50 text-sm mb-3">Einfaches Script:</p>
-          <div className="bg-white/5 rounded-xl p-4 mb-6 text-white/70 text-sm italic">
-            "Ich arbeite gerade an etwas Spannendem. Das ist vielleicht nichts für dich, vielleicht aber doch. 
-            Wärst du offen, dir das mal anzuschauen?"
-          </div>
-          <p className="text-white/40 text-xs mb-4">
-            "Enthusiasm on fire is better than knowledge on ice" – Begeisterung schlägt Wissen!
+          <p className="text-white/50 text-sm mb-3">Wähle deine Kontakt-Methode:</p>
+          <Accordion type="single" collapsible className="mb-4">
+            <AccordionItem value="text" className="border-white/10">
+              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
+                📱 Text-Nachricht (für Bekannte)
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-white/60 text-sm pt-2 mb-2">Ideal wenn ihr euch länger nicht gesprochen habt:</p>
+                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
+                  "Hey [Name], ich weiß wir haben uns lange nicht gehört. Ich wollte mal fragen – bist du offen für was Neues nebenbei? Kann nichts versprechen, aber die Firma wächst gerade stark. Vielleicht nichts für dich, aber ich dachte ich frag mal!"
+                </div>
+                <p className="text-white/40 text-xs">→ Kein Druck, fragt nur nach Offenheit</p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="voice" className="border-white/10">
+              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
+                🎤 Sprachnachricht (persönlicher)
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-white/60 text-sm pt-2 mb-2">30-60 Sekunden, authentisch und locker:</p>
+                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
+                  "Hey! Ich arbeite gerade an was Spannendem und hab an dich gedacht. Ist wahrscheinlich nichts für dich, aber du kennst bestimmt Leute die das interessieren könnte. Hast du kurz Zeit für ein Gespräch?"
+                </div>
+                <p className="text-white/40 text-xs">→ Deine Stimme schafft Vertrauen</p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="video" className="border-white/10">
+              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
+                🎬 Kurzes Video (höchste Response-Rate)
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-white/60 text-sm pt-2 mb-2">30-60 Sekunden, muss nicht perfekt sein:</p>
+                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
+                  "Hey [Name]! *wink* Ich hab an dich gedacht weil du immer so offen für Neues warst. Ich zeig dir kurz was... [zeige Produkt oder App]. Wärst du offen, dir das mal anzuschauen?"
+                </div>
+                <p className="text-white/40 text-xs">→ Gesicht + Stimme = stärkste Verbindung</p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="call" className="border-white/10">
+              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
+                📞 Anruf (für enge Freunde)
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-white/60 text-sm pt-2 mb-2">Nur bei engem Kontakt mit viel Vertrauen:</p>
+                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
+                  "Hey, ich hab gerade nicht viel Zeit, aber ich arbeite an was Großem. Was machst du morgen Mittag? Super, lass uns treffen – ich hab was das du sehen musst!"
+                </div>
+                <p className="text-white/40 text-xs">→ Direkt und persönlich</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <p className="text-white/40 text-xs mb-4 text-center">
+            💡 Tipp: Sprachnachricht oder Video haben die höchsten Antwort-Raten!
           </p>
           <GoldButton 
             href="#"
