@@ -968,14 +968,14 @@ export default function Home() {
           <Accordion type="single" collapsible className="mb-4">
             <AccordionItem value="text" className="border-white/10">
               <AccordionTrigger className="text-white/80 text-sm hover:text-white">
-                📱 Text-Nachricht (für Bekannte)
+                📱 Text-Nachricht (allgemein)
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-white/60 text-sm pt-2 mb-2">Ideal wenn ihr euch länger nicht gesprochen habt:</p>
+                <p className="text-white/60 text-sm pt-2 mb-2">Der Klassiker – funktioniert für alle:</p>
                 <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Hey [Name], ich weiß wir haben uns lange nicht gehört. Ich wollte mal fragen – bist du offen für was Neues nebenbei? Kann nichts versprechen, aber die Firma wächst gerade stark. Vielleicht nichts für dich, aber ich dachte ich frag mal!"
+                  "Ich arbeite gerade an etwas Spannendem. Das ist vielleicht nichts für dich, vielleicht aber doch. Wärst du offen, dir das mal anzuschauen?"
                 </div>
-                <p className="text-white/40 text-xs">→ Kein Druck, fragt nur nach Offenheit</p>
+                <p className="text-white/40 text-xs">→ Kurz, neugierig machend, kein Druck</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="voice" className="border-white/10">
@@ -997,7 +997,7 @@ export default function Home() {
               <AccordionContent>
                 <p className="text-white/60 text-sm pt-2 mb-2">30-60 Sekunden, muss nicht perfekt sein:</p>
                 <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Hey [Name]! *wink* Ich hab an dich gedacht weil du immer so offen für Neues warst. Ich zeig dir kurz was... [zeige Produkt oder App]. Wärst du offen, dir das mal anzuschauen?"
+                  "Hey [Name]! Ich hab an dich gedacht. Ich arbeite gerade an was Spannendem – schau mal kurz... [zeige kurz ein Produkt]. Wärst du offen, dir das mal genauer anzuschauen?"
                 </div>
                 <p className="text-white/40 text-xs">→ Gesicht + Stimme = stärkste Verbindung</p>
               </AccordionContent>
