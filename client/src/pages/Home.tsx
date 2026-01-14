@@ -1173,7 +1173,7 @@ export default function Home() {
             </GoldButton>
           </div>
           
-          {/* LR Job Seite */}
+          {/* LR Job Seite - Eigene Partner-Registrierungsseite */}
           <div 
             className="rounded-xl p-4 mt-4"
             style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
@@ -1186,17 +1186,33 @@ export default function Home() {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}
-            >Deine eigene Recruiting-Seite</h4>
+            >Deine eigene Partner-Registrierungsseite</h4>
             <p className="text-white/70 text-sm mb-3">
-              So eine Seite bekommst du von mir als <strong className="text-white">Junior Teamleiter</strong>, 
-              komplett fertig mit deinen Daten und Bildern.
+              Du bekommst <strong className="text-white">deine eigene personalisierte Seite</strong> mit deinem Namen, Foto und Video!
             </p>
-            <p className="text-white/60 text-sm mb-4">
-              Kleine Umgestaltungen nach deinen Wünschen inklusive!
+            <p className="text-white/60 text-sm mb-3">
+              <strong className="text-white">So funktioniert's:</strong>
             </p>
-            <GoldButton href="https://lr-job.net/" external>
-              Beispiel-Seite ansehen
-            </GoldButton>
+            <ul className="text-white/60 text-sm space-y-1 ml-4 mb-3">
+              <li>• Geh auf <strong className="text-white">lr-job.eu/team</strong></li>
+              <li>• Trag deinen Namen, E-Mail und Wunsch-Kurznamen ein</li>
+              <li>• Lade ein Foto von dir hoch und wähle ein Video</li>
+              <li>• Klick auf "Kurzlink erstellen" – fertig!</li>
+            </ul>
+            <p className="text-white/60 text-sm mb-3">
+              Du bekommst dann deinen persönlichen Kurzlink, z.B. <strong className="text-white">lr-job.eu/dein-name</strong>
+            </p>
+            <p className="text-white/70 text-sm mb-4">
+              <strong className="text-white">Was bringt dir das?</strong> Wenn sich jemand über deine Seite einträgt, bekommst du automatisch eine E-Mail mit allen Daten – Name, Adresse, Kontakt, IBAN und gewähltes Startset. Damit kannst du den neuen Partner direkt bei LR eintragen!
+            </p>
+            <div className="space-y-3">
+              <GoldButton href="https://lr-job.eu/team" external>
+                Jetzt eigene Seite erstellen
+              </GoldButton>
+              <GoldButton href="https://lr-job.eu/" external>
+                Beispiel-Seite ansehen
+              </GoldButton>
+            </div>
           </div>
         </SectionCard>
 
