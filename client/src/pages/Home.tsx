@@ -1447,6 +1447,101 @@ export default function Home() {
           </div>
         </SectionCard>
 
+        <GoldDivider />
+
+        {/* ==================== SECTION 11: LEADS KAUFEN ==================== */}
+        <SectionCard number={11} title="Leads kaufen – Interessenten direkt aufs Handy">
+          <div 
+            className="rounded-xl p-5 mb-6 border"
+            style={{ 
+              background: 'linear-gradient(135deg, rgba(191,149,63,0.1) 0%, rgba(0,0,0,0) 100%)',
+              borderColor: 'rgba(191,149,63,0.3)'
+            }}
+          >
+            <p className="text-white font-medium mb-2">
+              Du willst Leads? Wir liefern sie dir direkt per WhatsApp.
+            </p>
+            <p className="text-white/60 text-sm">
+              Kaufe ein Lead-Paket und bekomme <strong className="text-white">echte Interessenten</strong> aus Facebook-Werbung – 
+              automatisch, fair verteilt, direkt auf dein Handy.
+            </p>
+          </div>
+
+          <p className="text-white/80 text-sm font-medium mb-3">So funktioniert's:</p>
+
+          <div 
+            className="rounded-xl p-4 mb-4"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}
+          >
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <div 
+                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                    color: '#000'
+                  }}
+                >1</div>
+                <p className="text-white/60 text-sm"><strong className="text-white">Lina öffnen</strong> – Im Hauptmenü gibt es den neuen Punkt <strong className="text-white">"Leads kaufen"</strong>. Da drauf drücken.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div 
+                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                    color: '#000'
+                  }}
+                >2</div>
+                <p className="text-white/60 text-sm"><strong className="text-white">Bezahlen</strong> – Du bekommst einen Stripe-Zahlungslink. 50€ pro Paket. Name und Telefonnummer angeben.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div 
+                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                    color: '#000'
+                  }}
+                >3</div>
+                <p className="text-white/60 text-sm"><strong className="text-white">Guthaben aktiv</strong> – Nach der Zahlung wird dein Guthaben automatisch freigeschaltet.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div 
+                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                    color: '#000'
+                  }}
+                >4</div>
+                <p className="text-white/60 text-sm"><strong className="text-white">Leads per WhatsApp</strong> – Sobald ein neuer Lead reinkommt, bekommst du ihn direkt auf dein Handy. Name, Telefon, E-Mail – alles dabei.</p>
+              </div>
+            </div>
+          </div>
+
+          <div 
+            className="rounded-xl p-3 mb-4"
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+          >
+            <p className="text-white/70 text-xs">
+              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 5€ von deinem Guthaben.
+            </p>
+          </div>
+
+          <div 
+            className="rounded-xl p-3 mb-4"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}
+          >
+            <p className="text-white/70 text-xs">
+              <strong className="text-white">Guthaben leer?</strong> Kein Problem – kaufe einfach ein neues Paket über Lina nach. Dein Guthaben wird sofort wieder aufgeladen.
+            </p>
+          </div>
+
+          <GoldButton href="https://buy.stripe.com/aFa6oH64Wei20Robnte7m01" external>
+            Jetzt Lead-Paket kaufen (50€)
+          </GoldButton>
+        </SectionCard>
+
+        <GoldDivider />
+
         {/* Footer */}
         <div className="text-center text-white/40 text-xs py-8 border-t border-white/10">
           <p className="mb-2">
