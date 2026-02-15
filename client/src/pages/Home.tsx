@@ -1513,9 +1513,20 @@ export default function Home() {
                   }}
                 >4</div>
                 <p className="text-white/60 text-sm"><strong className="text-white">Leads per WhatsApp</strong> – Sobald ein neuer Lead reinkommt, bekommst du ihn direkt auf dein Handy. Name, Telefon, E-Mail – alles dabei.</p>
-              </div>
-            </div>
-          </div>
+               </div>
+
+               <div className="flex items-start gap-3">
+                <div 
+                  className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                    color: '#000'
+                  }}
+                >5</div>
+                <p className="text-white/60 text-sm"><strong className="text-white">Lead wird informiert</strong> – Der Interessent bekommt automatisch eine WhatsApp-Nachricht mit <strong className="text-white">deinem Namen</strong>. Er weiß also schon, dass du dich meldest. Das erhöht die Abschlussquote!</p>
+               </div>
+             </div>
+           </div>
 
           <div 
             className="rounded-xl p-3 mb-4"
