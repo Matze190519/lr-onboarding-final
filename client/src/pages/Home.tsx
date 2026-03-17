@@ -1523,7 +1523,7 @@ export default function Home() {
                     color: '#000'
                   }}
                 >5</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Lead wird informiert</strong> – Der Interessent bekommt automatisch eine WhatsApp-Nachricht mit <strong className="text-white">deinem Namen</strong>. Er weiß also schon, dass du dich meldest. Das erhöht die Abschlussquote!</p>
+                <p className="text-white/60 text-sm"><strong className="text-white">Sofort anrufen</strong> – Du nimmst Kontakt auf und startest das Gespräch mit deinem neuen Interessenten. <strong className="text-white">Schnelligkeit entscheidet!</strong></p>
                </div>
              </div>
            </div>
@@ -1533,7 +1533,7 @@ export default function Home() {
             style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
           >
             <p className="text-white/70 text-xs">
-              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 5€ von deinem Guthaben.
+              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 3,13€ von deinem Guthaben.
             </p>
           </div>
 
