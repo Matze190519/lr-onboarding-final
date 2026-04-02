@@ -1533,7 +1533,7 @@ export default function Home() {
             style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
           >
             <p className="text-white/70 text-xs">
-              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 3,13€ von deinem Guthaben.
+              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 5€ von deinem Guthaben.
             </p>
           </div>
 
@@ -1563,7 +1563,7 @@ export default function Home() {
             <a href="/impressum" className="hover:text-white">Impressum</a>
             <a href="/datenschutz" className="hover:text-white">Datenschutz</a>
           </div>
-          <p>© 2025 LR Lifestyle Team. All rights reserved.</p>
+          <p>© 2026 LR Lifestyle Team. All rights reserved.</p>
         </div>
       </div>
 
