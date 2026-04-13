@@ -3,21 +3,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import confetti from 'canvas-confetti';
 
 const TOTAL_STEPS = 5;
-const TOTAL_SECTIONS = 10;
-
-// Sektions-Namen für Navigation
-const sectionNames = [
-  'Lina (KI)',
-  'Gruppen',
-  'LR Connect',
-  'Wichtige Seiten',
-  'Ins Handeln',
-  'Gemeinsames Ziel',
-  'Webinar & Meeting',
-  'Geschäftsvorstellung',
-  'KI-Voice Tool',
-  'Wichtige Infos'
-];
 
 // Gold Konfetti Farben
 const goldColors = ['#BF953F', '#FCF6BA', '#B38728', '#FBF5B7', '#AA771C'];
@@ -133,11 +118,11 @@ const GoldButton = ({
   const baseStyle = {
     background: checked 
       ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
-      : 'rgba(255,255,255,0.05)',
-    border: checked ? 'none' : '1px solid rgba(255,255,255,0.15)',
+      : 'transparent',
+    border: '2px dashed rgba(191,149,63,0.6)',
     boxShadow: checked 
       ? '0 0 20px rgba(191,149,63,0.5), inset 0 1px 0 rgba(255,255,255,0.3)'
-      : '0 0 10px rgba(255,255,255,0.05)',
+      : '0 0 15px rgba(191,149,63,0.1)',
   };
   
   return (
@@ -154,42 +139,37 @@ const GoldButton = ({
           }
         }
       }}
-      className={`ghost-btn flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 hover:border-white/25 ${checked ? 'text-black' : 'text-white/80'}`}
+      className={`flex items-center justify-center gap-2 w-full text-center py-3 px-6 rounded-xl font-medium transition-all duration-300 hover:scale-[1.02] hover:border-[rgba(191,149,63,0.9)] ${checked ? 'text-black' : 'text-white'}`}
       style={baseStyle}
     >
-      {icon && <span style={{ color: checked ? '#000' : 'rgba(255,255,255,0.7)' }}>{icon}</span>}
+      {icon && <span style={{ color: checked ? '#000' : '#BF953F' }}>{icon}</span>}
       {children}
       {external && !checked && <ExternalIcon />}
     </a>
   );
 };
 
-// Section Card Component mit aktiver Sektion Highlight
+// Section Card Component
 const SectionCard = ({ 
   number, 
   title, 
-  children,
-  isActive = false
+  children 
 }: { 
   number: number; 
   title: string; 
   children: React.ReactNode;
-  isActive?: boolean;
 }) => (
   <div 
-    id={`section-${number}`}
-    className="rounded-2xl p-6 mb-6 relative scroll-mt-20 transition-all duration-500"
+    className="rounded-2xl p-6 mb-6 relative"
     style={{ 
-      background: isActive ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.03)',
+      background: 'rgba(255,255,255,0.03)',
       border: '1px solid rgba(255,255,255,0.08)',
-      boxShadow: isActive 
-        ? '0 0 40px rgba(255,255,255,0.5), 0 0 80px rgba(255,255,255,0.4), 0 0 120px rgba(255,255,255,0.3), 0 0 200px rgba(255,255,255,0.2)' 
-        : '0 0 60px rgba(255,255,255,0.08), 0 0 100px rgba(255,255,255,0.03)'
+      boxShadow: '0 0 60px rgba(255,255,255,0.08), 0 0 100px rgba(255,255,255,0.03)'
     }}
   >
     <div className="flex items-center gap-4 mb-4">
       <div 
-        className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 transition-all duration-500"
+        className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0"
         style={{ 
           background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
           color: '#000',
@@ -204,71 +184,7 @@ const SectionCard = ({
   </div>
 );
 
-// Option A: Dot Navigation (rechts am Rand)
-const DotNavigation = ({ activeSection }: { activeSection: number }) => (
-  <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3">
-    {Array.from({ length: TOTAL_SECTIONS }, (_, i) => i + 1).map((num) => (
-      <a
-        key={num}
-        href={`#section-${num}`}
-        className="group relative flex items-center justify-end"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById(`section-${num}`)?.scrollIntoView({ behavior: 'smooth' });
-        }}
-      >
-        {/* Label bei Hover */}
-        <span className="absolute right-8 px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white border border-white/20">
-          {sectionNames[num - 1]}
-        </span>
-        {/* Dot */}
-        <div
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSection === num ? 'scale-125' : 'scale-100 hover:scale-110'}`}
-          style={{
-            background: activeSection === num 
-              ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
-              : 'rgba(255,255,255,0.3)',
-            boxShadow: activeSection === num ? '0 0 15px rgba(191,149,63,0.6)' : 'none'
-          }}
-        />
-      </a>
-    ))}
-  </div>
-);
-
-// Option B: Section Progress Bar (unter dem Fortschrittsbalken)
-const SectionProgressBar = ({ activeSection }: { activeSection: number }) => (
-  <div className="flex gap-1 mt-3">
-    {Array.from({ length: TOTAL_SECTIONS }, (_, i) => i + 1).map((num) => (
-      <a
-        key={num}
-        href={`#section-${num}`}
-        className="group relative flex-1"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById(`section-${num}`)?.scrollIntoView({ behavior: 'smooth' });
-        }}
-      >
-        {/* Tooltip */}
-        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-black/90 text-white border border-white/20 pointer-events-none">
-          {num}. {sectionNames[num - 1]}
-        </span>
-        {/* Segment */}
-        <div
-          className={`h-1.5 rounded-full transition-all duration-300 ${num <= activeSection ? '' : 'opacity-30'}`}
-          style={{
-            background: num <= activeSection 
-              ? 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
-              : 'rgba(255,255,255,0.2)',
-            boxShadow: num === activeSection ? '0 0 10px rgba(191,149,63,0.5)' : 'none'
-          }}
-        />
-      </a>
-    ))}
-  </div>
-);
-
-// Startplan Step Component - Checkbox Style with Confetti
+// Startplan Step Component
 const StartplanStep = ({
   number,
   title,
@@ -282,66 +198,30 @@ const StartplanStep = ({
 }) => (
   <button
     onClick={onClick}
-    className="w-full flex items-center gap-3 p-4 rounded-xl transition-all duration-300 hover:bg-white/5"
+    className="w-full flex items-center gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-white/5"
     style={{ 
-      background: 'rgba(255,255,255,0.03)',
-      border: '1px solid rgba(255,255,255,0.1)'
+      background: checked ? 'rgba(191,149,63,0.15)' : 'rgba(255,255,255,0.02)',
+      border: checked ? '1px solid rgba(191,149,63,0.5)' : '1px solid rgba(255,255,255,0.05)'
     }}
   >
-    {/* Checkbox */}
-      <div 
-        className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 transition-all duration-300"
-        style={{ 
-          background: checked 
-            ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 100%)'
-            : 'transparent',
-          border: checked ? 'none' : '2px solid rgba(255,255,255,0.3)',
-          boxShadow: checked ? '0 0 12px rgba(191,149,63,0.5)' : 'none'
-        }}
-      >
-        {checked && (
-          <svg className="w-4 h-4" fill="none" stroke="#000" strokeWidth="3" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        )}
-      </div>
-      
-    {/* Title */}
-    <span className={`text-left text-sm ${checked ? 'text-white' : 'text-white/80'}`}>
-      {title}
-    </span>
+    <div 
+      className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+      style={{ 
+        background: checked 
+          ? 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)'
+          : 'rgba(255,255,255,0.1)',
+        color: checked ? '#000' : '#fff',
+        boxShadow: checked ? '0 0 15px rgba(191,149,63,0.4)' : 'none'
+      }}
+    >
+      {checked ? '✓' : number}
+    </div>
+    <span className={`text-left ${checked ? 'text-white' : 'text-white/70'}`}>{title}</span>
   </button>
 );
 
 export default function Home() {
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
-  const [activeSection, setActiveSection] = useState(1);
-
-  // Scroll Observer für aktive Sektion
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            const num = parseInt(id.replace('section-', ''));
-            if (!isNaN(num)) {
-              setActiveSection(num);
-            }
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
-    );
-
-    // Beobachte alle Sektionen
-    for (let i = 1; i <= TOTAL_SECTIONS; i++) {
-      const el = document.getElementById(`section-${i}`);
-      if (el) observer.observe(el);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const saved = localStorage.getItem('lr-onboarding-progress');
@@ -401,13 +281,8 @@ export default function Home() {
               }}
             />
           </div>
-          {/* Option B: Section Progress Bar */}
-          <SectionProgressBar activeSection={activeSection} />
         </div>
       </div>
-
-      {/* Option A: Dot Navigation (rechts am Rand) */}
-      <DotNavigation activeSection={activeSection} />
 
       <div className="max-w-2xl mx-auto px-4 py-8">
         {/* Hero */}
@@ -473,7 +348,7 @@ export default function Home() {
           >PLATIN ORGALEITER</p>
           <div className="flex flex-col gap-2 text-sm mt-4">
             <a 
-              href="https://api.whatsapp.com/send?phone=491715060008" 
+              href="https://api.whatsapp.com/send?phone=4917150600008" 
               className="flex items-center justify-center gap-2 hover:opacity-80 transition-opacity"
             >
               <span style={{ color: '#BF953F' }}><PhoneIcon /></span>
@@ -484,7 +359,7 @@ export default function Home() {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
                 }}
-              >WhatsApp: +49 171 5060008</span>
+              >WhatsApp: +49 171 506 0008</span>
             </a>
             <a 
               href="mailto:info@lr-lifestyle.info" 
@@ -505,7 +380,7 @@ export default function Home() {
           {/* Hilfe-Text */}
           <div 
             className="mt-4 rounded-xl p-4"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
           >
             <p className="text-white/80 text-sm text-center">
               <strong style={{ 
@@ -561,7 +436,7 @@ export default function Home() {
             </p>
             <div 
               className="rounded-xl p-4 mb-4"
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+              style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
             >
               <p className="text-white/80 text-sm">
                 Sprich mit Menschen. Zeig ihnen Produkte. Sprich über Möglichkeiten. Höre zu.
@@ -578,7 +453,7 @@ export default function Home() {
               <li>• Deinen Partnern helfen, genau das Gleiche zu tun</li>
             </ul>
             <p className="text-white/70 text-sm">
-              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>1.000 € im Monat</span></strong>*.
+              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>1.100 € im Monat</span></strong>*.
             </p>
             <p className="text-white/40 text-xs mt-3 italic">
               *Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.
@@ -590,11 +465,9 @@ export default function Home() {
         <div 
           className="mb-8 rounded-2xl p-6"
           style={{ 
-            background: 'rgba(255,255,255,0.03)',
-            border: '2px solid #BF953F',
-            borderRadius: '16px',
-            boxShadow: '0 0 30px rgba(191,149,63,0.2)',
-            position: 'relative'
+            background: 'linear-gradient(135deg, rgba(191,149,63,0.15) 0%, rgba(0,0,0,0) 100%)',
+            border: '2px dashed rgba(191,149,63,0.5)',
+            boxShadow: '0 0 30px rgba(191,149,63,0.1)'
           }}
         >
           <h3 
@@ -645,7 +518,7 @@ export default function Home() {
           {/* Sponsor-Hinweis */}
           <div 
             className="mt-4 p-3 rounded-xl text-center"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px dashed rgba(191,149,63,0.3)' }}
           >
             <p className="text-white/70 text-sm">
               📩 <strong className="text-white">Fertig?</strong> Schick deinem Sponsor eine kurze Info!
@@ -656,7 +529,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 1: LINA ==================== */}
-        <SectionCard number={1} title="Lina (KI) – dein 24/7 Coach" isActive={activeSection === 1}>
+        <SectionCard number={1} title="Lina (KI) – dein 24/7 Coach">
           <p className="text-white/70 text-sm mb-4">
             Lina ist deine KI-Assistentin auf WhatsApp.
           </p>
@@ -722,7 +595,7 @@ export default function Home() {
                 </p>
                 <div 
                   className="rounded-xl p-3 mb-3"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
                 >
                   <p className="text-white/70 text-xs mb-2">
                     <strong style={{ color: '#BF953F' }}>Wichtig:</strong> Danach zur Kontrolle an deinen <strong className="text-white">Sponsor schicken</strong>, ob alles richtig eingerichtet ist.
@@ -775,7 +648,7 @@ export default function Home() {
                 </ul>
                 <div 
                   className="rounded-xl p-3"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
                 >
                   <p className="text-white/70 text-xs">
                     <strong style={{ color: '#BF953F' }}>Tipp:</strong> Auch hier gibt es zu jeder wichtigen Kategorie ein <strong className="text-white">Quiz</strong>.
@@ -812,7 +685,7 @@ export default function Home() {
                 </p>
                 <div 
                   className="rounded-xl p-3 mb-4"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+                  style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
                 >
                   <p className="text-white/70 text-xs">
                     Lina macht dir Vorschläge und hilft dir genau dort weiter, wo du gerade stehst.
@@ -830,7 +703,7 @@ export default function Home() {
         <GoldDivider />
 
         <div id="gruppen">
-          <SectionCard number={2} title="Gruppen: WhatsApp & Telegram" isActive={activeSection === 2}>
+          <SectionCard number={2} title="Gruppen: WhatsApp & Telegram">
             <p className="text-white/70 text-sm mb-4">
               Tritt unseren Team-Gruppen bei und vernetze dich mit anderen Partnern.
             </p>
@@ -886,7 +759,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 3: LR CONNECT APP ==================== */}
-        <SectionCard number={3} title="LR Connect App" isActive={activeSection === 3}>
+        <SectionCard number={3} title="LR Connect App">
           <p className="text-white/70 text-sm mb-4">
             Deine LR App für deinen Erfolg.
           </p>
@@ -909,7 +782,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 4: DEINE WICHTIGSTEN SEITEN ==================== */}
-        <SectionCard number={4} title="Deine wichtigsten Seiten" isActive={activeSection === 4}>
+        <SectionCard number={4} title="Deine wichtigsten Seiten">
           <p className="text-white/70 text-sm mb-3">Hier siehst du deine Zahlen:</p>
           <ul className="text-white/60 text-sm space-y-1 mb-4 ml-4">
             <li>• Umsätze & Bestellungen</li>
@@ -932,12 +805,12 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 5: 10 TEXTE AN NAMEN SCHICKEN ==================== */}
-        <SectionCard number={5} title="Komm ins Handeln" isActive={activeSection === 5}>
+        <SectionCard number={5} title="Komm ins Handeln">
           <div 
             className="rounded-xl p-5 mb-6 border"
             style={{ 
-              background: 'rgba(255,255,255,0.05)',
-              borderColor: 'rgba(255,255,255,0.15)'
+              background: 'linear-gradient(135deg, rgba(191,149,63,0.1) 0%, rgba(0,0,0,0) 100%)',
+              borderColor: 'rgba(191,149,63,0.3)'
             }}
           >
             <p className="text-white font-medium mb-2">
@@ -964,59 +837,13 @@ export default function Home() {
             </ul>
           </div>
 
-          <p className="text-white/50 text-sm mb-3">Wähle deine Kontakt-Methode:</p>
-          <Accordion type="single" collapsible className="mb-4">
-            <AccordionItem value="text" className="border-white/10">
-              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
-                📱 Text-Nachricht (allgemein)
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-white/60 text-sm pt-2 mb-2">Der Klassiker – funktioniert für alle:</p>
-                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Ich arbeite gerade an etwas Spannendem. Das ist vielleicht nichts für dich, vielleicht aber doch. Wärst du offen, dir das mal anzuschauen?"
-                </div>
-                <p className="text-white/40 text-xs">→ Kurz, neugierig machend, kein Druck</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="voice" className="border-white/10">
-              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
-                🎤 Sprachnachricht (persönlicher)
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-white/60 text-sm pt-2 mb-2">30-60 Sekunden, authentisch und locker:</p>
-                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Hey! Ich arbeite gerade an was Spannendem und hab an dich gedacht. Ist wahrscheinlich nichts für dich, aber du kennst bestimmt Leute die das interessieren könnte. Hast du kurz Zeit für ein Gespräch?"
-                </div>
-                <p className="text-white/40 text-xs">→ Deine Stimme schafft Vertrauen</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="video" className="border-white/10">
-              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
-                🎬 Kurzes Video (höchste Response-Rate)
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-white/60 text-sm pt-2 mb-2">30-60 Sekunden, muss nicht perfekt sein:</p>
-                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Hey [Name]! Ich hab an dich gedacht. Ich arbeite gerade an was Spannendem – schau mal kurz... [zeige kurz ein Produkt]. Wärst du offen, dir das mal genauer anzuschauen?"
-                </div>
-                <p className="text-white/40 text-xs">→ Gesicht + Stimme = stärkste Verbindung</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="call" className="border-white/10">
-              <AccordionTrigger className="text-white/80 text-sm hover:text-white">
-                📞 Anruf (für enge Freunde)
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="text-white/60 text-sm pt-2 mb-2">Nur bei engem Kontakt mit viel Vertrauen:</p>
-                <div className="bg-white/5 rounded-lg p-3 text-white/70 text-sm italic mb-2">
-                  "Hey, ich hab gerade nicht viel Zeit, aber ich arbeite an was Großem. Was machst du morgen Mittag? Super, lass uns treffen – ich hab was das du sehen musst!"
-                </div>
-                <p className="text-white/40 text-xs">→ Direkt und persönlich</p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <p className="text-white/40 text-xs mb-4 text-center">
-            💡 Tipp: Sprachnachricht oder Video haben die höchsten Antwort-Raten!
+          <p className="text-white/50 text-sm mb-3">Einfaches Script:</p>
+          <div className="bg-white/5 rounded-xl p-4 mb-6 text-white/70 text-sm italic">
+            "Ich arbeite gerade an etwas Spannendem. Das ist vielleicht nichts für dich, vielleicht aber doch. 
+            Wärst du offen, dir das mal anzuschauen?"
+          </div>
+          <p className="text-white/40 text-xs mb-4">
+            "Enthusiasm on fire is better than knowledge on ice" – Begeisterung schlägt Wissen!
           </p>
           <GoldButton 
             href="#"
@@ -1030,16 +857,15 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 6: FAST-TRACK BONUS ==================== */}
-        <SectionCard number={6} title="Unser gemeinsames Ziel – die ersten 1-2 Wochen" isActive={activeSection === 6}>
+        <SectionCard number={6} title="Unser gemeinsames Ziel – die ersten 1-2 Wochen">
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
           >
             <p className="text-white/80 text-sm font-medium mb-2">Junior Manager Qualifikation:</p>
             <ul className="text-white/60 text-sm space-y-1 ml-4">
               <li>• 2 direkte Partner mit je 500 PW</li>
               <li>• Gesamtumsatz 4.000 PW</li>
-              <li>• Mind. 100 PW Eigenumsatz</li>
             </ul>
           </div>
 
@@ -1051,17 +877,16 @@ export default function Home() {
               backgroundClip: 'text'
             }}>Fast-Track-Boni:</span>
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+          <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
             <div 
-              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
+              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 40px rgba(255,255,255,0.4), 0 0 80px rgba(255,255,255,0.2)'
               }}
             >
-              <span className="text-white/60 text-xs block mb-1">Junior Manager</span>
               <span 
-                className="text-lg md:text-2xl font-black"
+                className="text-xl md:text-3xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1069,19 +894,17 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
                 }}
-              >250 €</span>
-              <span className="text-white/40 text-xs block">/Monat</span>
+              >300 €</span>
             </div>
             <div 
-              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
+              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 45px rgba(255,255,255,0.45), 0 0 90px rgba(255,255,255,0.25)'
               }}
             >
-              <span className="text-white/60 text-xs block mb-1">Manager</span>
               <span 
-                className="text-lg md:text-2xl font-black"
+                className="text-xl md:text-3xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1089,19 +912,17 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.6))'
                 }}
-              >500 €</span>
-              <span className="text-white/40 text-xs block">/Monat</span>
+              >1.100 €</span>
             </div>
             <div 
-              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
+              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
               style={{ 
                 background: 'transparent',
                 boxShadow: '0 0 50px rgba(255,255,255,0.5), 0 0 100px rgba(255,255,255,0.3)'
               }}
             >
-              <span className="text-white/60 text-xs block mb-1">Junior Teamleiter</span>
               <span 
-                className="text-lg md:text-2xl font-black"
+                className="text-xl md:text-3xl font-black"
                 style={{ 
                   background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
                   WebkitBackgroundClip: 'text',
@@ -1109,46 +930,8 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.7))'
                 }}
-              >1.000 €</span>
-              <span className="text-white/40 text-xs block">/Monat</span>
+              >2.000 €</span>
             </div>
-            <div 
-              className="text-center py-3 md:py-4 px-1 rounded-xl relative"
-              style={{ 
-                background: 'transparent',
-                boxShadow: '0 0 55px rgba(255,255,255,0.55), 0 0 110px rgba(255,255,255,0.35)'
-              }}
-            >
-              <span className="text-white/60 text-xs block mb-1">Teamleiter</span>
-              <span 
-                className="text-lg md:text-2xl font-black"
-                style={{ 
-                  background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.8))'
-                }}
-              >1.250 €</span>
-              <span className="text-white/40 text-xs block">/Monat</span>
-            </div>
-          </div>
-          <p className="text-white/50 text-xs text-center mb-4">plus Autobonus + Handelsspanne (aus Verkauf an Kunden)</p>
-          <div className="text-center mb-6">
-            <a 
-              href="/FAQ-Fast-track-2026.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-sm hover:underline"
-              style={{ 
-                background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
-            >
-              → FAQ Fast Track Bonus
-            </a>
           </div>
 
           <div 
@@ -1200,7 +983,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 7: STARTERWEBINAR ==================== */}
-        <SectionCard number={7} title="Starterwebinar & Teammeeting" isActive={activeSection === 7}>
+        <SectionCard number={7} title="Starterwebinar & Teammeeting">
           <div className="mb-4">
             <h4 className="text-white font-medium mb-2">Starterwebinar</h4>
             <p className="text-white/70 text-sm mb-2">
@@ -1216,7 +999,7 @@ export default function Home() {
 
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
           >
             <p className="text-white font-medium mb-2">Starterwebinare bei Lina finden:</p>
             <p className="text-white/60 text-sm mb-2">
@@ -1241,13 +1024,16 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 8: GESCHÄFTSVORSTELLUNG ==================== */}
-        <SectionCard number={8} title="Geschäftsvorstellung" isActive={activeSection === 8}>
+        <SectionCard number={8} title="Geschäftsvorstellung">
           {/* Video Preview */}
           <a 
             href="https://youtu.be/N-soKAiyjsA" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block relative rounded-xl overflow-hidden mb-4 group"
+            style={{ 
+              border: '2px dashed rgba(191,149,63,0.6)',
+            }}
           >
             <img 
               src="/images/video_preview.webp" 
@@ -1277,7 +1063,7 @@ export default function Home() {
           
           <div 
             className="rounded-xl p-4 mb-4"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)' }}
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.3)' }}
           >
             <p className="text-white/80 text-sm font-medium mb-2">Link personalisieren:</p>
             <p className="text-white/60 text-sm">
@@ -1315,24 +1101,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 9: KI-VOICE ==================== */}
-        <SectionCard number={9} title="Unternehmer-Tool: KI-Voice" isActive={activeSection === 9}>
-          {/* LINA VOICE Preview Image */}
-          <a 
-            href="https://ki-voice.net/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden mb-4 hover:opacity-90 transition-opacity"
-            style={{ 
-              boxShadow: '0 0 60px rgba(255,255,255,0.4), 0 0 100px rgba(255,255,255,0.2)'
-            }}
-          >
-            <img 
-              src="/images/lina-voice.jpg" 
-              alt="LINA VOICE - Telefon-KI für Unternehmer" 
-              className="w-full h-auto"
-            />
-          </a>
-          
+        <SectionCard number={9} title="Unternehmer-Tool: KI-Voice">
           <h4 className="text-white font-medium mb-3">Dein persönlicher Team-Link</h4>
           <p className="text-white/70 text-sm mb-4">
             Wenn du Unternehmer kennst, nutze dieses Tool.
@@ -1394,7 +1163,7 @@ export default function Home() {
         <GoldDivider />
 
         {/* ==================== SECTION 10: WICHTIGE INFOS ==================== */}
-        <SectionCard number={10} title="Wichtige Infos & Seiten" isActive={activeSection === 10}>
+        <SectionCard number={10} title="Wichtige Infos & Seiten">
           <p className="text-white/70 text-sm mb-4">
             Auf der Seite findest du ausführliche Infos + Lina Chat für allgemeine Fragen.
           </p>
@@ -1449,109 +1218,82 @@ export default function Home() {
 
         <GoldDivider />
 
-        {/* ==================== SECTION 11: LEADS KAUFEN ==================== */}
-        <SectionCard number={11} title="Leads kaufen – Interessenten direkt aufs Handy">
+        {/* ==================== SECTION 11: SOCIAL MEDIA SYSTEM ==================== */}
+        <SectionCard number={11} title="Social Media System – dein automatischer Kanal">
+          <p className="text-white/70 text-sm mb-4">
+            Dein persönlicher KI-Assistent postet automatisch auf bis zu 9 Social-Media-Kanälen gleichzeitig – komplett ohne Aufwand für dich.
+          </p>
+
+          {/* Was das System macht */}
           <div 
-            className="rounded-xl p-5 mb-6 border"
-            style={{ 
-              background: 'linear-gradient(135deg, rgba(191,149,63,0.1) 0%, rgba(0,0,0,0) 100%)',
-              borderColor: 'rgba(191,149,63,0.3)'
-            }}
+            className="rounded-xl p-4 mb-4"
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
           >
-            <p className="text-white font-medium mb-2">
-              Du willst Leads? Wir liefern sie dir direkt per WhatsApp.
-            </p>
-            <p className="text-white/60 text-sm">
-              Kaufe ein Lead-Paket und bekomme <strong className="text-white">echte Interessenten</strong> aus Facebook-Werbung – 
-              automatisch, fair verteilt, direkt auf dein Handy.
-            </p>
+            <h4 
+              className="font-bold mb-3"
+              style={{ 
+                background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >Was das System für dich erledigt:</h4>
+            <div className="space-y-2">
+              {[
+                '✅ KI erstellt täglich fertige Posts, Bilder & Videos',
+                '✅ Automatisches Posting auf Instagram, Facebook, TikTok, LinkedIn, Threads, Twitter/X & mehr',
+                '✅ Lina (KI) spricht in Videos – du musst nicht vor die Kamera',
+                '✅ Inhalte werden von dir oder deinem Sponsor freigegeben',
+                '✅ Interessenten kommen automatisch per WhatsApp auf dein Handy',
+              ].map((item, i) => (
+                <p key={i} className="text-white/70 text-sm">{item}</p>
+              ))}
+            </div>
           </div>
 
-          <p className="text-white/80 text-sm font-medium mb-3">So funktioniert's:</p>
-
+          {/* Schritt-für-Schritt Aktivierung */}
           <div 
             className="rounded-xl p-4 mb-4"
             style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}
           >
+            <h4 className="text-white font-medium mb-3">So aktivierst du das System:</h4>
             <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div 
-                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                    color: '#000'
-                  }}
-                >1</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Lina öffnen</strong> – Im Hauptmenü gibt es den neuen Punkt <strong className="text-white">"Leads kaufen"</strong>. Da drauf drücken.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div 
-                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                    color: '#000'
-                  }}
-                >2</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Bezahlen</strong> – Du bekommst einen Stripe-Zahlungslink. 50€ pro Paket. Name und Telefonnummer angeben.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div 
-                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                    color: '#000'
-                  }}
-                >3</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Guthaben aktiv</strong> – Nach der Zahlung wird dein Guthaben automatisch freigeschaltet.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div 
-                  className="w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                    color: '#000'
-                  }}
-                >4</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Leads per WhatsApp</strong> – Sobald ein neuer Lead reinkommt, bekommst du ihn direkt auf dein Handy. Name, Telefon, E-Mail – alles dabei.</p>
-               </div>
-
-               <div className="flex items-start gap-3">
-                <div 
-                  className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                  style={{ 
-                    background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
-                    color: '#000'
-                  }}
-                >5</div>
-                <p className="text-white/60 text-sm"><strong className="text-white">Sofort anrufen</strong> – Du nimmst Kontakt auf und startest das Gespräch mit deinem neuen Interessenten. <strong className="text-white">Schnelligkeit entscheidet!</strong></p>
-               </div>
-             </div>
-           </div>
-
-          <div 
-            className="rounded-xl p-3 mb-4"
-            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
-          >
-            <p className="text-white/70 text-xs">
-              <strong style={{ color: '#BF953F' }}>Faire Verteilung:</strong> Leads werden automatisch und fair an alle aktiven Partner verteilt. Wer am längsten keinen Lead bekommen hat, ist als nächstes dran. Jeder Lead kostet 5€ von deinem Guthaben.
-            </p>
+              {[
+                { step: 'Schritt 1', text: 'Öffne sozialmedia.best und melde dich mit deinem Magic Link an (kommt von deinem Sponsor)' },
+                { step: 'Schritt 2', text: 'Verbinde deine Social-Media-Kanäle unter "Einstellungen" – einmalig, dauert 5 Minuten' },
+                { step: 'Schritt 3', text: 'Gehe zu "Lina Avatar" und lass dir täglich fertige Video-Posts erstellen' },
+                { step: 'Schritt 4', text: 'Genehmige Posts mit einem Klick – oder lass sie automatisch rausgehen' },
+                { step: 'Schritt 5', text: 'Das System postet für dich – du konzentrierst dich auf Gespräche & Abschlüsse' },
+              ].map(({ step, text }, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ background: '#BF953F' }} />
+                  <p className="text-white/60 text-sm"><strong className="text-white">{step}:</strong> {text}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div 
-            className="rounded-xl p-3 mb-4"
-            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}
-          >
-            <p className="text-white/70 text-xs">
-              <strong className="text-white">Guthaben leer?</strong> Kein Problem – kaufe einfach ein neues Paket über Lina nach. Dein Guthaben wird sofort wieder aufgeladen.
-            </p>
+          {/* Kanäle Grid */}
+          <div className="mb-4">
+            <p className="text-white/50 text-xs mb-2">Unterstützte Kanäle:</p>
+            <div className="grid grid-cols-3 gap-2">
+              {['Instagram', 'Facebook', 'TikTok', 'LinkedIn', 'Threads', 'Twitter/X', 'YouTube', 'Pinterest', 'Bluesky'].map(kanal => (
+                <div key={kanal} className="text-center p-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <span className="text-white/60 text-xs">{kanal}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <GoldButton href="https://buy.stripe.com/aFa6oH64Wei20Robnte7m01" external>
-            Jetzt Lead-Paket kaufen (50€)
-          </GoldButton>
+          <div className="space-y-3">
+            <GoldButton href="https://sozialmedia.best" external>
+              Social Media System öffnen
+            </GoldButton>
+            <GoldButton href="https://wa.me/4917150600008?text=Hallo%20Mathias%2C%20ich%20m%C3%B6chte%20das%20Social%20Media%20System%20aktivieren" external>
+              Magic Link bei Mathias anfragen
+            </GoldButton>
+          </div>
         </SectionCard>
-
-        <GoldDivider />
 
         {/* Footer */}
         <div className="text-center text-white/40 text-xs py-8 border-t border-white/10">
@@ -1563,13 +1305,13 @@ export default function Home() {
             <a href="/impressum" className="hover:text-white">Impressum</a>
             <a href="/datenschutz" className="hover:text-white">Datenschutz</a>
           </div>
-          <p>© 2026 LR Lifestyle Team. All rights reserved.</p>
+          <p>© 2025 LR Lifestyle Team. All rights reserved.</p>
         </div>
       </div>
 
       {/* WhatsApp Button */}
       <a
-        href="https://api.whatsapp.com/send?phone=491715060008"
+        href="https://api.whatsapp.com/send?phone=4917150600008"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 py-3 px-5 rounded-full font-medium transition-all duration-300 hover:scale-105"
         style={{ 
           background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
