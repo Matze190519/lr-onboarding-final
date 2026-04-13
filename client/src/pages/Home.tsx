@@ -1216,6 +1216,85 @@ export default function Home() {
           </div>
         </SectionCard>
 
+        <GoldDivider />
+
+        {/* ==================== SECTION 11: SOCIAL MEDIA SYSTEM ==================== */}
+        <SectionCard number={11} title="Social Media System – dein automatischer Kanal">
+          <p className="text-white/70 text-sm mb-4">
+            Dein persönlicher KI-Assistent postet automatisch auf bis zu 9 Social-Media-Kanälen gleichzeitig – komplett ohne Aufwand für dich.
+          </p>
+
+          {/* Was das System macht */}
+          <div 
+            className="rounded-xl p-4 mb-4"
+            style={{ background: 'rgba(191,149,63,0.1)', border: '1px solid rgba(191,149,63,0.2)' }}
+          >
+            <h4 
+              className="font-bold mb-3"
+              style={{ 
+                background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >Was das System für dich erledigt:</h4>
+            <div className="space-y-2">
+              {[
+                '✅ KI erstellt täglich fertige Posts, Bilder & Videos',
+                '✅ Automatisches Posting auf Instagram, Facebook, TikTok, LinkedIn, Threads, Twitter/X & mehr',
+                '✅ Lina (KI) spricht in Videos – du musst nicht vor die Kamera',
+                '✅ Inhalte werden von dir oder deinem Sponsor freigegeben',
+                '✅ Interessenten kommen automatisch per WhatsApp auf dein Handy',
+              ].map((item, i) => (
+                <p key={i} className="text-white/70 text-sm">{item}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Schritt-für-Schritt Aktivierung */}
+          <div 
+            className="rounded-xl p-4 mb-4"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}
+          >
+            <h4 className="text-white font-medium mb-3">So aktivierst du das System:</h4>
+            <div className="space-y-3">
+              {[
+                { step: 'Schritt 1', text: 'Öffne sozialmedia.best und melde dich mit deinem Magic Link an (kommt von deinem Sponsor)' },
+                { step: 'Schritt 2', text: 'Verbinde deine Social-Media-Kanäle unter "Einstellungen" – einmalig, dauert 5 Minuten' },
+                { step: 'Schritt 3', text: 'Gehe zu "Lina Avatar" und lass dir täglich fertige Video-Posts erstellen' },
+                { step: 'Schritt 4', text: 'Genehmige Posts mit einem Klick – oder lass sie automatisch rausgehen' },
+                { step: 'Schritt 5', text: 'Das System postet für dich – du konzentrierst dich auf Gespräche & Abschlüsse' },
+              ].map(({ step, text }, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ background: '#BF953F' }} />
+                  <p className="text-white/60 text-sm"><strong className="text-white">{step}:</strong> {text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Kanäle Grid */}
+          <div className="mb-4">
+            <p className="text-white/50 text-xs mb-2">Unterstützte Kanäle:</p>
+            <div className="grid grid-cols-3 gap-2">
+              {['Instagram', 'Facebook', 'TikTok', 'LinkedIn', 'Threads', 'Twitter/X', 'YouTube', 'Pinterest', 'Bluesky'].map(kanal => (
+                <div key={kanal} className="text-center p-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <span className="text-white/60 text-xs">{kanal}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <GoldButton href="https://sozialmedia.best" external>
+              Social Media System öffnen
+            </GoldButton>
+            <GoldButton href="https://wa.me/4917150600008?text=Hallo%20Mathias%2C%20ich%20m%C3%B6chte%20das%20Social%20Media%20System%20aktivieren" external>
+              Magic Link bei Mathias anfragen
+            </GoldButton>
+          </div>
+        </SectionCard>
+
         {/* Footer */}
         <div className="text-center text-white/40 text-xs py-8 border-t border-white/10">
           <p className="mb-2">
