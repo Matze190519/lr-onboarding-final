@@ -1259,11 +1259,11 @@ export default function Home() {
             <h4 className="text-white font-medium mb-3">So aktivierst du das System:</h4>
             <div className="space-y-3">
               {[
-                { step: 'Schritt 1', text: 'Öffne sozialmedia.best und melde dich mit deinem Magic Link an (kommt von deinem Sponsor)' },
-                { step: 'Schritt 2', text: 'Verbinde deine Social-Media-Kanäle unter "Einstellungen" – einmalig, dauert 5 Minuten' },
-                { step: 'Schritt 3', text: 'Gehe zu "Lina Avatar" und lass dir täglich fertige Video-Posts erstellen' },
-                { step: 'Schritt 4', text: 'Genehmige Posts mit einem Klick – oder lass sie automatisch rausgehen' },
-                { step: 'Schritt 5', text: 'Das System postet für dich – du konzentrierst dich auf Gespräche & Abschlüsse' },
+                { step: 'Schritt 1', text: 'Schreibe "Hallo" an Lina auf WhatsApp oder Telegram – sie begrüßt dich und zeigt das Hauptmenü' },
+                { step: 'Schritt 2', text: 'Tippe auf "Social Media Dashboard" im Menü unter "Neue Features" – Lina schickt dir deinen Magic-Link' },
+                { step: 'Schritt 3', text: 'Klicke den Magic-Link – du bist sofort eingeloggt, kein Passwort nötig' },
+                { step: 'Schritt 4', text: 'Verbinde deine Social-Media-Kanäle unter "Einstellungen" – einmalig, dauert 5 Minuten' },
+                { step: 'Schritt 5', text: 'Das System erstellt und postet täglich Content für dich – du konzentrierst dich auf Gespräche & Abschlüsse' },
               ].map(({ step, text }, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ background: '#BF953F' }} />
@@ -1286,11 +1286,11 @@ export default function Home() {
           </div>
 
           <div className="space-y-3">
+            <GoldButton href="https://api.whatsapp.com/send?phone=4915170605019" external>
+              Bei Lina registrieren & Magic Link erhalten
+            </GoldButton>
             <GoldButton href="https://sozialmedia.best" external>
               Social Media System öffnen
-            </GoldButton>
-            <GoldButton href="https://wa.me/4917150600008?text=Hallo%20Mathias%2C%20ich%20m%C3%B6chte%20das%20Social%20Media%20System%20aktivieren" external>
-              Magic Link bei Mathias anfragen
             </GoldButton>
           </div>
         </SectionCard>
