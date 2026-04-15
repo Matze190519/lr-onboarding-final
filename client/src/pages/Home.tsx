@@ -453,7 +453,7 @@ export default function Home() {
               <li>• Deinen Partnern helfen, genau das Gleiche zu tun</li>
             </ul>
             <p className="text-white/70 text-sm">
-              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>1.100 € im Monat</span></strong>*.
+              So entsteht Schritt für Schritt ein stabiles Fundament – die Basis für deine ersten <strong><span style={{ background: 'linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #BF953F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>250 € bis 1.250 € im Monat</span></strong>*.
             </p>
             <p className="text-white/40 text-xs mt-3 italic">
               *Kein Einkommensversprechen. Ergebnisse sind abhängig von persönlichem Einsatz und aktuellen LR-Bedingungen. Details in LR Neo / MyOffice.
@@ -877,7 +877,7 @@ export default function Home() {
               backgroundClip: 'text'
             }}>Fast-Track-Boni:</span>
           </p>
-          <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
+          <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6">
             <div 
               className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
               style={{ 
@@ -894,7 +894,8 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.5))'
                 }}
-              >300 €</span>
+              >250 €</span>
+              <p className="text-white/50 text-xs mt-1">Jr. Manager</p>
             </div>
             <div 
               className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
@@ -912,7 +913,8 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.6))'
                 }}
-              >1.100 €</span>
+              >500 €</span>
+              <p className="text-white/50 text-xs mt-1">Manager</p>
             </div>
             <div 
               className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
@@ -930,7 +932,27 @@ export default function Home() {
                   backgroundClip: 'text',
                   filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.7))'
                 }}
-              >2.000 €</span>
+              >1.000 €</span>
+              <p className="text-white/50 text-xs mt-1">Jr. Teaml.</p>
+            </div>
+            <div 
+              className="text-center py-4 md:py-6 px-1 md:px-2 rounded-xl relative"
+              style={{ 
+                background: 'transparent',
+                boxShadow: '0 0 55px rgba(255,255,255,0.55), 0 0 110px rgba(255,255,255,0.35)'
+              }}
+            >
+              <span 
+                className="text-xl md:text-3xl font-black"
+                style={{ 
+                  background: 'linear-gradient(135deg, #BF953F 0%, #FCF6BA 40%, #FFF 50%, #FCF6BA 60%, #BF953F 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0 0 18px rgba(255,255,255,0.8))'
+                }}
+              >1.250 €</span>
+              <p className="text-white/50 text-xs mt-1">Teamleiter</p>
             </div>
           </div>
 
